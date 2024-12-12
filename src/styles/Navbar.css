@@ -1,34 +1,59 @@
-/* Navbar.css */
 .navbar-custom {
-  background-color: #f5f5f5; /* Color gris claro */
+  background-color: #f5f5f5; /* Fondo gris claro */
   padding: 15px 20px;
   font-family: 'Poppins', sans-serif; /* Fuente moderna */
-  border-bottom: 2px solid #dedede; /* Línea inferior decorativa */
+  border-bottom: 2px solid #dedede;
+  display: flex;
+  align-items: center; /* Alinea verticalmente todo */
 }
 
 .navbar-custom .nav-link {
   color: #333; /* Color de texto */
   font-weight: 500;
   margin-right: 15px;
+  display: flex;
+  align-items: center; /* Alinea verticalmente */
 }
 
 .navbar-custom .nav-link:hover {
-  color: #fbb900; /* Color amarillo al pasar el mouse */
+  color: #fbb900; /* Amarillo al pasar el mouse */
+}
+
+.navbar-custom .navbar-brand {
+  display: flex;
+  align-items: center; /* Asegura que el logo esté alineado */
 }
 
 .navbar-custom .navbar-brand img {
-  max-width: 200px; /* Tamaño del logo */
+  max-height: 50px; /* Ajusta el tamaño del logo */
 }
 
 .navbar-custom .btn-custom {
-  background-color: #ffd700; /* Amarillo dorado */
+  background-color: #ffd700; /* Amarillo */
   color: #333;
   font-weight: 600;
-  border-radius: 8px; /* Bordes redondeados */
+  border-radius: 8px;
   padding: 8px 16px;
+  display: flex;
+  align-items: center; /* Alinea el texto de los botones */
 }
 
 .navbar-custom .btn-custom:hover {
-  background-color: #ffc300; /* Un tono más oscuro al pasar el mouse */
+  background-color: #ffc300;
   color: #000;
+}
+
+.scroll-bar {
+  position: fixed; /* Fija la barra */
+  top: 70px; /* Debajo del Navbar */
+  left: 0;
+  width: 100%;
+  height: 5px; /* Altura de la barra */
+  background-color: #ffd700; /* Amarillo */
+  z-index: 999; /* Sobre otros elementos */
+  transition: transform 0.3s ease; /* Animación al esconderse */
+}
+
+.hidden {
+  transform: translateY(-100%); /* Mueve la barra hacia arriba */
 }

@@ -1,12 +1,11 @@
-// src/components/Navbar.js
 import React from "react";
 import images from "../assets/images/images";
 import { Navbar, Nav, Button, Container, NavDropdown } from "react-bootstrap";
-import "../styles/Navbar.css"; // Si lo moviste a `src/styles/`
+import "../styles/Navbar.css";
 
 const NavigationBar = () => {
   return (
-    <Navbar className="navbar-custom" expand="lg">
+    <Navbar bg="light" expand="lg" className="navbar-custom">
       <Container>
         <Navbar.Brand href="#home" className="d-flex align-items-center">
           <img
@@ -15,10 +14,11 @@ const NavigationBar = () => {
             className="img-fluid"
           />
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavDropdown title="Servicios" id="basic-nav-dropdown" className="nav-link">
+            <NavDropdown title="Servicios" id="basic-nav-dropdown">
               <NavDropdown.Item href="#almacenamiento">
                 Almacenamiento
               </NavDropdown.Item>
@@ -31,8 +31,12 @@ const NavigationBar = () => {
             <Nav.Link href="#blog">Blog</Nav.Link>
             <Nav.Link href="#carga-libre">Carga Libre</Nav.Link>
           </Nav>
-          <Button className="btn-custom ms-2">Portal Clientes</Button>
-          <Button className="btn-custom ms-2">Contactar</Button>
+          <Button variant="warning" className="btn-custom ms-2">
+            Portal Clientes
+          </Button>
+          <Button variant="warning" className="btn-custom ms-2">
+            Contactar
+          </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
