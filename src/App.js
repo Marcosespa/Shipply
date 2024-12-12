@@ -1,5 +1,5 @@
-// src/App.js
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -17,20 +17,30 @@ import WhatsappButton from './components/WhatsappButton';
 
 const App = () => {
   return (
-    <div>
+    <Router>
       <Navbar />
-      <Hero />
-      <Clients />
-      <Benefits />
-      <Integrations />
-      <AboutUs/>
-      <Services />
-      <Benefits2/>
-      <Testimonials />
-      <Contact />
-      <WhatsappButton />
+      <Routes>
+        {/* Ruta para la página principal */}
+        <Route path="/" element={
+          <>
+            <Hero />
+            <Clients />
+            <Benefits />
+            <Integrations />
+            <AboutUs />
+            <Services />
+            <Benefits2 />
+            <Testimonials />
+            <Contact />
+            <WhatsappButton />
+          </>
+        } />
+
+        {/* Ruta para la página de servicios */}
+        <Route path="/servicios" element={<Services />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 };
 
