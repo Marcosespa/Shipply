@@ -1,41 +1,50 @@
-// src/components/Services.js
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import '../styles/services.css';
 
 const Services = () => {
   return (
-    <Container className="py-5" id="services">
-      <h2 className="text-center mb-4">Nuestros Servicios</h2>
-      <Row>
-        <Col md={4}>
-          <Card className="text-center">
-            <Card.Body>
-              <i className="bi bi-box-seam fs-1 text-primary"></i>
-              <Card.Title className="mt-3">Almacenamiento</Card.Title>
-              <Card.Text>Recolectamos, clasificamos y almacenamos tus productos de acuerdo a su naturaleza y especificaciones en nuestras bodegas especializadas.</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card className="text-center">
-            <Card.Body>
-              <i className="bi bi-arrow-repeat fs-1 text-primary"></i>
-              <Card.Title className="mt-3">Cross-docking</Card.Title>
-              <Card.Text>Recibimos tus órdenes, recepcionamos tus productos, armamos, etiquetamos y empacamos tus pedidos sin almacenar.</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card className="text-center">
-            <Card.Body>
-              <i className="bi bi-truck fs-1 text-primary"></i>
-              <Card.Title className="mt-3">Envío</Card.Title>
-              <Card.Text>Te ofrecemos diversas alternativas de transporte de acuerdo a tu necesidad.</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    <div className="services-section">
+      <Container>
+        <h2 className="text-center text-warning">Servicios</h2>
+        <p className="text-center text-light">
+          En Shipply encontrarás una serie de servicios que facilitarán el crecimiento de tu E-commerce.
+        </p>
+        <Row className="mt-4">
+          <Col md={3} className="text-center service-card">
+            <i className="bi bi-box-seam icon-service"></i>
+            <h4>Almacenamiento</h4>
+            <p>
+              Recolectamos, clasificamos y almacenamos tus productos de acuerdo a su naturaleza y especificaciones, en nuestras bodegas especializadas.
+            </p>
+          </Col>
+          <Col md={3} className="text-center service-card">
+            <i className="bi bi-arrow-left-right icon-service"></i>
+            <h4>Cross-docking</h4>
+            <p>
+              Recibimos tus órdenes, recepcionamos tus productos, armamos, etiquetamos y empacamos tus pedidos sin almacenar.
+            </p>
+          </Col>
+          <Col md={3} className="text-center service-card">
+            <i className="bi bi-box2-heart icon-service"></i>
+            <h4>Picking / Packing</h4>
+            <p>
+              Seleccionamos tus productos, realizamos el alistamiento de tus órdenes de pedido, etiquetamos y empacamos a tu medida.
+            </p>
+          </Col>
+          <Col md={3} className="text-center service-card">
+            <i className="bi bi-truck icon-service"></i>
+            <h4>Envío</h4>
+            <p>
+              Te ofrecemos diversas alternativas de transporte de acuerdo a tu necesidad.
+            </p>
+          </Col>
+        </Row>
+        <div className="text-center mt-4">
+          <Button variant="warning" size="lg">Conoce nuestros servicios</Button>
+        </div>
+      </Container>
+    </div>
   );
 };
 
