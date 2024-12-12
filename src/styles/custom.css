@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 /* body {
   background-color: #dbe510;
 }
@@ -35,7 +37,7 @@ h5 {
   color: #000;
   font-weight: 700;
 }
-.navbar-logo {
-  width: 250px;
-  height: auto; /* Mantén la proporción */
+.navbar {
+  min-height: 80px; /* Ajusta según el tamaño de tu logo */
+  padding: 0.5rem 1rem; /* Ajusta el espaciado si es necesario */
 }

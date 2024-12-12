@@ -1,0 +1,34 @@
+/* Navbar.css */
+.navbar-custom {
+  background-color: #f5f5f5; /* Color gris claro */
+  padding: 15px 20px;
+  font-family: 'Poppins', sans-serif; /* Fuente moderna */
+  border-bottom: 2px solid #dedede; /* Línea inferior decorativa */
+}
+
+.navbar-custom .nav-link {
+  color: #333; /* Color de texto */
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #fbb900; /* Color amarillo al pasar el mouse */
+}
+
+.navbar-custom .navbar-brand img {
+  max-width: 200px; /* Tamaño del logo */
+}
+
+.navbar-custom .btn-custom {
+  background-color: #ffd700; /* Amarillo dorado */
+  color: #333;
+  font-weight: 600;
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 8px 16px;
+}
+
+.navbar-custom .btn-custom:hover {
+  background-color: #ffc300; /* Un tono más oscuro al pasar el mouse */
+  color: #000;
+}
