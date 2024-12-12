@@ -1,0 +1,38 @@
+/* src/components/AboutUs.css */
+.about-us-section {
+  background-color: #ffffff;
+  padding: 3rem 0;
+}
+
+.text-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.text-section p {
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+.info-cards {
+  display: flex;
+  justify-content: space-between; /* Espaciado uniforme entre cuadros */
+  gap: 0; /* Sin espacio extra entre los cuadros */
+}
+
+.info-card {
+  background-color: #ffc107;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  color: #000;
+  flex: 1; /* Igual ancho para cada cuadro */
+  margin: 0; /* Elimina márgenes */
+  max-width: 30%; /* Limita el tamaño */
+}
+
+.info-card p {
+  font-size: 0.9rem;
+  margin: 0;
+}

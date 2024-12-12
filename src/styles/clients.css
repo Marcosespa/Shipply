@@ -18,3 +18,13 @@
 .client-logo:hover {
   transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
 }
+/* Personalizar las flechas del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #817e7e; /* Cambia el color de fondo a amarillo */
+  background-size: 100%; /* Ajusta el tamaño del icono */
+  border-radius: 50%; /* Hazlo redondeado si deseas */
+}
+
+
+

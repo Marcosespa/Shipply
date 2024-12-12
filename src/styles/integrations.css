@@ -1,0 +1,42 @@
+/* src/components/Integrations.css */
+.integrations-section {
+  background-color: #f4f4f4; /* Fondo gris */
+}
+
+.integrations-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.integration-carousel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 15s linear infinite;
+}
+
+.integration-logo {
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+.integration-logo:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

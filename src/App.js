@@ -10,6 +10,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Clients from './components/Clients';
 import Benefits from './components/Benefits';
+import Integrations from './components/Integraciones';
+import AboutUs from './components/AboutUs';
 
 const App = () => {
   return (
@@ -18,7 +20,9 @@ const App = () => {
       <Hero />
       <Clients />
       <Benefits />
-      <Features />
+      <Integrations />
+      <AboutUs/>
+
       <Services />
       <SearchForm />
       <Testimonials />

@@ -1,0 +1,27 @@
+/* src/components/Benefits.css */
+.benefits-section {
+  background-color: #f9f9f9;
+}
+
+.benefits-section h5 {
+  color: #ffd700; /* Amarillo brillante */
+  font-weight: bold;
+}
+
+.benefits-section h2 {
+  color: #000; /* Negro */
+  font-weight: bold;
+}
+
+.benefit-item {
+  padding: 20px;
+}
+
+.benefit-icon img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
