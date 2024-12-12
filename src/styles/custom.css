@@ -1,7 +1,37 @@
-body {
-  background-color: #f8f9fa;
+/* body {
+  background-color: #dbe510;
 }
 
 h1 {
-  color: #007bff;
+  color: #e7e01b;
+}
+src/styles/custom.css */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  color: #000; /* Texto principal negro */
+}
+
+h5 {
+  color: #ffc107; /* Amarillo */
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+}
+
+.navbar-light .navbar-brand img {
+  max-height: 50px;
+}
+
+.navbar-light .nav-link {
+  font-weight: 600;
+}
+
+.navbar-light .btn-warning {
+  color: #000;
+  font-weight: 700;
 }

@@ -1,30 +1,32 @@
+// src/components/Navbar.js
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar, Nav, Button, Container, NavDropdown } from 'react-bootstrap';
 
-const Navbar = () => {
+const NavigationBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
-        <a className="navbar-brand" href="/">Shipply</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="#services">Servicios</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#features">Características</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#contact">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home">
+        <img src="https://via.placeholder.com/500x300" alt="Placeholder" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
+            <NavDropdown title="Servicios" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#almacenamiento">Almacenamiento</NavDropdown.Item>
+              <NavDropdown.Item href="#crossdocking">Cross-docking</NavDropdown.Item>
+              <NavDropdown.Item href="#envios">Envíos</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#contacto">Contacto</Nav.Link>
+            <Nav.Link href="#blog">Blog</Nav.Link>
+            <Nav.Link href="#carga-libre">Carga Libre</Nav.Link>
+          </Nav>
+          <Button variant="warning" className="ms-2">Portal Clientes</Button>
+          <Button variant="warning" className="ms-2">Contactar</Button>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavigationBar;

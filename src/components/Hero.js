@@ -1,14 +1,25 @@
+// src/components/Hero.js
 import React from 'react';
+import { Container, Button, Row, Col } from 'react-bootstrap';
 
 const Hero = () => {
   return (
-    <div className="hero bg-primary text-white text-center py-5">
-      <div className="container">
-        <h1>Encuentra transportadores confiables</h1>
-        <p className="lead">Compara precios y elige el mejor servicio para tus envíos.</p>
-        <button className="btn btn-light btn-lg m-2">¡Empezar ahora!</button>
-        <button className="btn btn-outline-light btn-lg m-2">Más información</button>
-      </div>
+    <div className="bg-light py-5">
+      <Container>
+        <Row className="align-items-center">
+          <Col md={6}>
+            <h5 className="text-warning">Simplifica tu logística y acelera el crecimiento de tu E-commerce</h5>
+            <h1 className="fw-bold">
+              Centraliza tu inventario, automatiza el proceso de pedidos y garantiza entregas rápidas y seguras.
+            </h1>
+            <Button variant="warning" size="lg" className="mt-3">Contáctanos</Button>
+            <p className="mt-3">La mudanza corre por cuenta nuestra</p>
+          </Col>
+          <Col md={6}>
+          <img src="https://via.placeholder.com/500x300" alt="Placeholder" />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
