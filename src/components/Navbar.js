@@ -12,6 +12,7 @@ const NavigationBar = () => {
             src={images.logo1}
             alt="Logo 1"
             className="img-fluid"
+            loading="lazy"
           />
         </Navbar.Brand>
 

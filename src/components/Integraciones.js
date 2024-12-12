@@ -16,12 +16,12 @@ const Integrations = () => {
           <Col>
             <div className="integration-carousel">
               <div className="carousel-track">
-                <img src="/path/to/vtex-logo.png" alt="VTEX" className="integration-logo" />
-                <img src="/path/to/shopify-logo.png" alt="Shopify" className="integration-logo" />
-                <img src="/path/to/linio-logo.png" alt="Linio" className="integration-logo" />
-                <img src="/path/to/rappi-logo.png" alt="Rappi" className="integration-logo" />
-                <img src="/path/to/woocommerce-logo.png" alt="WooCommerce" className="integration-logo" />
-                <img src="/path/to/mercadolibre-logo.png" alt="Mercado Libre" className="integration-logo" />
+                <img src="/path/to/vtex-logo.png" alt="VTEX" className="integration-logo" loading="lazy"/>
+                <img src="/path/to/shopify-logo.png" alt="Shopify" className="integration-logo"loading="lazy" />
+                <img src="/path/to/linio-logo.png" alt="Linio" className="integration-logo" loading="lazy" />
+                <img src="/path/to/rappi-logo.png" alt="Rappi" className="integration-logo"loading="lazy" />
+                <img src="/path/to/woocommerce-logo.png" alt="WooCommerce" className="integration-logo" loading="lazy"/>
+                <img src="/path/to/mercadolibre-logo.png" alt="Mercado Libre" className="integration-logo" loading="lazy" />
               </div>
             </div>
           </Col>

@@ -41,3 +41,36 @@
   margin-top: 2rem; /* Añade espacio si lo necesitas */
 }
 
+.hero-title,
+.hero-subtitle,
+.hero-text,
+.button-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-in-out;
+}
+
+.image-container .hero-image {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s ease-in-out;
+}
+
+.hero-section.visible .hero-title,
+.hero-section.visible .hero-subtitle,
+.hero-section.visible .hero-text,
+.hero-section.visible .button-container,
+.hero-section.visible .hero-image {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-section.visible .hero-image {
+  transform: scale(1);
+}
+
+/* Hover para el botón */
+.button-container:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
