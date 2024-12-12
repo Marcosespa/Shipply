@@ -1,11 +1,20 @@
-import React from "react";
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import SearchForm from './components/SearchForm';
+import Features from './components/Features';
+import Footer from './components/Footer';
 
-function App() {
+const App = () => {
   return (
-    <div className="app">
-      <h1>Hello World!</h1>
-    </div>
+    <>
+      <Navbar />
+      <Hero />
+      <SearchForm />
+      <Features />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
