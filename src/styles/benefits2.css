@@ -1,0 +1,58 @@
+.benefits-section {
+  background-color: #fff; /* Fondo blanco */
+  padding: 60px 20px;
+}
+
+.logo-container {
+  position: relative;
+}
+
+.logo-image {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.floating-boxes {
+  position: relative;
+  margin-top: 20px;
+}
+
+.floating-box {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+
+.box1 {
+  top: 20px;
+  left: 0;
+}
+
+.box2 {
+  top: 80px;
+  left: 40%;
+}
+
+.box3 {
+  top: 140px;
+  right: 0;
+}
+
+.benefit-card {
+  background-color: #ffc107;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+}
+
+.benefit-card h4 {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.icon-benefit {
+  font-size: 40px;
+  color: #000;
+}

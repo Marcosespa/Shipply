@@ -1,0 +1,49 @@
+.testimonials-section {
+  background-image: url('https://via.placeholder.com/1920x1080'); /* Cambia por tu imagen */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden; /* Asegúrate de que el contenido no desborde */
+}
+
+/* .testimonials-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%; 
+  height: 100%;
+  background-color: #ffc107;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  z-index: 1;
+} */
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Para que se muestre encima del triángulo */
+}
+
+.testimonial-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+.testimonial-card h5 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.testimonial-card .text-light {
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+.text-warning {
+  color: #ffc107 !important;
+}

@@ -1,0 +1,58 @@
+.footer-section {
+  background-color: #fff; /* Fondo blanco */
+  color: #000; /* Texto negro */
+  padding: 20px 0;
+}
+
+.footer-logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  margin-top: 10px;
+}
+
+.instagram-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.instagram-icon:hover {
+  transform: scale(1.1);
+}
+
+.footer-menu,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu li,
+.footer-contact li {
+  margin-bottom: 10px;
+}
+
+.footer-menu a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-menu a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact i {
+  margin-right: 10px;
+}

@@ -12,6 +12,8 @@ import Clients from './components/Clients';
 import Benefits from './components/Benefits';
 import Integrations from './components/Integraciones';
 import AboutUs from './components/AboutUs';
+import Benefits2 from './components/Benefits2';
+import WhatsappButton from './components/WhatsappButton';
 
 const App = () => {
   return (
@@ -22,11 +24,11 @@ const App = () => {
       <Benefits />
       <Integrations />
       <AboutUs/>
-
       <Services />
-      <SearchForm />
+      <Benefits2/>
       <Testimonials />
       <Contact />
+      <WhatsappButton />
       <Footer />
     </div>
   );

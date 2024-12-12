@@ -1,32 +1,43 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import "../styles/services.css";
 
 const Services = () => {
+  const servicesRef = useRef(null);
+
   useEffect(() => {
-    AOS.init({
-      duration: 1000, // Duración de la animación en milisegundos
-      once: true, // Ejecutar la animación solo una vez
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          } else {
+            entry.target.classList.remove("animate"); // Opcional: para repetir animaciones
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Porcentaje visible para activar la animación
+      }
+    );
+
+    const elements = servicesRef.current.querySelectorAll(".service-card");
+    elements.forEach((el) => observer.observe(el));
+
+    // Limpieza al desmontar el componente
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="services-section">
+    <div className="services-section" ref={servicesRef}>
       <Container>
-        <h2 className="text-center text-warning" data-aos="fade-up">
-          Servicios
-        </h2>
-        <p className="text-center text-light" data-aos="fade-up">
+        <h2 className="text-center text-warning">Servicios</h2>
+        <p className="text-center text-light">
           En Shipply encontrarás una serie de servicios que facilitarán el
           crecimiento de tu E-commerce.
         </p>
-        <Row
-          className="mt-4 justify-content-center align-items-stretch"
-          data-aos="fade-up"
-        >
-          <Col md={2} sm={6} className="service-card" data-aos="zoom-in">
+        <Row className="mt-4 justify-content-center align-items-stretch">
+          <Col md={2} sm={6} className="service-card">
             <i className="bi bi-box-seam icon-service"></i>
             <h4>Almacenamiento</h4>
             <p>
@@ -35,7 +46,7 @@ const Services = () => {
               especializadas.
             </p>
           </Col>
-          <Col md={2} sm={6} className="service-card" data-aos="zoom-in">
+          <Col md={2} sm={6} className="service-card">
             <i className="bi bi-arrow-left-right icon-service"></i>
             <h4>Cross-docking</h4>
             <p>
@@ -43,7 +54,7 @@ const Services = () => {
               etiquetamos y empacamos tus pedidos sin almacenar.
             </p>
           </Col>
-          <Col md={2} sm={6} className="service-card" data-aos="zoom-in">
+          <Col md={2} sm={6} className="service-card">
             <i className="bi bi-box2-heart icon-service"></i>
             <h4>Picking / Packing</h4>
             <p>
@@ -51,7 +62,7 @@ const Services = () => {
               órdenes de pedido, etiquetamos y empacamos a tu medida.
             </p>
           </Col>
-          <Col md={2} sm={6} className="service-card" data-aos="zoom-in">
+          <Col md={2} sm={6} className="service-card">
             <i className="bi bi-truck icon-service"></i>
             <h4>Envío</h4>
             <p>
@@ -60,8 +71,7 @@ const Services = () => {
             </p>
           </Col>
         </Row>
-
-        <div className="text-center mt-4" data-aos="fade-up">
+        <div className="text-center mt-4">
           <Button variant="warning" size="lg">
             Conoce nuestros servicios
           </Button>

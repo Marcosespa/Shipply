@@ -1,7 +1,20 @@
 .services-section {
+  position: relative;
   background-color: #222; /* Fondo oscuro */
   color: #fff;
   padding: 60px 20px;
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0; /* Alineado al lado derecho */
+  width: 0;
+  height: 0;
+  border-left: 50vw solid transparent; /* El triángulo comienza desde la mitad del ancho */
+  border-top: 170px solid #ffc107; /* Controla la altura vertical del triángulo */
+  z-index: 1;
 }
 
 .service-card {
@@ -53,4 +66,17 @@
 
 .services-section .row {
   gap: 20px; /* Espaciado uniforme entre cajas */
+}
+
+/* Estado inicial (elemento oculto o sin animación) */
+.service-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.5s ease-in-out; /* Animación más lenta */
+}
+
+/* Estado animado (cuando entra al viewport) */
+.service-card.animate {
+  opacity: 1;
+  transform: translateY(1);
 }
