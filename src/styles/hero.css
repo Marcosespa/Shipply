@@ -1,0 +1,43 @@
+.hero-section {
+  background-color: #f8f9fa; /* Fondo claro */
+  padding: 5rem 0;
+}
+
+.text-container {
+  text-align: left;
+}
+
+.hero-subtitle {
+  color: #f1c40f; /* Amarillo similar */
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  color: #6c757d; /* Gris tenue */
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-top: 2rem; /* Añade espacio si lo necesitas */
+}
+
