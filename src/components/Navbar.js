@@ -41,7 +41,12 @@ const NavigationBar = () => {
               Carga Libre
             </Nav.Link>
           </Nav>
-          <Button variant="warning" className="btn-custom ms-2">
+          <Button variant="warning" className="btn-custom ms-2"
+            href="https://control.logystix.co/site/login"
+            target="_blank" // Abre el enlace en una nueva pestaña
+            rel="noopener noreferrer" // Mejora la seguridad para enlaces externos
+          >
+
             Portal Clientes
           </Button>
           <Button variant="warning" className="btn-custom ms-2">

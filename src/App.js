@@ -14,6 +14,9 @@ import Integrations from './components/Integraciones';
 import AboutUs from './components/AboutUs';
 import Benefits2 from './components/Benefits2';
 import WhatsappButton from './components/WhatsappButton';
+import ChestDrawer from './components/ChestDrawer';
+import { Player } from '@lottiefiles/react-lottie-player';
+import images from "./assets/images/images";
 
 const App = () => {
   return (
@@ -31,6 +34,7 @@ const App = () => {
             <Services />
             <Benefits2 />
             <Testimonials />
+            {/* <ChestDrawer />  */}
             <Contact />
             <WhatsappButton />
           </>

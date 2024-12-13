@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Container, Button, Row, Col } from "react-bootstrap";
 import "../styles/hero.css";
+import { Player } from "@lottiefiles/react-lottie-player";
+import images from "../assets/images/images";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,14 +47,20 @@ const Hero = () => {
             <Button variant="warning" size="lg" className="button-container">
               Contáctanos
             </Button>
-            <p className="hero-text mt-3">La mudanza corre por cuenta nuestra</p>
+            <p className="hero-text mt-3">
+              La mudanza corre por cuenta nuestra
+            </p>
           </Col>
           <Col md={6} className="image-container">
-            <img
-              src="https://via.placeholder.com/500x300"
-              alt="Placeholder"
-              className="hero-image"
-            />
+            <div className="container">
+              <Player
+                src={images.logo3}
+                className="player"
+                loop
+                autoplay
+                style={{ height: "400px", width: "500px" }}
+              />
+            </div>
           </Col>
         </Row>
       </Container>
