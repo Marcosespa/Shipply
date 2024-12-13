@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import '../styles/benefits2.css';
-import images from "../assets/images/images";
+import '../../styles/benefits2.css';
+import images from "../../assets/images/images";
 
 const Benefits2 = () => {
   return (

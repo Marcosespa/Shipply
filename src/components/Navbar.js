@@ -21,14 +21,17 @@ const NavigationBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <NavDropdown title="Servicios" id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/servicios#almacenamiento">
+              <NavDropdown.Item as={Link} to="/servicios#integraciones">
+                Integraciones
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/servicios#almacentamiento">
                 Almacenamiento
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/servicios#crossdocking">
-                Cross-docking
+              <NavDropdown.Item as={Link} to="/servicios#picking">
+                Picking / Packing
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/servicios#envios">
-                Envíos
+                Envio
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/contacto">
@@ -41,12 +44,13 @@ const NavigationBar = () => {
               Carga Libre
             </Nav.Link>
           </Nav>
-          <Button variant="warning" className="btn-custom ms-2"
+          <Button
+            variant="warning"
+            className="btn-custom ms-2"
             href="https://control.logystix.co/site/login"
             target="_blank" // Abre el enlace en una nueva pestaña
             rel="noopener noreferrer" // Mejora la seguridad para enlaces externos
           >
-
             Portal Clientes
           </Button>
           <Button variant="warning" className="btn-custom ms-2">

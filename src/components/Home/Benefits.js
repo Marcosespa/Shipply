@@ -1,7 +1,7 @@
 // src/components/Benefits.js
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import '../styles/benefits.css';
+import '../../styles/benefits.css';
 
 const Benefits = () => {
   return (

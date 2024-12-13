@@ -2,19 +2,20 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
-import Services from './components/Services';
-import SearchForm from './components/SearchForm';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
+import Features from './components/Home/Features';
+import Services from './components/Home/Services';
+import SearchForm from './components/Home/SearchForm';
+import Testimonials from './components/Home/Testimonials';
+import Contact from './components/Home/Contact';
 import Footer from './components/Footer';
-import Clients from './components/Clients';
-import Benefits from './components/Benefits';
+import Clients from './components/Home/Clients';
+import Benefits from './components/Home/Benefits';
 import Integrations from './components/Integraciones';
-import AboutUs from './components/AboutUs';
-import Benefits2 from './components/Benefits2';
+import AboutUs from './components/Home/AboutUs';
+import Benefits2 from './components/Home/Benefits2';
+import BlogIndex from './components/Blog/BlogIndex';
 import WhatsappButton from './components/WhatsappButton';
-import ChestDrawer from './components/ChestDrawer';
+import ChestDrawer from './components/Home/ChestDrawer';
 import { Player } from '@lottiefiles/react-lottie-player';
 import images from "./assets/images/images";
 
@@ -34,7 +35,6 @@ const App = () => {
             <Services />
             <Benefits2 />
             <Testimonials />
-            {/* <ChestDrawer />  */}
             <Contact />
             <WhatsappButton />
           </>
@@ -42,6 +42,12 @@ const App = () => {
 
         {/* Ruta para la página de servicios */}
         <Route path="/servicios" element={<Services />} />
+
+        {/* Ruta para la página de contacto */}
+        <Route path="/contacto" element={<Contact />} />
+
+        {/* Ruta para la página de blog */}
+        <Route path="/blog" element={<BlogIndex />} />
       </Routes>
       <Footer />
     </Router>

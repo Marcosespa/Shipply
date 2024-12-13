@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/chestDrawer.css"; // Asegúrate de crear este archivo CSS
+import "../../styles/chestDrawer.css"; // Asegúrate de crear este archivo CSS
 
 const ChestDrawer = () => {
   return (

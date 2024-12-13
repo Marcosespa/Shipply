@@ -1,7 +1,7 @@
 // src/components/AboutUs.js
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import '../styles/aboutus.css';
+import '../../styles/aboutus.css';
 
 const AboutUs = () => {
   return (
@@ -14,7 +14,7 @@ const AboutUs = () => {
               Somos una empresa de logística fulfillment especializada en diseñar soluciones adaptadas a las necesidades de las empresas E-commerce.
             </p>
             <Row className="info-cards">
-              <Col md={4} className="info-card">
+              <Col md={3} className="info-card">
                 <div className="card-icon">
                   <i className="fas fa-shield-alt"></i>
                 </div>
@@ -26,7 +26,7 @@ const AboutUs = () => {
                 </div>
                 <p>Simplificamos y mejoramos la logística de tu E-commerce.</p>
               </Col>
-              <Col md={4} className="info-card">
+              <Col md={3} className="info-card">
                 <div className="card-icon">
                   <i className="fas fa-balance-scale"></i>
                 </div>

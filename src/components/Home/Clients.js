@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel, Container } from "react-bootstrap";
-import "../styles/clients.css";
+import "../../styles/clients.css";
 
 const Clients = () => {
   return (
