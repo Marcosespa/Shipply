@@ -32,49 +32,49 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        {/* Ruta para la página principal */}
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <Clients />
-              <Benefits />
-              <Integrations />
-              <AboutUs />
-              <Services />
-              <Benefits2 />
-              <Testimonials />
-              <Contact />
-              <WhatsappButton />
-            </>
-          }
-        />
+      <div style={{ minHeight: "100vh", minWidth:"100vh"}}>
+        {" "}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Clients />
+                <Benefits />
+                <Integrations />
+                <AboutUs />
+                <Services />
+                <Benefits2 />
+                <Testimonials />
+                <Contact />
+                <WhatsappButton />
+              </>
+            }
+          />
 
-        {/* Ruta para la página de servicios */}
-        <Route
-          path="/servicios"
-          element={
-            <>
-              <ProcessSection />
-              <IntegracionesSection />
-              <VentajasSection/>
-              <PickingPackingSection />
-              <EnvioSection/>
-              <DevolutionSection/>
-              <DataAnalysisSection/>
+          <Route
+            path="/servicios"
+            element={
+              <>
+                <ProcessSection />
+                <IntegracionesSection />
+                <VentajasSection />
+                <PickingPackingSection />
+                <EnvioSection />
+                <DevolutionSection />
+                <DataAnalysisSection />
+              </>
+            }
+          />
 
-            </>
-          }
-        />
+          {/* Ruta para la página de contacto */}
+          <Route path="/contacto" element={<ContactSection />} />
 
-        {/* Ruta para la página de contacto */}
-        <Route path="/contacto" element={<ContactSection />} />
-
-        {/* Ruta para la página de blog */}
-        <Route path="/blog" element={<BlogIndex />} />
-      </Routes>
+          {/* Ruta para la página de blog */}
+          <Route path="/blog" element={<BlogIndex />} />
+        </Routes>
+      </div>
       <Footer />
     </Router>
   );

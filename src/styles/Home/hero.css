@@ -1,10 +1,28 @@
 .hero-section {
   background-color: #f8f9fa; /* Fondo claro */
-  padding: 5rem 0;
+  padding: 1rem 0;
   position: relative; /* Asegura que esté dentro de su contexto */
   z-index: 1; /* Z-index bajo para no interferir con el NavBar */
   width: 100%; /* Ocupa todo el ancho de la página */
   margin: 0; /* Elimina cualquier margen */
+}
+.container {
+  max-width: 100%; /* Elimina restricciones de ancho */
+  padding: 0; /* Sin espacio interno */
+  margin: 0 auto; /* Centrar el contenido */
+}
+.hero-container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.player-container {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
