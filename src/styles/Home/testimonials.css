@@ -1,49 +1,113 @@
+/* Sección principal */
 .testimonials-section {
-  background-image: url('https://via.placeholder.com/1920x1080'); /* Cambia por tu imagen */
+  background-image: url("https://via.placeholder.com/1920x1080");
   background-size: cover;
   background-position: center;
-  padding: 60px 20px;
+  background-attachment: fixed;
+  padding: 5rem 1rem;
   position: relative;
-  overflow: hidden; /* Asegúrate de que el contenido no desborde */
+  overflow: hidden;
+  color: #fff;
 }
 
-/* .testimonials-section::after {
-  content: '';
+.testimonials-section::after {
+  content: "";
   position: absolute;
   top: 0;
-  right: 0;
-  width: 50%; 
+  left: 0;
+  width: 100%;
   height: 100%;
-  background-color: #ffc107;
-  clip-path: polygon(0 0, 100% 0, 0 100%);
+  background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo para destacar el contenido */
   z-index: 1;
-} */
+}
 
+/* Títulos y descripción */
+.section-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffc107;
+  z-index: 2;
+  position: relative;
+}
+
+.section-description {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* Tarjetas de testimonio */
 .testimonial-card {
   background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
+  z-index: 2;
   position: relative;
-  z-index: 2; /* Para que se muestre encima del triángulo */
+  animation: fadeIn 1.2s ease;
 }
 
 .testimonial-card p {
-  font-size: 16px;
-  color: #333;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: #c0bdbd;
+  line-height: 1.6;
 }
 
 .testimonial-card h5 {
-  font-size: 18px;
-  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #ffc107;
+  font-weight: 600;
 }
 
-.testimonial-card .text-light {
-  font-size: 14px;
-  margin-top: -10px;
+.testimonial-card .company-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
 }
 
-.text-warning {
-  color: #ffc107 !important;
+/* Animación */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-card {
+    padding: 1rem;
+  }
 }

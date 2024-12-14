@@ -1,58 +1,90 @@
+/* Sección principal */
 .footer-section {
-  background-color: #f4f4f4; /* Fondo blanco */
+  background-color: #fff; /* Fondo blanco */
   color: #000; /* Texto negro */
-  padding: 20px 0;
+  padding: 4rem 2rem;
+  border-top: 1px solid #ddd; /* Línea superior sutil */
 }
 
 .footer-logo {
-  max-width: 150px;
-  margin-bottom: 20px;
+  max-width: 100px;
+  margin-bottom: 1rem;
 }
 
-.social-icon {
-  margin-top: 10px;
+/* Títulos */
+.footer-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000;
 }
 
-.instagram-icon {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  border-radius: 50%;
-  color: #fff;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.instagram-icon:hover {
-  transform: scale(1.1);
-}
-
-.footer-menu,
-.footer-contact {
+/* Menú */
+.footer-menu {
   list-style: none;
   padding: 0;
 }
 
-.footer-menu li,
-.footer-contact li {
-  margin-bottom: 10px;
+.footer-menu li {
+  margin-bottom: 0.5rem;
 }
 
 .footer-menu a {
   color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer-menu a:hover {
+  color: #007bff; /* Azul para el hover */
   text-decoration: underline;
 }
 
-.footer-contact i {
-  margin-right: 10px;
+/* Redes sociales */
+.social-icons a i {
+  color: #000;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a i:hover {
+  transform: scale(1.2);
+  color: #007bff; /* Azul en hover */
+}
+
+/* Derechos reservados */
+.footer-rights {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-col {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-logo {
+    max-width: 80px;
+  }
+
+  .footer-menu a {
+    font-size: 0.9rem;
+  }
+
+  .social-icons a {
+    font-size: 1.3rem;
+  }
 }

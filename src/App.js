@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Home/Hero";
 import Features from "./components/Home/Features";
@@ -47,7 +49,6 @@ const App = () => {
                 <Services />
                 <Benefits2 />
                 <Testimonials />
-                <Contact />
                 <WhatsappButton />
               </>
             }

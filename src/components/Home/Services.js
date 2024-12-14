@@ -11,22 +11,46 @@ const Services = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate");
-          } else {
-            entry.target.classList.remove("animate"); // Opcional: para repetir animaciones
           }
         });
       },
       {
-        threshold: 0.1, // Porcentaje visible para activar la animación
+        threshold: 0.1,
       }
     );
 
     const elements = servicesRef.current.querySelectorAll(".service-card");
     elements.forEach((el) => observer.observe(el));
 
-    // Limpieza al desmontar el componente
     return () => observer.disconnect();
   }, []);
+
+  const services = [
+    {
+      icon: "bi bi-box-seam",
+      title: "Almacenamiento",
+      description:
+        "Recolectamos, clasificamos y almacenamos tus productos de acuerdo a su naturaleza y especificaciones, en nuestras bodegas especializadas.",
+    },
+    {
+      icon: "bi bi-arrow-left-right",
+      title: "Cross-docking",
+      description:
+        "Recibimos tus órdenes, recepcionamos tus productos, armamos, etiquetamos y empacamos tus pedidos sin almacenar.",
+    },
+    {
+      icon: "bi bi-box2-heart",
+      title: "Picking / Packing",
+      description:
+        "Seleccionamos tus productos, realizamos el alistamiento de tus órdenes de pedido, etiquetamos y empacamos a tu medida.",
+    },
+    {
+      icon: "bi bi-truck",
+      title: "Envío",
+      description:
+        "Te ofrecemos diversas alternativas de transporte de acuerdo a tu necesidad.",
+    },
+  ];
 
   return (
     <div className="services-section" ref={servicesRef}>
@@ -37,39 +61,19 @@ const Services = () => {
           crecimiento de tu E-commerce.
         </p>
         <Row className="mt-4 justify-content-center align-items-stretch">
-          <Col md={2} sm={6} className="service-card d-flex flex-column">
-            <i className="bi bi-box-seam icon-service"></i>
-            <h4>Almacenamiento</h4>
-            <p>
-              Recolectamos, clasificamos y almacenamos tus productos de acuerdo
-              a su naturaleza y especificaciones, en nuestras bodegas
-              especializadas.
-            </p>
-          </Col>
-          <Col md={2} sm={6} className="service-card d-flex flex-column">
-            <i className="bi bi-arrow-left-right icon-service"></i>
-            <h4>Cross-docking</h4>
-            <p>
-              Recibimos tus órdenes, recepcionamos tus productos, armamos,
-              etiquetamos y empacamos tus pedidos sin almacenar.
-            </p>
-          </Col>
-          <Col md={2} sm={6} className="service-card d-flex flex-column">
-            <i className="bi bi-box2-heart icon-service"></i>
-            <h4>Picking / Packing</h4>
-            <p>
-              Seleccionamos tus productos, realizamos el alistamiento de tus
-              órdenes de pedido, etiquetamos y empacamos a tu medida.
-            </p>
-          </Col>
-          <Col md={2} sm={6} className="service-card d-flex flex-column">
-            <i className="bi bi-truck icon-service"></i>
-            <h4>Envío</h4>
-            <p>
-              Te ofrecemos diversas alternativas de transporte de acuerdo a tu
-              necesidad.
-            </p>
-          </Col>
+          {services.map((service, index) => (
+            <Col
+              key={index}
+              md={2}
+              sm={6}
+              xs={12}
+              className="service-card d-flex flex-column"
+            >
+              <i className={`${service.icon} icon-service`}></i>
+              <h4>{service.title}</h4>
+              <p>{service.description}</p>
+            </Col>
+          ))}
         </Row>
         <div className="text-center mt-5">
           <Button variant="warning" size="lg" className="cta-button">
