@@ -6,11 +6,6 @@
   width: 100%; /* Ocupa todo el ancho de la página */
   margin: 0; /* Elimina cualquier margen */
 }
-.container {
-  max-width: 100%; /* Elimina restricciones de ancho */
-  padding: 0; /* Sin espacio interno */
-  margin: 0 auto; /* Centrar el contenido */
-}
 .hero-container {
   width: 100%;
   padding: 0 15px;

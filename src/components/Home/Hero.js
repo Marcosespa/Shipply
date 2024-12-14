@@ -61,7 +61,9 @@ const Hero = () => {
                 </svg>
               </span>
             </button>
-            <p className="hero-text mt-3">La mudanza corre por cuenta nuestra</p>
+            <p className="hero-text mt-3">
+              La mudanza corre por cuenta nuestra
+            </p>
           </Col>
           <Col md={6} className="image-container">
             <div className="player-container">
