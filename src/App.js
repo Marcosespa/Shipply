@@ -10,7 +10,7 @@ import Contact from "./components/Home/Contact";
 import Footer from "./components/Footer";
 import Clients from "./components/Home/Clients";
 import Benefits from "./components/Home/Benefits";
-import Integrations from "./components/Home/Integraciones";
+import Integrations from "./components/Home/Integrations";
 import AboutUs from "./components/Home/AboutUs";
 import Benefits2 from "./components/Home/Benefits2";
 import BlogIndex from "./components/Blog/BlogIndex";

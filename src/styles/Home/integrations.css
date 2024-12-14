@@ -1,7 +1,26 @@
 /* src/components/Integrations.css */
 .integrations-section {
   background-color: #f4f4f4; /* Fondo gris */
+  
 }
+
+.integrations-title {
+  font-family: "Poppins", sans-serif; /* Fuente moderna */
+  color: #333;
+  position: relative;
+}
+
+.integrations-title::after {
+  content: "";
+  width: 100px;
+  height: 4px;
+  background-color: #f4d03f; /* Subrayado amarillo */
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 
 .integrations-section h2 {
   font-size: 1.8rem;
@@ -38,5 +57,31 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .integrations-title {
+    font-size: 2rem;
+  }
+
+  .carousel-track {
+    gap: 2rem; /* Reduce el espacio entre logos */
+  }
+
+  .integration-logo {
+    height: 60px; /* Tamaño reducido */
+  }
+}
+
+@media (max-width: 576px) {
+  .integration-logo {
+    height: 50px; /* Logos más pequeños en pantallas móviles */
+  }
+
+  .integrations-title {
+    font-size: 1.8rem;
   }
 }

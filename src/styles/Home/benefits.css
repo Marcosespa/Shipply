@@ -1,6 +1,8 @@
 /* src/components/Benefits.css */
 .benefits-section {
   background-color: #f9f9f9;
+  padding: 4rem 1rem; /* Espaciado uniforme */
+
 }
 
 .benefits-section h5 {
@@ -12,7 +14,13 @@
   color: #000; /* Negro */
   font-weight: bold;
 }
-
+.benefits-subtitle {
+  font-family: "Poppins", sans-serif; /* Fuente moderna */
+  color: #f4c20f; /* Amarillo brillante */
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 .benefit-item {
   padding: 20px;
 }
