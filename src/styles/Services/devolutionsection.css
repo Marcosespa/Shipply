@@ -1,0 +1,63 @@
+.devolution-section {
+  background-color: #333333; /* Fondo gris oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+.devolution-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffc107; /* Amarillo */
+}
+
+.devolution-section p {
+  font-size: 1.2rem;
+  color: #dddddd; /* Gris claro */
+}
+
+.advantages h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.advantages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.advantages ul li {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: #000000; /* Botón negro */
+  color: #ffffff; /* Texto blanco */
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #555555; /* Botón más claro */
+}
+
+.image-container {
+  position: relative;
+}
+
+.main-image {
+  border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
+.decorator {
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  background-color: #ffc107; /* Decoración amarilla */
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+  z-index: -1; /* Coloca detrás de la imagen */
+}

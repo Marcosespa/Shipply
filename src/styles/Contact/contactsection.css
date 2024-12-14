@@ -1,0 +1,64 @@
+.contact-section {
+  background-color: #ffffff; /* Fondo blanco */
+}
+
+.contact-section .title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.contact-section .highlight {
+  color: #ffc107; /* Amarillo */
+  font-weight: bold;
+}
+
+.contact-section .illustration {
+  max-width: 80%; /* Ajusta el tamaño de la ilustración */
+  margin-top: 1rem;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  color: #ffc107; /* Amarillo */
+  font-weight: bold;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+button {
+  background-color: #000000; /* Botón negro */
+  color: #ffffff; /* Texto blanco */
+  font-size: 1rem;
+  padding: 0.8rem;
+}
+
+button:hover {
+  background-color: #333333; /* Botón más claro */
+}
+
+.social-text {
+  font-size: 0.9rem;
+  color: #555555;
+  text-align: center;
+}
+.social-icons {
+  display: flex;
+  justify-content: center; /* Alinea los íconos horizontalmente */
+  align-items: center; /* Asegura que estén verticalmente alineados */
+  margin-top: 1rem; /* Espaciado superior */
+  gap: 15px; /* Espaciado uniforme entre los íconos */
+}
+
+.social-icons i {
+  font-size: 1.5rem;
+  color: #ffc107; /* Amarillo */
+  cursor: pointer;
+}
+
+.social-icons i:hover {
+  color: #333333; /* Gris oscuro al pasar el mouse */
+}

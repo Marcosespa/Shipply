@@ -3,6 +3,7 @@ import images from "../assets/images/images";
 import { Navbar, Nav, Button, Container, NavDropdown } from "react-bootstrap";
 import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
+import { FaUsers, FaPhoneAlt } from "react-icons/fa"; // Importar íconos
 
 const NavigationBar = () => {
   return (
@@ -58,15 +59,15 @@ const NavigationBar = () => {
           </Nav>
           <Button
             variant="warning"
-            className="btn-custom ms-2"
+            className="btn-custom ms-2 d-flex align-items-center"
             href="https://control.logystix.co/site/login"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Portal Clientes
+            <FaUsers className="me-2" /> Portal Clientes
           </Button>
-          <Button variant="warning" className="btn-custom ms-2">
-            Contactar
+          <Button variant="warning" className="btn-custom ms-2 d-flex align-items-center">
+            <FaPhoneAlt className="me-2" /> Contactar
           </Button>
         </Navbar.Collapse>
       </Container>

@@ -18,10 +18,15 @@ import WhatsappButton from "./components/WhatsappButton";
 import ChestDrawer from "./components/Home/ChestDrawer";
 import { Player } from "@lottiefiles/react-lottie-player";
 import images from "./assets/images/images";
+
 import ProcessSection from "./components/Services/ProcessSection";
 import IntegracionesSection from "./components/Services/IntegracionesSection";
 import VentajasSection from "./components/Services/VentajasSection";
-
+import PickingPackingSection from "./components/Services/PickingPackingSection";
+import DataAnalysisSection from "./components/Services/DataAnalysisSection";
+import DevolutionSection from "./components/Services/DevolutionSection";
+import EnvioSection from "./components/Services/EnvioSection";
+import ContactSection from "./components/Contact/ContactSection";
 
 const App = () => {
   return (
@@ -55,12 +60,17 @@ const App = () => {
               <ProcessSection />
               <IntegracionesSection />
               <VentajasSection/>
+              <PickingPackingSection />
+              <EnvioSection/>
+              <DevolutionSection/>
+              <DataAnalysisSection/>
+
             </>
           }
         />
 
         {/* Ruta para la página de contacto */}
-        <Route path="/contacto" element={<Contact />} />
+        <Route path="/contacto" element={<ContactSection />} />
 
         {/* Ruta para la página de blog */}
         <Route path="/blog" element={<BlogIndex />} />

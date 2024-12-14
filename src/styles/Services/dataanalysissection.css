@@ -1,0 +1,58 @@
+.data-analysis-section {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #333333; /* Texto gris oscuro */
+}
+
+.data-analysis-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffc107; /* Amarillo */
+}
+
+.data-analysis-section p {
+  font-size: 1.2rem;
+  color: #555555; /* Gris medio */
+}
+
+.advantages h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.advantages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.advantages ul li {
+  font-size: 1rem;
+  color: #777777; /* Gris claro */
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background-color: #000000; /* Botón negro */
+  color: #ffffff; /* Texto blanco */
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #333333; /* Botón más claro */
+}
+
+.main-image {
+  border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
+.decorator {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  background-color: #ffc107; /* Decoración amarilla */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
