@@ -6,17 +6,31 @@
 
 /* Título de la sección */
 .section-title {
+  font-family: "Poppins", sans-serif; /* Fuente moderna */
   font-size: 2.5rem;
-  font-weight: bold;
-  color: #ffc107;
+  font-weight: 600;
+  color: #f4c20f; /* Amarillo brillante */
   text-align: center;
   margin-bottom: 1.5rem;
+}
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #f4c20f;
+  display: block;
+  margin: 0 auto; /* Centra el subrayado */
+  position: absolute; /* Permite posicionamiento relativo al título */
+  bottom: -10px; /* Ajusta la distancia exacta debajo del texto */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Compensa el ancho para centrarlo */
 }
 
 /* Descripción */
 .section-description {
-  font-size: 1.1rem;
-  color: #555555;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #666;
   text-align: center;
   margin-bottom: 2.5rem;
   line-height: 1.6;
@@ -24,23 +38,28 @@
 
 /* Tarjetas de información */
 .info-cards {
+  font-family: "Poppins", sans-serif; /* O Roboto/Lato como alternativa */
+  font-size: 1rem; /* Tamaño de fuente cómodo para lectura */
+  font-weight: 400; /* Peso ligero */
+  color: #555555; /* Gris suave */
+
   display: flex;
-  justify-content: space-between; /* Distribución uniforme */
+  justify-content: space-between;
   gap: 1rem;
 }
 
 .info-card {
   background-color: #ffc107;
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
   color: #000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .info-card:hover {
-  transform: translateY(-5px); /* Efecto de elevación */
+  transform: translateY(-8px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -53,7 +72,7 @@
 .card-icon {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #f4c20f;
 }
 
 /* Imagen */
@@ -61,16 +80,37 @@
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 /* Responsividad */
 @media (max-width: 768px) {
   .info-cards {
     flex-direction: column;
     gap: 1.5rem;
-    height: 10px;
   }
 
   .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .section-description {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .info-card {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .card-icon {
     font-size: 2rem;
   }
 }
