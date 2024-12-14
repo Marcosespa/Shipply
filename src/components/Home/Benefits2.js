@@ -4,11 +4,17 @@ import '../../styles/Home/benefits2.css';
 import images from "../../assets/images/images";
 
 const Benefits2 = () => {
+  const benefits = [
+    { icon: "bi bi-shield-check", title: "Seguridad y soporte 24/7" },
+    { icon: "bi bi-lightning-fill", title: "Velocidad de respuesta" },
+    { icon: "bi bi-gear-fill", title: "Tecnología especializada" },
+  ];
+
   return (
     <div className="benefits-section">
       <Container>
         <Row className="align-items-center">
-          {/* Columna de logo y cajas */}
+          {/* Columna del logo */}
           <Col md={6} className="text-center logo-container">
             <img
               src={images.logo2}
@@ -16,22 +22,19 @@ const Benefits2 = () => {
               className="img-fluid logo-image"
             />
           </Col>
-          <Col md={6} className="text-center">
-            <h2 className="text-warning">Beneficios</h2>
-            <p>Nos enfocamos en ofrecer servicios de calidad para que hagas crecer tu negocio.</p>
+          {/* Columna de beneficios */}
+          <Col md={6}>
+            <h2 className="section-title text-warning">Beneficios</h2>
+            <p className="section-description">
+              Nos enfocamos en ofrecer servicios de calidad para que hagas crecer tu negocio.
+            </p>
             <Row className="mt-4 justify-content-center">
-              <Col md={4} sm={6} className="benefit-card">
-                <i className="bi bi-shield-check icon-benefit"></i>
-                <h4>Seguridad y soporte 24/7</h4>
-              </Col>
-              <Col md={4} sm={6} className="benefit-card">
-                <i className="bi bi-lightning-fill icon-benefit"></i>
-                <h4>Velocidad de respuesta</h4>
-              </Col>
-              <Col md={4} sm={6} className="benefit-card">
-                <i className="bi bi-gear-fill icon-benefit"></i>
-                <h4>Tecnología especializada</h4>
-              </Col>
+              {benefits.map((benefit, index) => (
+                <Col key={index} md={4} sm={6} xs={12} className="benefit-card">
+                  <i className={`${benefit.icon} icon-benefit`}></i>
+                  <h4>{benefit.title}</h4>
+                </Col>
+              ))}
             </Row>
           </Col>
         </Row>

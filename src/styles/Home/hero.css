@@ -14,7 +14,6 @@
 }
 .hero-container {
   width: 100%;
-  max-width: 1200px; /* Restringe el ancho máximo */
   margin: 0 auto;
   padding: 0 15px;
 }
