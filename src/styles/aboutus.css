@@ -1,38 +1,76 @@
-/* src/components/AboutUs.css */
+/* Sección principal */
 .about-us-section {
-  background-color: #ffffff;
-  padding: 3rem 0;
+  background-color: #f9f9f9; /* Fondo claro */
+  padding: 5rem 0;
 }
 
-.text-section h2 {
-  font-size: 2rem;
+/* Título de la sección */
+.section-title {
+  font-size: 2.5rem;
   font-weight: bold;
   color: #ffc107;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.text-section p {
+/* Descripción */
+.section-description {
   font-size: 1.1rem;
-  color: #333333;
-  margin-bottom: 2rem;
+  color: #555555;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
 }
+
+/* Tarjetas de información */
 .info-cards {
   display: flex;
-  justify-content: space-between; /* Espaciado uniforme entre cuadros */
-  gap: 0; /* Sin espacio extra entre los cuadros */
+  justify-content: space-between; /* Distribución uniforme */
+  gap: 1rem;
 }
 
 .info-card {
   background-color: #ffc107;
-  padding: 1rem;
-  border-radius: 8px;
+  padding: 1.5rem;
+  border-radius: 10px;
   text-align: center;
   color: #000;
-  flex: 1; /* Igual ancho para cada cuadro */
-  margin: 0; /* Elimina márgenes */
-  max-width: 30%; /* Limita el tamaño */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.info-card:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .info-card p {
   font-size: 0.9rem;
-  margin: 0;
+  margin-top: 0.5rem;
+  color: #333;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Imagen */
+.image-section img {
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .info-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 10px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
 }
