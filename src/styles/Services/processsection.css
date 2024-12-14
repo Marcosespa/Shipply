@@ -1,0 +1,23 @@
+.process-section {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 4rem 0;
+}
+
+.process-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffc107; /* Amarillo */
+}
+
+.process-section p {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+
+.process-image img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

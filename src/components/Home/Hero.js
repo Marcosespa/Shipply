@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Container, Button, Row, Col } from "react-bootstrap";
-import "../styles/hero.css";
+import "../../styles/Home/hero.css";
 import { Player } from "@lottiefiles/react-lottie-player";
-import images from "../assets/images/images";
+import images from "../../assets/images/images";
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);

@@ -7,56 +7,49 @@ const Footer = () => {
   return (
     <footer className="footer-section">
       <Container>
-        <Row className="align-items-center">
-          {/* Logo */}
-          <Col md={4} className="text-center">
+        <Row>
+          {/* Logo y social media */}
+          <Col md={4} className="footer-col">
+            <div className="footer-logo">
             <img src={images.logo1} alt="Logo" className="footer-logo" />
-            <div className="social-icon">
-              <a
-                href="https://www.instagram.com/shipply.col/"
-                target="_blank"
-                rel="noreferrer"
-                className="instagram-icon"
-              >
-                <i className="bi bi-instagram"></i>
+            </div>
+            <div className="social-icons">
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+                <i className="fab fa-linkedin"></i>
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
+                <i className="fab fa-youtube"></i>
               </a>
             </div>
           </Col>
 
-          {/* Menú */}
-          <Col md={4}>
-            <h5 className="text-warning">Menú</h5>
+          {/* Sección de menú */}
+          <Col md={4} className="footer-col">
+            <h5>Menú</h5>
             <ul className="footer-menu">
-              <li>
-                <a href="#inicio">Inicio</a>
-              </li>
-              <li>
-                <a href="#servicios">Servicios</a>
-              </li>
-              <li>
-                <a href="#contacto">Contacto</a>
-              </li>
-              <li>
-                <a href="#privacidad">Política de privacidad</a>
-              </li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#casos">Casos de éxito</a></li>
+              <li><a href="#talento">Talento</a></li>
+              <li><a href="#prensa">Prensa y medios</a></li>
             </ul>
           </Col>
 
-          {/* Contacto */}
-          <Col md={4}>
-            <h5 className="text-warning">Contacto</h5>
-            <ul className="footer-contact">
-              <li>
-                <i className="bi bi-telephone"></i> +57 3184516959
-              </li>
-              <li>
-                <i className="bi bi-envelope"></i> alejandrareina@shipply.com.co
-              </li>
-              <li>
-                <i className="bi bi-geo-alt"></i> Carrera 36 # 11A-32, Bogotá,
-                Colombia
-              </li>
+          {/* Política de privacidad */}
+          <Col md={4} className="footer-col">
+            <h5>Privacidad</h5>
+            <ul className="footer-menu">
+              <li><a href="#privacidad">Política de privacidad</a></li>
+              <li><a href="#datos">Protección de datos</a></li>
+              <li><a href="#mexico">Aviso de privacidad México</a></li>
             </ul>
+          </Col>
+        </Row>
+        <Row className="text-center mt-3">
+          <Col>
+            <p>© 2025 Todos los derechos reservados.</p>
           </Col>
         </Row>
       </Container>

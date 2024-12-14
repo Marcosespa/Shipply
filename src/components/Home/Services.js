@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import "../../styles/services.css";
+import "../../styles/Home/services.css";
 
 const Services = () => {
   const servicesRef = useRef(null);

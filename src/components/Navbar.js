@@ -20,18 +20,30 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavDropdown title="Servicios" id="basic-nav-dropdown">
+            {/* Botón principal de Servicios */}
+            <NavDropdown
+              title={
+                <span
+                  onClick={() => {
+                    window.location.href = "/servicios"; // Redirige a Servicios
+                  }}
+                >
+                  Servicios
+                </span>
+              }
+              id="basic-nav-dropdown"
+            >
               <NavDropdown.Item as={Link} to="/servicios#integraciones">
                 Integraciones
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/servicios#almacentamiento">
+              <NavDropdown.Item as={Link} to="/servicios#almacenamiento">
                 Almacenamiento
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/servicios#picking">
                 Picking / Packing
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/servicios#envios">
-                Envio
+                Envío
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/contacto">
@@ -48,8 +60,8 @@ const NavigationBar = () => {
             variant="warning"
             className="btn-custom ms-2"
             href="https://control.logystix.co/site/login"
-            target="_blank" // Abre el enlace en una nueva pestaña
-            rel="noopener noreferrer" // Mejora la seguridad para enlaces externos
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Portal Clientes
           </Button>

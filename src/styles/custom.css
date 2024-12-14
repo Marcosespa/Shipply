@@ -1,22 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-/* body {
-  background-color: #dbe510;
-}
-
-h1 {
-  color: #e7e01b;
-}
-src/styles/custom.css */
 body {
+  background-color: #f9f9f9;
   font-family: 'Poppins', sans-serif;
+  color: #333;
   margin: 0;
   padding: 0;
-
 }
 
 h1 {
-  color: #000; /* Texto principal negro */
+  color: #000; /* Negro */
 }
 
 h5 {
@@ -26,21 +19,21 @@ h5 {
 .btn-warning {
   background-color: #ffc107;
   border: none;
+  color: #000;
+  font-weight: bold;
 }
 
-.navbar-light .navbar-brand img {
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  min-height: 80px;
+}
+
+.navbar-brand img {
   max-height: 50px;
 }
 
-.navbar-light .nav-link {
+.nav-link {
   font-weight: 600;
-}
-
-.navbar-light .btn-warning {
-  color: #000;
-  font-weight: 700;
-}
-.navbar {
-  min-height: 80px; /* Ajusta según el tamaño de tu logo */
-  padding: 0.5rem 1rem; /* Ajusta el espaciado si es necesario */
 }

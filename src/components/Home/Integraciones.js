@@ -1,7 +1,7 @@
 // src/components/Integrations.js
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import '../styles/integrations.css';
+import "../../styles/Home/integrations.css";
 
 const Integrations = () => {
   return (
