@@ -17,31 +17,61 @@
   z-index: 1;
 }
 
+.section-title {
+  font-family: "Poppins", sans-serif;
+  color: #ffc107;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
 .service-card {
   background-color: #ffc107; /* Fondo amarillo */
   border-radius: 8px;
   padding: 15px;
   min-height: 150px; /* Altura mínima para todas las cajas */
   /* height: 100%; Asegura que todas las cajas llenen el espacio */
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
 }
-
+.service-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+.service-card:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
 .service-card h4 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #333;
+
 }
 
 .service-card p {
-  font-size: 14px;
-  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #444;
+  margin-top: 0.5rem;
+  line-height: 1.5;
 }
 
 .icon-service {
-  font-size: 40px;
+  font-size: 3rem;
   margin-bottom: 15px;
   color: #000; /* Ícono negro */
 }
@@ -79,4 +109,49 @@
 .service-card.animate {
   opacity: 1;
   transform: translateY(1);
+}
+
+
+.cta-button {
+  background-color: #ffc107;
+  border: none;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+cta-button:hover {
+  background-color: #f7c846;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .service-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .icon-service {
+    font-size: 2.5rem;
+  }
 }

@@ -31,13 +31,13 @@ const Services = () => {
   return (
     <div className="services-section" ref={servicesRef}>
       <Container>
-        <h2 className="text-center text-warning">Servicios</h2>
-        <p className="text-center text-light">
+        <h2 className="text-center section-title">Nuestros Servicios</h2>
+        <p className="text-center section-description">
           En Shipply encontrarás una serie de servicios que facilitarán el
           crecimiento de tu E-commerce.
         </p>
         <Row className="mt-4 justify-content-center align-items-stretch">
-          <Col md={2} sm={6} className="service-card">
+          <Col md={2} sm={6} className="service-card d-flex flex-column">
             <i className="bi bi-box-seam icon-service"></i>
             <h4>Almacenamiento</h4>
             <p>
@@ -46,7 +46,7 @@ const Services = () => {
               especializadas.
             </p>
           </Col>
-          <Col md={2} sm={6} className="service-card">
+          <Col md={2} sm={6} className="service-card d-flex flex-column">
             <i className="bi bi-arrow-left-right icon-service"></i>
             <h4>Cross-docking</h4>
             <p>
@@ -54,7 +54,7 @@ const Services = () => {
               etiquetamos y empacamos tus pedidos sin almacenar.
             </p>
           </Col>
-          <Col md={2} sm={6} className="service-card">
+          <Col md={2} sm={6} className="service-card d-flex flex-column">
             <i className="bi bi-box2-heart icon-service"></i>
             <h4>Picking / Packing</h4>
             <p>
@@ -62,7 +62,7 @@ const Services = () => {
               órdenes de pedido, etiquetamos y empacamos a tu medida.
             </p>
           </Col>
-          <Col md={2} sm={6} className="service-card">
+          <Col md={2} sm={6} className="service-card d-flex flex-column">
             <i className="bi bi-truck icon-service"></i>
             <h4>Envío</h4>
             <p>
@@ -71,8 +71,8 @@ const Services = () => {
             </p>
           </Col>
         </Row>
-        <div className="text-center mt-4">
-          <Button variant="warning" size="lg">
+        <div className="text-center mt-5">
+          <Button variant="warning" size="lg" className="cta-button">
             Conoce nuestros servicios
           </Button>
         </div>
