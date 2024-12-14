@@ -1,11 +1,12 @@
+
 .hero-section {
   background-color: #f8f9fa; /* Fondo claro */
-  padding: 1rem 0;
-  position: relative; /* Asegura que esté dentro de su contexto */
-  z-index: 1; /* Z-index bajo para no interferir con el NavBar */
-  width: 100%; /* Ocupa todo el ancho de la página */
-  margin: 0; /* Elimina cualquier margen */
+  padding: 2rem 1rem; /* Más espacio en el contenedor */
+  width: 100%;
+  margin: 0; /* Elimina márgenes externos */
 }
+
+
 .container {
   max-width: 100%; /* Elimina restricciones de ancho */
   padding: 0; /* Sin espacio interno */
@@ -13,9 +14,11 @@
 }
 .hero-container {
   width: 100%;
-  padding: 0 15px;
+  max-width: 1200px; /* Restringe el ancho máximo */
   margin: 0 auto;
+  padding: 0 15px;
 }
+
 
 .player-container {
   height: 400px;
@@ -39,7 +42,13 @@
   margin-bottom: 1rem;
 }
 
+
+
+
 .hero-title {
+  font-family: "Poppins", sans-serif; /* Tipografía consistente */
+  line-height: 1.3; /* Aumenta la legibilidad */
+
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
@@ -61,6 +70,9 @@
 }
 /* Botón Estilizado con Colores Uniformes */
 .button {
+  font-family: "Poppins", sans-serif; /* Consistencia en la fuente */
+  font-size: 1rem;
+
   display: flex;
   justify-content: center; /* Centra horizontalmente el contenido */
   align-items: center; /* Centra verticalmente el contenido */
@@ -77,6 +89,12 @@
   font-size: 1em;
   font-weight: 700;
   letter-spacing: 0.5px;
+}
+.hero-text {
+  color: #6c757d; /* Gris tenue */
+  font-family: "Poppins", sans-serif; /* Tipografía consistente */
+  font-size: 1.2rem;
+  margin-top: 2rem; /* Más espacio entre el texto y el botón */
 }
 
 .svg {
