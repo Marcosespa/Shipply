@@ -1,14 +1,13 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import "../../styles/Services/processsection.css";
 import images from "../../assets/images/images";
 
 const ProcessSection = () => {
   return (
     <section className="process-section text-center py-5">
-      <Container>
-        <h2 className="text-warning">Conoce Nuestro Proceso Integral</h2>
-        <p className="mb-5">
+      <div className="custom-container">
+        <h2 className="section-title">Conoce Nuestro Proceso Integral</h2>
+        <p className="section-description">
           Operamos desde la primera milla para BigCommerce hasta la entrega final para tus clientes
         </p>
         <div className="process-image">
@@ -19,9 +18,10 @@ const ProcessSection = () => {
             loading="lazy"
           />
         </div>
-      </Container>
+      </div>
     </section>
   );
 };
 
 export default ProcessSection;
+
