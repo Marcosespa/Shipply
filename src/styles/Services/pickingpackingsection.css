@@ -86,27 +86,24 @@
 }
 
 /* Imagen */
-.image-container {
-  position: relative;
-}
-
-.animated-image {
-  max-width: 90%;
-  height: auto;
+.fade-in-image {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInZoom 1s ease forwards;
   border-radius: 8px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  animation: float 3s ease-in-out infinite; /* Efecto flotante */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-/* Efecto flotante */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 
 /* Responsividad */
 @media (max-width: 768px) {

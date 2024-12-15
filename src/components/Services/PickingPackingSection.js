@@ -12,24 +12,18 @@ const PickingPackingSection = () => {
           <Col md={6}>
             <h2 className="section-title">Picking / Packing</h2>
             <p className="section-description mb-4">
-              Seleccionamos tus productos, realizamos el alistamiento de tus
-              órdenes de pedido, etiquetamos y empacamos a tu medida.
+              Seleccionamos tus productos, realizamos el alistamiento de tus órdenes de pedido, etiquetamos y empacamos a tu medida.
             </p>
             <p className="highlighted-text">
               <strong>
-                Ofrecemos seguridad a tu inventario: verificamos la calidad de
-                tus productos al llegar a nuestros centros logísticos, y
-                realizamos un chequeo de tus pedidos antes de ser enviados a tu
-                cliente final.
+                Ofrecemos seguridad a tu inventario: verificamos la calidad de tus productos al llegar a nuestros centros logísticos, y realizamos un chequeo de tus pedidos antes de ser enviados a tu cliente final.
               </strong>
             </p>
             <div className="advantages">
-              <h5 className="advantages-title">Ventajas</h5>
+              <h5 className="advantages-title mb-3">Ventajas</h5>
               <ul className="advantages-list">
                 <li>
-                  Contamos con diferentes soluciones de packaging de acuerdo a
-                  tus necesidades, manteniendo el branding de tu marca, para que
-                  tu cliente viva toda una experiencia de compra.
+                  Contamos con diferentes soluciones de packaging de acuerdo a tus necesidades, manteniendo el branding de tu marca, para que tu cliente viva toda una experiencia de compra.
                 </li>
               </ul>
             </div>
@@ -40,14 +34,12 @@ const PickingPackingSection = () => {
           </Col>
           {/* Imagen a la derecha */}
           <Col md={6} className="text-center">
-            <div className="image-container">
-              <img
-                src={images.pickingPackingImage}
-                alt="Picking Packing"
-                className="img-fluid animated-image"
-                loading="lazy"
-              />
-            </div>
+            <img
+              src={images.pickingPackingImage}
+              alt="Picking Packing"
+              className="img-fluid fade-in-image"
+              loading="lazy"
+            />
           </Col>
         </Row>
       </Container>
