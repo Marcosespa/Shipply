@@ -9,9 +9,9 @@ const VentajasSection = () => {
     <section className="ventajas-section py-5">
       <Container>
         <Row className="align-items-center">
-          {/* Imagen a la izquierda */}
+          {/* Animación a la izquierda */}
           <Col md={6} className="text-center">
-          <div className="container">
+            <div className="player-container">
               <Player
                 src={images.logo6}
                 className="player"
@@ -23,11 +23,12 @@ const VentajasSection = () => {
           </Col>
           {/* Texto a la derecha */}
           <Col md={6}>
-            <h2 className="text-warning">Almacenamiento</h2>
-            <p className="mb-4">
-              Recolectamos, clasificamos y almacenamos tus productos de acuerdo a su naturaleza.
+            <h2 className="section-title">Almacenamiento</h2>
+            <p className="section-description">
+              Recolectamos, clasificamos y almacenamos tus productos de acuerdo
+              a su naturaleza.
             </p>
-            <p>
+            <p className="highlighted-text">
               <strong>
                 Contamos con bodegas especializadas en las principales ciudades
                 de Colombia, las cuales funcionan con un modelo de almacenamiento optimizado
@@ -35,8 +36,8 @@ const VentajasSection = () => {
               </strong>
             </p>
             <div className="advantages">
-              <h5 className="text-warning mb-3">Ventajas</h5>
-              <ul>
+              <h5 className="advantages-title">Ventajas</h5>
+              <ul className="advantages-list">
                 <li>Costos bajos</li>
                 <li>Seguridad de tu inventario las 24/7</li>
                 <li>
@@ -45,7 +46,7 @@ const VentajasSection = () => {
                 </li>
               </ul>
             </div>
-            <Button variant="dark" className="mt-3">
+            <Button variant="dark" className="cta-button mt-3">
               <i className="bi bi-whatsapp me-2"></i>
               Cotizar ahora
             </Button>

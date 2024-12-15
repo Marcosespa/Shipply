@@ -1,43 +1,144 @@
+/* Sección principal */
 .ventajas-section {
-  background-color: #ffffff; /* Fondo blanco */
+  background-color: #ffffff; /* Fondo gris claro */
+  padding: 4rem 1rem;
+  border-top: 1px solid #e0e0e0; /* Línea superior sutil */
 }
 
-.ventajas-section h2 {
-  font-size: 2rem;
-  font-weight: bold;
+/* Títulos */
+.section-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: #ffc107; /* Amarillo */
+  margin-bottom: 1.5rem;
 }
 
-.ventajas-section p {
+.advantages-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffc107; /* Amarillo */
+  margin-bottom: 1rem;
+}
+
+/* Descripciones */
+.section-description {
+  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   color: #333333;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-.advantages h5 {
-  font-size: 1.2rem;
-  font-weight: bold;
+.highlighted-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  background-color: #fff9e6; /* Fondo suave */
+  padding: 0.5rem 1rem;
+  border-left: 4px solid #ffc107;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
 }
 
-.advantages ul {
+/* Lista de ventajas */
+.advantages-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.advantages ul li {
+.advantages-list li {
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   color: #555555;
-  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 20px;
 }
 
-button {
+.advantages-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  font-size: 1rem;
+  color: #ffc107; /* Icono amarillo */
+}
+
+/* Botón */
+.cta-button {
   background-color: #000000; /* Botón negro */
   color: #ffffff; /* Texto blanco */
   border: none;
+  font-family: "Poppins", sans-serif;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover {
-  background-color: #333333; /* Botón más claro al pasar el mouse */
+.cta-button:hover {
+  background-color: #333333; /* Botón más claro */
+  transform: translateY(-2px); /* Levanta el botón */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Player */
+.player-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .highlighted-text {
+    font-size: 1rem;
+  }
+
+  .advantages-title {
+    font-size: 1.3rem;
+  }
+
+  .advantages-list li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .player-container {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+  .highlighted-text {
+    font-size: 0.9rem;
+  }
 }

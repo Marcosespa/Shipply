@@ -1,48 +1,117 @@
+/* Sección principal */
 .integraciones-section {
-  background-color: #ffffff; /* Fondo blanco */
+  background-color: #f9f9f9; /* Gris claro */
+  padding: 4rem 1rem;
+  border-top: 1px solid #e0e0e0; /* Línea superior sutil */
 }
 
+/* Imagen */
 .integration-image {
-  max-width: 100%; /* Imagen responsiva */
+  max-width: 90%;
   height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  animation: float 3s ease-in-out infinite; /* Animación flotante */
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffc107; /* Amarillo */
+/* Efecto flotante */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
-p {
+/* Títulos */
+.section-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffc107;
+  margin-bottom: 1.5rem;
+}
+
+/* Descripciones */
+.section-description {
+  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   color: #333333;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
-.advantages h5 {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.advantages ul {
+/* Lista de ventajas */
+.advantages-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.advantages ul li {
+.advantages-list li {
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   color: #555555;
-  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 20px;
 }
 
-button {
-  background-color: #000000; /* Botón negro */
-  color: #ffffff; /* Texto blanco */
+.advantages-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  font-size: 1rem;
+  color: #ffc107;
+}
+
+/* Botón */
+.cta-button {
+  background-color: #000000;
+  color: #ffffff;
   border: none;
+  font-family: "Poppins", sans-serif;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover {
-  background-color: #333333; /* Botón más claro al pasar el mouse */
+.cta-button:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .advantages-list li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .integration-image {
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
 }

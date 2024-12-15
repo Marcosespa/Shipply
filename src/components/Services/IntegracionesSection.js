@@ -19,13 +19,13 @@ const IntegracionesSection = () => {
           </Col>
           {/* Texto a la derecha */}
           <Col md={6}>
-            <h2 className="text-warning">Integraciones</h2>
-            <p className="mb-4">
+            <h2 className="section-title">Integraciones</h2>
+            <p className="section-description">
               Nos integramos a tu canal de ventas e-commerce.
             </p>
             <div className="advantages">
-              <h5 className="text-warning mb-3">Ventajas</h5>
-              <ul>
+              <h5 className="advantages-title">Ventajas</h5>
+              <ul className="advantages-list">
                 <li>
                   Realizamos una gestión ágil y eficiente de tus pedidos e
                   inventario en tiempo real, con un WMS especializado que nos
@@ -33,7 +33,7 @@ const IntegracionesSection = () => {
                 </li>
               </ul>
             </div>
-            <Button variant="dark" className="mt-3">
+            <Button variant="dark" className="cta-button mt-3">
               <i className="bi bi-whatsapp me-2"></i>
               Cotizar ahora
             </Button>
