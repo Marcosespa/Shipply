@@ -10,6 +10,8 @@ const images = {
   travelBlue: require('./Travel-Blue.png'),
   dia11: require('./diaonce.webp'),
   alohaBaby: require('./alohaBaby.png'),
+  anasac: require('./anasac.png'),
+  santaAnita: require('./SantaAnita.png.webp')
 };
 
 export default images;
