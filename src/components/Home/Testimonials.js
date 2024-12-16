@@ -6,42 +6,49 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote:
-        "Son una empresa competente, responsable, dedicada y con ganas de crecer. Destaco la responsabilidad y atención que le brindan al cliente, ya que, al operar a distancia, es de vital importancia.",
-      name: "Leoncia",
-      company: "Travel Blue",
+        "Shipply es una opción excelente para empresas que buscan crecer y optimizar sus procesos logísticos. Su combinación de profesionalismo, tecnología y atención al cliente los sitúa como un socio confiable y valioso para cualquier negocio.",
+      name: "Nury Cuarán",
+      company: "Transporte Carga Libre",
+      logo: "logo1.png", // Reemplaza con la ruta correcta del logo
     },
     {
       quote:
-        "Shipply es excelente con los servicios de almacenamiento, alistamiento y distribución de mis productos. Lo hacen de una manera oportuna y eficaz, y lo mejor es que dan respuesta rápida a las necesidades.",
-      name: "Francisca Vaca",
-      company: "AV Plastics Trade SAS",
+        "Son una empresa competente, responsable, dedicada y con ganas de crecer. Destaco la responsabilidad y atención que le brindan al cliente, ya que, al operar a distancia, es de vital importancia.",
+      name: "Leonela",
+      company: "Travel Blue",
+      logo: "logo2.png", // Reemplaza con la ruta correcta del logo
     },
   ];
 
   return (
     <div className="testimonials-section">
       <Container>
-        <Row>
-          <Col className="text-center">
+        <Row className="text-center">
+          <Col>
             <h2 className="section-title">Testimonios</h2>
             <p className="section-description">¿Qué dicen nuestros clientes?</p>
           </Col>
         </Row>
-        <Row className="justify-content-center mt-4">
-          <Col md={8}>
-            <Carousel controls={true} indicators={false} interval={5000}>
-              {testimonials.map((testimonial, index) => (
-                <Carousel.Item key={index}>
-                  <div className="testimonial-card">
-                    <p>{testimonial.quote}</p>
-                    <h5>{testimonial.name}</h5>
-                    <p className="company-name">{testimonial.company}</p>
+        <Carousel controls={true} indicators={true} interval={5000}>
+          {testimonials.map((testimonial, index) => (
+            <Carousel.Item key={index}>
+              <div className="testimonial-card mx-auto">
+                <p className="testimonial-quote">"{testimonial.quote}"</p>
+                <div className="testimonial-info">
+                  <img
+                    src={testimonial.logo}
+                    alt={testimonial.company}
+                    className="testimonial-logo"
+                  />
+                  <div>
+                    <h5 className="testimonial-name">{testimonial.name}</h5>
+                    <p className="testimonial-company">{testimonial.company}</p>
                   </div>
-                </Carousel.Item>
-              ))}
-            </Carousel>
-          </Col>
-        </Row>
+                </div>
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
       </Container>
     </div>
   );
