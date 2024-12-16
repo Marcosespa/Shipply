@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../../styles/Home/aboutus.css';
+import images from "../../assets/images/images";
+
 
 const AboutUs = () => {
   return (
@@ -35,9 +37,10 @@ const AboutUs = () => {
           </Col>
           <Col md={6} className="image-section">
             <img
-              src="/path/to/about-image.png"
-              alt="About Us"
-              className="img-fluid rounded shadow"
+              src={images.logo8}
+              alt="Logo 8"
+              className="img-fluid"
+              loading="lazy"
             />
           </Col>
         </Row>

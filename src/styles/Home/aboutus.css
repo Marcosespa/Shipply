@@ -39,10 +39,9 @@
 /* Tarjetas de información */
 .info-cards {
   font-family: "Poppins", sans-serif; /* O Roboto/Lato como alternativa */
-  font-size: 1rem; /* Tamaño de fuente cómodo para lectura */
+  font-size: 0.85rem; /* Tamaño de fuente cómodo para lectura */
   font-weight: 400; /* Peso ligero */
   color: #555555; /* Gris suave */
-
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -50,29 +49,35 @@
 
 .info-card {
   background-color: #ffc107;
-  padding: 1.5rem;
-  border-radius: 12px;
+  padding: 0.5rem; /* Reduce el relleno interno */
+  border-radius: 8px;
   text-align: center;
   color: #000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 0.85rem; /* Reduce el tamaño de la fuente */
+  min-height: 110px; /* Reduce la altura mínima de la tarjeta */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura una distribución limpia del contenido */
 }
 
 .info-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .info-card p {
   font-size: 0.9rem;
+  text-align: center;
   margin-top: 0.5rem;
   color: #333;
 }
 
 .card-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #f4c20f;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #000;
 }
 
 /* Imagen */

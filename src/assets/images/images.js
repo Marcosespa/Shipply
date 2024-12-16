@@ -6,6 +6,8 @@ const images = {
   logo5: require('./integracionesimg.jpeg'),
   logo6: require('./Almacentamiento.json'),
   logo7: require('./ImagenContacto.png'),
+  logo8: require('./Quienes-somos.png'),
+  // Logos empresas
   proimpo: require('./Proimpo.png'),
   travelBlue: require('./Travel-Blue.png'),
   dia11: require('./diaonce.webp'),
