@@ -1,0 +1,92 @@
+/* Página Principal */
+.news-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+.news-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.news-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.news-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Secciones */
+.news-section {
+  margin-bottom: 3rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f4c20f;
+  margin-bottom: 1rem;
+}
+
+.news-section ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  color: #555;
+}
+
+.news-section ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Botón de Retorno */
+.back-button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.back-button {
+  background-color: #ffc107;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #e0a800;
+  transform: translateY(-3px);
+}
+
+.back-button:active {
+  transform: translateY(1px);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .news-header h1 {
+    font-size: 2rem;
+  }
+
+  .news-section h2 {
+    font-size: 1.5rem;
+  }
+}

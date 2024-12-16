@@ -1,0 +1,111 @@
+/* Página Principal */
+.comparison-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+.comparison-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.comparison-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.comparison-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Secciones */
+.comparison-section {
+  margin-bottom: 3rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f4c20f;
+  margin-bottom: 1rem;
+}
+
+/* Tablas */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.comparison-table th {
+  background-color: #ffc107;
+  color: #333;
+  font-weight: bold;
+}
+
+.comparison-table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+/* Botón de Retorno */
+.back-button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.back-button {
+  background-color: #ffc107;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #e0a800;
+  transform: translateY(-3px);
+}
+
+.back-button:active {
+  transform: translateY(1px);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .comparison-header h1 {
+    font-size: 2rem;
+  }
+
+  .comparison-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}

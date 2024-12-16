@@ -44,7 +44,7 @@ const Hero = () => {
               Centraliza tu inventario, automatiza el proceso de pedidos y
               garantiza entregas rápidas y seguras.
             </h1>
-            <button className="button">
+            <a href="/contacto" className="button">
               <span className="text">Contactanos</span>
               <span className="svg">
                 <svg
@@ -60,8 +60,10 @@ const Hero = () => {
                   ></path>
                 </svg>
               </span>
-            </button>
-            <p className="hero-text mt-3">La mudanza corre por cuenta nuestra</p>
+            </a>
+            <p className="hero-text mt-3">
+              La mudanza corre por cuenta nuestra
+            </p>
           </Col>
           <Col md={6} className="image-container">
             <div className="player-container">

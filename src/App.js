@@ -21,8 +21,11 @@ import Integrations from "./components/Home/Integrations";
 import AboutUs from "./components/Home/AboutUs";
 import Benefits2 from "./components/Home/Benefits2";
 import BlogSection from "./components/Blog/BlogSection";
-import BlogPost1 from "./components/Blog/BlogPost1";
-
+import GuidesPage from "./components/Blog/GuidesPage";
+import NewsAnalysisPage from "./components/Blog/NewsAnalysisPage"
+import ServiceComparisonPage from "./components/Blog/ServiceComparisonPage"
+import UrbanLogisticsPage from "./components/Blog/UrbanLogisticsPage"
+import WarehouseAutomationPage from "./components/Blog/WarehouseAutomationPage"
 
 
 
@@ -99,23 +102,23 @@ const App = () => {
           <Route path="/blog" element={<BlogSection />} />
           <Route
             path="/blog/guias-practicas"
-            element={<BlogPost1 title="Guías Prácticas" />}
+            element={<GuidesPage title="Guías Prácticas" />}
           />
           <Route
             path="/blog/analisis-noticias"
-            element={<BlogPost1 title="Análisis de Noticias" />}
+            element={<NewsAnalysisPage title="Análisis de Noticias" />}
           />
           <Route
             path="/blog/comparativas-servicios"
-            element={<BlogPost1 title="Comparativas de Servicios" />}
+            element={<ServiceComparisonPage title="Comparativas de Servicios" />}
           />
           <Route
             path="/blog/logistica-urbana"
-            element={<BlogPost1 title="Logística Urbana" />}
+            element={<UrbanLogisticsPage title="Logística Urbana" />}
           />
           <Route
             path="/blog/automatizacion-almacenes"
-            element={<BlogPost1 title="Automatización en Almacenes" />}
+            element={<WarehouseAutomationPage title="Automatización en Almacenes" />}
           />
         </Routes>
       </div>

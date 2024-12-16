@@ -1,11 +1,12 @@
 import React from "react";
 import { Carousel, Container } from "react-bootstrap";
 import "../../styles/Home/clients.css";
+import images from "../../assets/images/images";
 
 const Clients = () => {
   const clientLogos = [
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
+    <img src={images.proimpo} alt="Proimpo" key="proimpo" />, 
+    <img src={images.proimpo} alt="Proimpo" key="proimpo" />,,
     "https://via.placeholder.com/150",
     "https://via.placeholder.com/150",
     "https://via.placeholder.com/150",
