@@ -5,12 +5,10 @@ import images from "../../assets/images/images";
 
 const Clients = () => {
   const clientLogos = [
-    <img src={images.proimpo} alt="Proimpo" key="proimpo" />, 
-    <img src={images.proimpo} alt="Proimpo" key="proimpo" />,,
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
+    <img src={images.proimpo} alt="Proimpo" key="proimpo" className="client-logo" />,
+    <img src={images.travelBlue} alt="Travel Blue" key="travelBlue" className="client-logo" />,
+    <img src={images.dia11} alt="Dia 11" key="dia11" className="client-logo" />,
+    <img src={images.alohaBaby} alt="Aloha Baby" key="alohababy" className="client-logo" />,
   ];
 
   const groupedLogos = clientLogos.reduce((acc, curr, index) => {
@@ -29,12 +27,9 @@ const Clients = () => {
             <Carousel.Item key={index}>
               <div className="d-flex justify-content-center align-items-center flex-wrap">
                 {group.map((logo, idx) => (
-                  <img
-                    key={idx}
-                    src={logo}
-                    alt={`Cliente ${idx + 1}`}
-                    className="mx-3 client-logo"
-                  />
+                  <div key={idx} className="d-flex justify-content-center align-items-center mx-3 client-logo-container">
+                    {logo}
+                  </div>
                 ))}
               </div>
             </Carousel.Item>

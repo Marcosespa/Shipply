@@ -8,6 +8,8 @@ const images = {
   logo7: require('./ImagenContacto.png'),
   proimpo: require('./Proimpo.png'),
   travelBlue: require('./Travel-Blue.png'),
+  dia11: require('./diaonce.webp'),
+  alohaBaby: require('./alohaBaby.png'),
 };
 
 export default images;
