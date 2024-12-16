@@ -15,7 +15,7 @@ const Footer = () => {
 
           {/* Sección de menú */}
           <Col md={3} className="footer-col">
-            <h5 className="footer-title">MELONN</h5>
+            <h5 className="footer-title">SHIPPLY</h5>
             <ul className="footer-menu">
               <li>
                 <a href="#blog">Blog</a>
@@ -28,9 +28,6 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#prensa">Prensa y Medios</a>
-              </li>
-              <li>
-                <a href="#asesoria-mexico">Asesoría México</a>
               </li>
               <li>
                 <a href="#asesoria-colombia">Asesoría Colombia</a>
@@ -52,9 +49,6 @@ const Footer = () => {
                 <a href="#integraciones">Integraciones</a>
               </li>
               <li>
-                <a href="#orbita">Órbita: Plataforma de fulfillment</a>
-              </li>
-              <li>
                 <a href="#faq">Preguntas frecuentes (FAQ)</a>
               </li>
             </ul>
@@ -72,9 +66,6 @@ const Footer = () => {
                   Política de protección de datos Colombia
                 </a>
               </li>
-              <li>
-                <a href="#aviso-mexico">Aviso de privacidad México</a>
-              </li>
             </ul>
           </Col>
         </Row>
@@ -83,21 +74,21 @@ const Footer = () => {
           <Col md={12}>
             <div className="social-icons">
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/company/shipply-sas"
                 target="_blank"
                 rel="noreferrer"
               >
                 <i className="fab fa-linkedin"></i>
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/shipply.col/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <i className="fab fa-instagram"></i>
               </a>
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/profile.php?id=61550521441472"
                 target="_blank"
                 rel="noreferrer"
               >

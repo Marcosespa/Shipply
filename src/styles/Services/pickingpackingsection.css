@@ -16,7 +16,7 @@
 }
 
 /* Descripción */
-.section-description {
+.section-description-picking {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   color: #dddddd; /* Gris claro */
@@ -44,28 +44,30 @@
   margin-bottom: 1rem;
 }
 
-.advantages-list {
+.advantages-list-picking {
   list-style: none;
   padding: 0;
 }
 
-.advantages-list li {
+.advantages-list-picking li {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  color: #cccccc; /* Gris claro */
+  color: #ffffff !important; /* Cambia el texto a blanco */
+  line-height: 1.6;
   margin-bottom: 0.8rem;
   position: relative;
   padding-left: 20px;
 }
 
-.advantages-list li::before {
+.advantages-list-picking li::before {
   content: "✔";
   position: absolute;
   left: 0;
-  top: 0.2rem;
-  color: #ffc107; /* Icono amarillo */
-  font-size: 1.2rem;
+  top: 0;
+  font-size: 1rem;
+  color: #ffc107; /* Color amarillo para el check */
 }
+
 
 /* Botón */
 .cta-button {
@@ -111,7 +113,7 @@
     font-size: 2rem;
   }
 
-  .section-description {
+  .section-description-picking {
     font-size: 1rem;
   }
 
@@ -123,8 +125,9 @@
     font-size: 1.3rem;
   }
 
-  .advantages-list li {
+  .advantages-list-picking li {
     font-size: 0.9rem;
+
   }
 }
 

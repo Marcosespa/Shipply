@@ -53,7 +53,11 @@ const NavigationBar = () => {
             <Nav.Link as={Link} to="/blog">
               Blog
             </Nav.Link>
-            <Nav.Link as={Link} to="/carga-libre">
+            <Nav.Link
+              href="https://cargalibre.com.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Carga Libre
             </Nav.Link>
           </Nav>
@@ -66,7 +70,13 @@ const NavigationBar = () => {
           >
             <FaUsers className="me-2" /> Portal Clientes
           </Button>
-          <Button variant="warning" className="btn-custom ms-2 d-flex align-items-center">
+          <Button
+            variant="warning"
+            className="btn-custom ms-2 d-flex align-items-center"
+            href="/contacto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaPhoneAlt className="me-2" /> Contactar
           </Button>
         </Navbar.Collapse>

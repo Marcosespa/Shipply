@@ -10,11 +10,10 @@ const ContactSection = () => {
         <Row className="align-items-center">
           {/* Ilustración e información */}
           <Col md={6} className="text-center">
-            <h2 className="title">Descubre <span className="highlight">Shipply</span></h2>
             <img
-              src={images.contactIllustration}
-              alt="Descubre Shipply"
-              className="img-fluid illustration"
+              src={images.logo7}
+              alt="Logo 7"
+              className="img-fluid"
               loading="lazy"
             />
           </Col>
@@ -34,7 +33,10 @@ const ContactSection = () => {
                 <Col md={6}>
                   <Form.Group controlId="email" className="mb-3">
                     <Form.Label>Correo electrónico</Form.Label>
-                    <Form.Control type="email" placeholder="Correo electrónico" />
+                    <Form.Control
+                      type="email"
+                      placeholder="Correo electrónico"
+                    />
                   </Form.Group>
                 </Col>
               </Row>
@@ -68,7 +70,9 @@ const ContactSection = () => {
                 Enviar
               </Button>
             </Form>
-            <p className="social-text mt-3">Síguenos en nuestras redes sociales</p>
+            <p className="social-text mt-3">
+              Síguenos en nuestras redes sociales
+            </p>
             <div className="social-icons">
               <i className="bi bi-instagram"></i>
               <i className="bi bi-facebook"></i>

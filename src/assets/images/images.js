@@ -5,6 +5,7 @@ const images = {
   logo4: require('./Recogemos tu inventario.png'),
   logo5: require('./integracionesimg.jpeg'),
   logo6: require('./Almacentamiento.json'),
+  logo7: require('./ImagenContacto.png')
 };
 
 export default images;

@@ -25,6 +25,7 @@ section {
   width: 100%;
   box-sizing: border-box; /* Considerar padding en el cálculo del ancho */
 }
+
 section {
   background-color: transparent; /* Elimina colores de fondo no deseados */
   border: none; /* Elimina bordes */

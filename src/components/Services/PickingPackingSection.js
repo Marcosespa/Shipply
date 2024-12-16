@@ -11,7 +11,7 @@ const PickingPackingSection = () => {
           {/* Texto a la izquierda */}
           <Col md={6}>
             <h2 className="section-title">Picking / Packing</h2>
-            <p className="section-description mb-4">
+            <p className="section-description-picking mb-4">
               Seleccionamos tus productos, realizamos el alistamiento de tus órdenes de pedido, etiquetamos y empacamos a tu medida.
             </p>
             <p className="highlighted-text">
@@ -21,7 +21,7 @@ const PickingPackingSection = () => {
             </p>
             <div className="advantages">
               <h5 className="advantages-title mb-3">Ventajas</h5>
-              <ul className="advantages-list">
+              <ul className="advantages-list-picking">
                 <li>
                   Contamos con diferentes soluciones de packaging de acuerdo a tus necesidades, manteniendo el branding de tu marca, para que tu cliente viva toda una experiencia de compra.
                 </li>

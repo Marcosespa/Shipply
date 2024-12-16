@@ -25,25 +25,25 @@ const EnvioSection = () => {
           </Col>
           {/* Texto y ventajas */}
           <Col md={6}>
-            <h2 className="text-warning">Envío</h2>
-            <p className="mb-4">
+            <h2 className="section-title">Envío</h2>
+            <p className="section-description mb-4">
               Contamos con una flota de transporte propia, y sostenemos alianzas con las principales empresas paqueteras para brindarte la solución de transporte que más se adapte a tu necesidad.
             </p>
-            <p>
+            <p className="highlighted-text">
               <strong>
                 Entrega same day o next day en las principales ciudades del país. Contamos con motorizados y vehículos propios para nunca fallar tu entrega importante.
               </strong>
             </p>
             <div className="advantages">
-              <h5 className="text-warning mb-3">Ventajas</h5>
-              <ul>
+              <h5 className="advantages-title mb-3">Ventajas</h5>
+              <ul className="advantages-list">
                 <li>Precios competitivos</li>
                 <li>Mayor cobertura geográfica</li>
                 <li>Menor lead time</li>
                 <li>Recibimos pago contraentrega</li>
               </ul>
             </div>
-            <Button variant="dark" className="mt-3">
+            <Button variant="dark" className="cta-button mt-3">
               <i className="bi bi-whatsapp me-2"></i>
               Cotizar ahora
             </Button>
