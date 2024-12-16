@@ -1,86 +1,124 @@
 import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import "../../styles/Contact/contactsection.css";
 import images from "../../assets/images/images";
 
 const ContactSection = () => {
   return (
     <section className="contact-section py-5">
-      <Container>
-        <Row className="align-items-center">
-          {/* Ilustración e información */}
-          <Col md={6} className="text-center">
-            <img
-              src={images.logo7}
-              alt="Logo 7"
-              className="img-fluid"
-              loading="lazy"
-            />
-          </Col>
+      <Row className="align-items-center">
+        {/* Ilustración e información */}
+        <Col md={6} className="text-center">
+          <img
+            src={images.logo7}
+            alt="Logo 7"
+            className="img-fluid"
+            loading="lazy"
+          />
+        </Col>
 
-          {/* Formulario de contacto */}
-          <Col md={6}>
-            <h3 className="form-title">Déjanos un mensaje</h3>
-            <p>Y un asesor se contactará contigo lo antes posible</p>
-            <Form>
-              <Row>
-                <Col md={6}>
-                  <Form.Group controlId="name" className="mb-3">
-                    <Form.Label>Nombre completo</Form.Label>
-                    <Form.Control type="text" placeholder="Nombre completo" />
-                  </Form.Group>
-                </Col>
-                <Col md={6}>
-                  <Form.Group controlId="email" className="mb-3">
-                    <Form.Label>Correo electrónico</Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="Correo electrónico"
-                    />
-                  </Form.Group>
-                </Col>
-              </Row>
-              <Row>
-                <Col md={6}>
-                  <Form.Group controlId="productType" className="mb-3">
-                    <Form.Label>Tipo de producto</Form.Label>
-                    <Form.Control type="text" placeholder="Tipo de producto" />
-                  </Form.Group>
-                </Col>
-                <Col md={6}>
-                  <Form.Group controlId="ordersPerMonth" className="mb-3">
-                    <Form.Label>Número de pedidos por mes</Form.Label>
-                    <Form.Control type="text" placeholder="Pedidos por mes" />
-                  </Form.Group>
-                </Col>
-              </Row>
-              <Form.Group controlId="city" className="mb-3">
-                <Form.Label>Ciudad</Form.Label>
-                <Form.Control type="text" placeholder="Ciudad" />
-              </Form.Group>
-              <Form.Group controlId="message" className="mb-3">
-                <Form.Label>Mensaje</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={4}
-                  placeholder="Escribe tu mensaje aquí"
-                />
-              </Form.Group>
-              <Button variant="dark" type="submit" className="w-100">
-                Enviar
-              </Button>
-            </Form>
-            <p className="social-text mt-3">
-              Síguenos en nuestras redes sociales
-            </p>
-            <div className="social-icons">
-              <i className="bi bi-instagram"></i>
-              <i className="bi bi-facebook"></i>
-              <i className="bi bi-linkedin"></i>
+        {/* Formulario de contacto */}
+        <Col md={6}>
+          <h3 className="form-title">Déjanos un mensaje</h3>
+          <p>Y un asesor se contactará contigo lo antes posible</p>
+          <form action="https://formspree.io/f/myzyqebw" method="POST">
+            <Row>
+              <Col md={6}>
+                <div className="form-group mb-3">
+                  <label htmlFor="name">Nombre completo</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Nombre completo"
+                    required
+                  />
+                </div>
+              </Col>
+              <Col md={6}>
+                <div className="form-group mb-3">
+                  <label htmlFor="email">Correo electrónico</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Correo electrónico"
+                    required
+                  />
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <div className="form-group mb-3">
+                  <label htmlFor="productType">Tipo de producto</label>
+                  <input
+                    type="text"
+                    id="productType"
+                    name="productType"
+                    placeholder="Tipo de producto"
+                  />
+                </div>
+              </Col>
+              <Col md={6}>
+                <div className="form-group mb-3">
+                  <label htmlFor="ordersPerMonth">
+                    Número de pedidos por mes
+                  </label>
+                  <input
+                    type="text"
+                    id="ordersPerMonth"
+                    name="ordersPerMonth"
+                    placeholder="Pedidos por mes"
+                  />
+                </div>
+              </Col>
+            </Row>
+            <div className="form-group mb-3">
+              <label htmlFor="city">Ciudad</label>
+              <input type="text" id="city" name="city" placeholder="Ciudad" />
             </div>
-          </Col>
-        </Row>
-      </Container>
+            <div className="form-group mb-3">
+              <label htmlFor="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Escribe tu mensaje aquí"
+              ></textarea>
+            </div>
+            <button type="submit" className="btn btn-dark w-100">
+              Enviar
+            </button>
+          </form>
+          <p className="social-text mt-3">
+            Síguenos en nuestras redes sociales
+          </p>
+          <div className="social-icons">
+            <a
+              href="https://www.instagram.com/shipply.col/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61550521441472"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-facebook"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/shipply-sas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </Col>
+      </Row>
     </section>
   );
 };

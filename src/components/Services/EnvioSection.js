@@ -5,7 +5,7 @@ import images from "../../assets/images/images";
 
 const EnvioSection = () => {
   return (
-    <section className="envio-section py-5">
+    <section id="envios" className="envio-section py-5">
       <Container>
         <Row className="align-items-center">
           {/* Imagen con íconos decorativos */}

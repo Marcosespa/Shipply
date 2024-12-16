@@ -6,7 +6,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 
 const VentajasSection = () => {
   return (
-    <section className="ventajas-section py-5">
+    <section id="almacenamiento" className="ventajas-section py-5">
       <Container>
         <Row className="align-items-center">
           {/* Animación a la izquierda */}

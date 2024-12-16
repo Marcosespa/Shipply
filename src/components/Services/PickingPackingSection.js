@@ -5,7 +5,7 @@ import images from "../../assets/images/images";
 
 const PickingPackingSection = () => {
   return (
-    <section className="picking-packing-section py-5">
+    <section id="picking" className="picking-packing-section py-5">
       <Container>
         <Row className="align-items-center">
           {/* Texto a la izquierda */}

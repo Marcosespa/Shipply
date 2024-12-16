@@ -5,7 +5,7 @@ import images from "../../assets/images/images";
 
 const IntegracionesSection = () => {
   return (
-    <section className="integraciones-section py-5">
+    <section id="integraciones" className="integraciones-section py-5">
       <Container>
         <Row className="align-items-center">
           {/* Imagen a la izquierda */}

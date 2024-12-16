@@ -1,6 +1,11 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Home/Hero";
@@ -15,7 +20,12 @@ import Benefits from "./components/Home/Benefits";
 import Integrations from "./components/Home/Integrations";
 import AboutUs from "./components/Home/AboutUs";
 import Benefits2 from "./components/Home/Benefits2";
-import BlogIndex from "./components/Blog/BlogIndex";
+import BlogSection from "./components/Blog/BlogSection";
+import BlogPost1 from "./components/Blog/BlogPost1";
+
+
+
+
 import WhatsappButton from "./components/WhatsappButton";
 import ChestDrawer from "./components/Home/ChestDrawer";
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -30,12 +40,28 @@ import DevolutionSection from "./components/Services/DevolutionSection";
 import EnvioSection from "./components/Services/EnvioSection";
 import ContactSection from "./components/Contact/ContactSection";
 
+const ScrollToHash = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [hash]);
+
+  return null;
+};
+
 const App = () => {
   return (
     <Router>
       <Navbar />
-      <div style={{ minHeight: "100vh", minWidth:"100vh"}}>
+      <div style={{ minHeight: "100vh", minWidth: "100vh" }}>
         {" "}
+        <ScrollToHash />
         <Routes>
           <Route
             path="/"
@@ -68,12 +94,29 @@ const App = () => {
               </>
             }
           />
-
-          {/* Ruta para la página de contacto */}
           <Route path="/contacto" element={<ContactSection />} />
-
-          {/* Ruta para la página de blog */}
-          <Route path="/blog" element={<BlogIndex />} />
+          {/* Blog Routes */}
+          <Route path="/blog" element={<BlogSection />} />
+          <Route
+            path="/blog/guias-practicas"
+            element={<BlogPost1 title="Guías Prácticas" />}
+          />
+          <Route
+            path="/blog/analisis-noticias"
+            element={<BlogPost1 title="Análisis de Noticias" />}
+          />
+          <Route
+            path="/blog/comparativas-servicios"
+            element={<BlogPost1 title="Comparativas de Servicios" />}
+          />
+          <Route
+            path="/blog/logistica-urbana"
+            element={<BlogPost1 title="Logística Urbana" />}
+          />
+          <Route
+            path="/blog/automatizacion-almacenes"
+            element={<BlogPost1 title="Automatización en Almacenes" />}
+          />
         </Routes>
       </div>
       <Footer />
