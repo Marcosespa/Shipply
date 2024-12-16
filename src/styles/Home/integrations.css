@@ -1,87 +1,50 @@
-/* src/components/Integrations.css */
-.integrations-section {
-  background-color: #f4f4f4; /* Fondo gris */
-  
-}
-
-.integrations-title {
-  font-family: "Poppins", sans-serif; /* Fuente moderna */
-  color: #333;
+/* Contenedor general del carrusel */
+.carousel-container {
   position: relative;
-}
-
-.integrations-title::after {
-  content: "";
-  width: 100px;
-  height: 4px;
-  background-color: #f4d03f; /* Subrayado amarillo */
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-
-.integrations-section h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.integration-carousel {
-  position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Oculta los elementos fuera del área visible */
   display: flex;
   justify-content: center;
+  width: 100%; /* Ocupa todo el ancho disponible */
 }
 
+/* Pista del carrusel (donde se mueven los logos) */
 .carousel-track {
   display: flex;
-  gap: 2rem;
-  animation: scroll 15s linear infinite;
+  gap: 2rem; /* Espacio entre los logos */
+  animation: scroll 20s linear infinite; /* Animación continua */
 }
 
+/* Logos del carrusel */
 .integration-logo {
-  height: 80px;
-  object-fit: contain;
+  height: 160px; /* Altura fija para los logos */
+  width: auto; /* Mantiene la proporción de la imagen */
+  object-fit: contain; /* Ajusta la imagen dentro del contenedor */
   transition: transform 0.2s ease-in-out;
 }
 
 .integration-logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
 }
 
+/* Animación de desplazamiento continuo */
 @keyframes scroll {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0); /* Posición inicial */
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Mueve todo el carrusel hacia la izquierda */
   }
 }
-
 
 /* Responsividad */
 @media (max-width: 768px) {
-  .integrations-title {
-    font-size: 2rem;
-  }
-
-  .carousel-track {
-    gap: 2rem; /* Reduce el espacio entre logos */
-  }
-
   .integration-logo {
-    height: 60px; /* Tamaño reducido */
+    height: 80px; /* Tamaño reducido en pantallas medianas */
   }
 }
 
 @media (max-width: 576px) {
   .integration-logo {
-    height: 50px; /* Logos más pequeños en pantallas móviles */
-  }
-
-  .integrations-title {
-    font-size: 1.8rem;
+    height: 60px; /* Tamaño más pequeño en pantallas pequeñas */
   }
 }

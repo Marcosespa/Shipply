@@ -11,7 +11,18 @@ const images = {
   dia11: require('./diaonce.webp'),
   alohaBaby: require('./alohaBaby.png'),
   anasac: require('./anasac.png'),
-  santaAnita: require('./SantaAnita.png.webp')
+  santaAnita: require('./SantaAnita.png.webp'),
+  // Logos empresas integraciones
+  shopify: require('./shopify.png'),
+  vtex: require('./vtex.png'),
+  mercadoLibre: require('./mercadoLibre.png'),
+  magento: require('./magento.png'),
+  woocomerce: require('./woocomerce.png'),
+  rappi: require('./rappi.png'),
+  linio:require('./linio.png')
+
+
+
 };
 
 export default images;
