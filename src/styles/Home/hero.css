@@ -1,6 +1,6 @@
 
 .hero-section {
-  background-color: #f8f9fa; /* Fondo claro */
+  background-color: #ffffff; /* Fondo claro */
   padding: 2rem 1rem; /* Más espacio en el contenedor */
   width: 100%;
   margin: 0; /* Elimina márgenes externos */
@@ -25,6 +25,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: inherit; /* Asegura consistencia en el color */
+  box-shadow: none; /* Elimina sombras no deseadas */
+  border: none; /* Elimina bordes no deseados */
 }
 
 
