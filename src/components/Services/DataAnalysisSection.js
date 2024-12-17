@@ -18,7 +18,6 @@ const DataAnalysisSection = () => {
               autoplay
               style={{ height: "400px", width: "500px" }}
             />
-            <div className="decorator"></div>
           </Col>
           {/* Texto a la derecha */}
           <Col md={6}>

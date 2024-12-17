@@ -116,6 +116,20 @@
   animation: moveArrow 1s infinite alternate; /* Animación de la flecha */
 }
 
+/* Tarjeta inicial (oculta) */
+.process-step {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Tarjeta visible (animada) */
+.process-step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación de la flecha */
 @keyframes moveArrow {
   from {
     transform: translateX(0);
@@ -124,6 +138,15 @@
     transform: translateX(5px);
   }
 }
+
+.arrow-animate {
+  font-size: 1.5rem;
+  color: #ffc107;
+  animation: moveArrow 1s infinite alternate;
+}
+
+
+
 
 /* Quitar flecha en la última tarjeta de cada fila */
 .process-step:nth-child(3n) .arrow-container {

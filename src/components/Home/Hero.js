@@ -3,6 +3,21 @@ import { Row, Col } from "react-bootstrap";
 import "../../styles/Home/hero.css";
 import { Player } from "@lottiefiles/react-lottie-player";
 import images from "../../assets/images/images";
+const wrapText = (text) => {
+  return text.split(" ").map((word, index) => (
+    <span
+      key={index}
+      style={{
+        display: "inline-block",
+        opacity: 0,
+        transform: "translateY(20px)",
+        animation: `fadeInUp 0.6s ease-out ${index * 0.1}s forwards`,
+      }}
+    >
+      {word}&nbsp;
+    </span>
+  ));
+};
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,8 +56,9 @@ const Hero = () => {
               Simplifica tu logística y acelera el crecimiento de tu E-commerce
             </h5>
             <h1 className="hero-title">
-              Centraliza tu inventario, automatiza el proceso de pedidos y
-              garantiza entregas rápidas y seguras.
+              {wrapText(
+                "Centraliza tu inventario, automatiza el proceso de pedidos y garantiza entregas rápidas y seguras."
+              )}
             </h1>
             <a href="/contacto" className="button">
               <span className="text">Contactanos</span>

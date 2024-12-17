@@ -14,7 +14,6 @@ const Benefits2 = () => {
     <div className="benefits-section">
       <Container>
         <Row className="align-items-center">
-          {/* Columna del logo */}
           <Col md={6} className="text-center logo-container">
             <img
               src={images.logo2}

@@ -39,7 +39,7 @@ const AboutUs = () => {
             <img
               src={images.logo8}
               alt="Logo 8"
-              className="img-fluid"
+              className="img-fluid logo-image"
               loading="lazy"
             />
           </Col>
