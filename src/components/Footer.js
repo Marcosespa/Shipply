@@ -7,10 +7,12 @@ const Footer = () => {
   return (
     <footer className="footer-section">
       <Container>
-        <Row>
+        <Row className="align-items-center">
           {/* Logo */}
           <Col md={3} className="footer-col text-center text-md-start">
-            <img src={images.ShipplyPNG} alt="Logo" className="footer-logo" />
+            <div className="footer-logo-container">
+              <img src={images.ShipplyPNG} alt="Logo" className="footer-logo" />
+            </div>
           </Col>
 
           {/* Sección de menú */}

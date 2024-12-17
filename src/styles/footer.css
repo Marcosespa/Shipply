@@ -4,20 +4,45 @@
   color: #000; /* Texto negro */
   padding: 4rem 2rem;
   border-top: 1px solid #ddd; /* Línea superior sutil */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* Contenedor del logo */
+.footer-logo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px; /* Espaciado uniforme entre columnas */
+
+  margin-top: 1rem; /* Espacio adicional para bajar el logo */
 }
 
+/* Logo más grande */
 .footer-logo {
-  max-width: 100px;
+  max-width: 250px; /* Tamaño del logo aumentado */
+  height: auto; /* Mantiene la proporción */
   margin-bottom: 1rem;
+  transition: transform 0.3s ease; /* Transición suave */
 }
 
-/* Títulos */
+.footer-logo:hover {
+  transform: scale(1.05); /* Efecto de hover para resaltar */
+}
+
+/* Títulos alineados uniformemente */
 .footer-title {
+  height: 50px; /* Altura fija para todos los títulos */
+
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #000;
+  text-align: left;
+  min-height: 50px; /* Altura mínima para alinear todos los títulos */
+  display: flex;
+  align-items: center; /* Centra verticalmente el texto dentro de su contenedor */
 }
 
 /* Menú */
@@ -64,20 +89,41 @@
   margin: 0;
 }
 
+/* Alineación uniforme de columnas */
+.footer-col {
+  flex: 1; /* Las columnas ocupan el mismo ancho */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alineación a la izquierda */
+}
+
 /* Responsividad */
 @media (max-width: 768px) {
   .footer-section {
     text-align: center;
   }
 
+  .footer-logo-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-logo {
+    max-width: 200px; /* Reduce el tamaño del logo en pantallas más pequeñas */
+  }
+
+  .footer-title {
+    text-align: center; /* Alinea los títulos al centro en pantallas pequeñas */
+  }
+
   .footer-col {
-    margin-bottom: 2rem;
+    text-align: center; /* Centra las columnas en dispositivos pequeños */
   }
 }
 
 @media (max-width: 576px) {
   .footer-logo {
-    max-width: 80px;
+    max-width: 150px; /* Reduce el tamaño del logo en dispositivos móviles */
   }
 
   .footer-menu a {
