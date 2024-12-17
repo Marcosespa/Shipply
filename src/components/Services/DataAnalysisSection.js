@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "../../styles/Services/dataanalysissection.css";
 import images from "../../assets/images/images";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const DataAnalysisSection = () => {
   return (
@@ -10,11 +11,12 @@ const DataAnalysisSection = () => {
         <Row className="align-items-center">
           {/* Imagen a la izquierda */}
           <Col md={6} className="text-center position-relative">
-            <img
-              src={images.dataAnalysisImage}
-              alt="Análisis de datos"
-              className="img-fluid main-image"
-              loading="lazy"
+            <Player
+              src={images.AnimationAnalytics}
+              className="player"
+              loop
+              autoplay
+              style={{ height: "400px", width: "500px" }}
             />
             <div className="decorator"></div>
           </Col>

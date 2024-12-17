@@ -11,8 +11,9 @@ const images = {
   ImagenAlmacentamiento: require('./ImagenAlmacentamiento.jpg'),
   ShipplyPNG: require('./Shipply-SinFondo.png'),
   EnviosImg: require('./EnviosImg.png'),
+  AnimationAnalytics: require('./AnimationAnalytics.json'),
   // Logos empresas
-  cargalibre:require('./LOGO CARGALIBRE.png'),
+  cargalibre: require('./LOGO CARGALIBRE.png'),
   proimpo: require('./Proimpo.png'),
   travelBlue: require('./Travel-Blue.png'),
   dia11: require('./diaonce.webp'),
@@ -26,7 +27,7 @@ const images = {
   magento: require('./magento.png'),
   woocomerce: require('./woocomerce.png'),
   rappi: require('./rappi.png'),
-  linio:require('./linio.png')
+  linio: require('./linio.png')
 
 
 

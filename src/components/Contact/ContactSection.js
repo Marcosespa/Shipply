@@ -8,112 +8,85 @@ const ContactSection = () => {
     <section className="contact-section py-5">
       <Row className="align-items-center">
         {/* Ilustración e información */}
-        <Col md={6} className="text-center">
+        <Col md={6} className="text-center text-md-left info-section">
           <img
             src={images.logo7}
-            alt="Logo 7"
-            className="img-fluid"
+            alt="Ilustración Shipply"
+            className="illustration"
             loading="lazy"
           />
         </Col>
 
-        {/* Formulario de contacto */}
-        <Col md={6}>
+        {/* Formulario */}
+        <Col md={5} className="form-section">
           <h3 className="form-title">Déjanos un mensaje</h3>
-          <p>Y un asesor se contactará contigo lo antes posible</p>
+          <p className="form-description">
+            Y un asesor se contactará contigo lo antes posible
+          </p>
           <form action="https://formspree.io/f/myzyqebw" method="POST">
             <Row>
               <Col md={6}>
-                <div className="form-group mb-3">
-                  <label htmlFor="name">Nombre completo</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Nombre completo"
-                    required
-                  />
-                </div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Nombre completo"
+                  className="form-control mb-3"
+                  required
+                />
               </Col>
               <Col md={6}>
-                <div className="form-group mb-3">
-                  <label htmlFor="email">Correo electrónico</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Correo electrónico"
-                    required
-                  />
-                </div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Correo electrónico"
+                  className="form-control mb-3"
+                  required
+                />
               </Col>
             </Row>
             <Row>
               <Col md={6}>
-                <div className="form-group mb-3">
-                  <label htmlFor="productType">Tipo de producto</label>
-                  <input
-                    type="text"
-                    id="productType"
-                    name="productType"
-                    placeholder="Tipo de producto"
-                  />
-                </div>
+                <input
+                  type="text"
+                  name="productType"
+                  placeholder="Tipo de producto"
+                  className="form-control mb-3"
+                />
               </Col>
               <Col md={6}>
-                <div className="form-group mb-3">
-                  <label htmlFor="ordersPerMonth">
-                    Número de pedidos por mes
-                  </label>
-                  <input
-                    type="text"
-                    id="ordersPerMonth"
-                    name="ordersPerMonth"
-                    placeholder="Pedidos por mes"
-                  />
-                </div>
+                <input
+                  type="text"
+                  name="ordersPerMonth"
+                  placeholder="Número de pedidos por mes"
+                  className="form-control mb-3"
+                />
               </Col>
             </Row>
-            <div className="form-group mb-3">
-              <label htmlFor="city">Ciudad</label>
-              <input type="text" id="city" name="city" placeholder="Ciudad" />
-            </div>
-            <div className="form-group mb-3">
-              <label htmlFor="message">Mensaje</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                placeholder="Escribe tu mensaje aquí"
-              ></textarea>
-            </div>
+            <input
+              type="text"
+              name="city"
+              placeholder="Ciudad"
+              className="form-control mb-3"
+            />
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Mensaje"
+              className="form-control mb-3"
+            ></textarea>
             <button type="submit" className="btn btn-dark w-100">
               Enviar
             </button>
           </form>
-          <p className="social-text mt-3">
-            Síguenos en nuestras redes sociales
-          </p>
+          <p className="social-text mt-4">Síguenos en nuestras redes sociales</p>
           <div className="social-icons">
-            <a
-              href="https://www.instagram.com/shipply.col/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">
               <i className="bi bi-instagram"></i>
             </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=61550521441472"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://facebook.com" target="_blank" rel="noreferrer">
               <i className="bi bi-facebook"></i>
             </a>
-            <a
-              href="https://www.linkedin.com/company/shipply-sas"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
               <i className="bi bi-linkedin"></i>
             </a>
           </div>
