@@ -9,11 +9,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Home/Hero";
-import Features from "./components/Home/Features";
 import Services from "./components/Home/Services";
-import SearchForm from "./components/Home/SearchForm";
 import Testimonials from "./components/Home/Testimonials";
-import Contact from "./components/Home/Contact";
 import Footer from "./components/Footer";
 import Clients from "./components/Home/Clients";
 import Benefits from "./components/Home/Benefits";
@@ -31,8 +28,6 @@ import WarehouseAutomationPage from "./components/Blog/WarehouseAutomationPage"
 
 import WhatsappButton from "./components/WhatsappButton";
 import ChestDrawer from "./components/Home/ChestDrawer";
-import { Player } from "@lottiefiles/react-lottie-player";
-import images from "./assets/images/images";
 
 import ProcessSection from "./components/Services/ProcessSection";
 import IntegracionesSection from "./components/Services/IntegracionesSection";
