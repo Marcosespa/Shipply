@@ -12,6 +12,12 @@ const images = {
   ShipplyPNG: require('./Shipply-SinFondo.png'),
   EnviosImg: require('./EnviosImg.png'),
   AnimationAnalytics: require('./AnimationAnalytics.json'),
+  //Fotos Blog
+  GuiasPracticas: require('./Guiaspracticas.jpg.webp'),
+  AnalisisNoticias: require('./NoticiasRecientes.png'),
+  ComparativaServicios: require('./ComparativaServicios.jpg.webp'),
+  LogisticaUrbana: require('./LogisticaUrbana.avif'),
+  AutomatizacionAlmacenes: require('./Automatizacion.avif'),
   // Logos empresas
   cargalibre: require('./LOGO CARGALIBRE.png'),
   proimpo: require('./Proimpo.png'),

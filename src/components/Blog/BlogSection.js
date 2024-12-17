@@ -1,6 +1,17 @@
 import React from "react";
 import "../../styles/Blog/blogsection.css";
+import images from "../../assets/images/images";
+
 import { useNavigate } from "react-router-dom";
+
+// GuiasPracticas: require('./Guiaspracticas.jpg.webp'),
+// AnalisisNoticias: require('./Guiaspracticas.jpg.webp'),
+// ComparativaServicios: require('./ComparativaServicios.jpg.webp'),
+// LogisticaUrbana: require('./LogisticaUrbana.avif'),
+// AutomatizacionAlmacenes: require('./Automatizacion.avif'),
+
+
+
 const BlogSection = () => {
   const navigate = useNavigate();
 
@@ -10,7 +21,7 @@ const BlogSection = () => {
       title: "Guías Prácticas",
       description:
         "Educación y ayuda para resolver problemas específicos en logística y transporte, como optimización y cálculos de costos.",
-      image: "https://via.placeholder.com/500x300?text=Guías+Prácticas", // Reemplaza con una imagen de guías
+      image: images.GuiasPracticas, // Ruta de la imagen desde el archivo importado
       route: "/blog/guias-practicas",
     },
     {
@@ -18,7 +29,7 @@ const BlogSection = () => {
       title: "Análisis de Noticias Recientes",
       description:
         "Mantente al día con los cambios regulatorios, disrupciones en la cadena global y las últimas tendencias de la industria.",
-      image: "https://via.placeholder.com/500x300?text=Noticias+Recientes", // Noticias logísticas
+      image: images.AnalisisNoticias, // Ruta de la imagen desde el archivo importado
       route: "/blog/analisis-noticias",
     },
     {
@@ -26,8 +37,7 @@ const BlogSection = () => {
       title: "Comparativas de Servicios",
       description:
         "Comparación de servicios logísticos, flotas, sistemas de gestión y opciones de transporte para una toma de decisiones informada.",
-      image:
-        "https://via.placeholder.com/500x300?text=Comparativas+de+Servicios", // Comparaciones gráficas
+      image: images.ComparativaServicios, // Ruta de la imagen desde el archivo importado
       route: "/blog/comparativas-servicios",
     },
     {
@@ -35,7 +45,7 @@ const BlogSection = () => {
       title: "Logística Urbana",
       description:
         "Soluciones y estrategias para enfrentar los retos de las ciudades congestionadas y la optimización de la última milla.",
-      image: "https://via.placeholder.com/500x300?text=Logística+Urbana", // Imagen de transporte urbano
+      image: images.LogisticaUrbana, // Ruta de la imagen desde el archivo importado
       route: "/blog/logistica-urbana",
     },
     {
@@ -43,8 +53,7 @@ const BlogSection = () => {
       title: "Automatización en Almacenes",
       description:
         "Explora tecnologías innovadoras como robots autónomos, sistemas AS/RS y sus beneficios para la eficiencia.",
-      image:
-        "https://via.placeholder.com/500x300?text=Automatización+en+Almacenes", // Robots o almacenes automatizados
+      image: images.AutomatizacionAlmacenes, // Ruta de la imagen desde el archivo importado
       route: "/blog/automatizacion-almacenes",
     },
   ];
