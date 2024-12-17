@@ -27,7 +27,7 @@ import WarehouseAutomationPage from "./components/Blog/WarehouseAutomationPage"
 
 
 import WhatsappButton from "./components/WhatsappButton";
-import ChestDrawer from "./components/Home/ChestDrawer";
+import "./styles/Home/chestDrawer.css"; 
 
 import ProcessSection from "./components/Services/ProcessSection";
 import IntegracionesSection from "./components/Services/IntegracionesSection";
