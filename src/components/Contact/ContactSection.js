@@ -6,9 +6,9 @@ import images from "../../assets/images/images";
 const ContactSection = () => {
   return (
     <section className="contact-section py-5">
-      <Row className="align-items-center">
-        {/* Ilustración e información */}
-        <Col md={6} className="text-center text-md-left info-section">
+      <Row className="align-items-center gx-1">
+        {/* Columna de la imagen */}
+        <Col md={6} className="info-section pe-2">
           <img
             src={images.logo7}
             alt="Ilustración Shipply"
@@ -18,8 +18,8 @@ const ContactSection = () => {
         </Col>
 
         {/* Formulario */}
-        <Col md={5} className="form-section">
-          <h3 className="form-title">Déjanos un mensaje</h3>
+        <Col md={5} className="form-section ps-2">
+        <h3 className="form-title">Déjanos un mensaje</h3>
           <p className="form-description">
             Y un asesor se contactará contigo lo antes posible
           </p>

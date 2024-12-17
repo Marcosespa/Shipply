@@ -1,12 +1,15 @@
 /* Estilo general */
 .contact-section {
-  background-color: #fff; /* Fondo blanco */
+  background-color: #fff;
+  /* Fondo blanco */
   padding: 3rem 0;
 }
 
 /* Información de la izquierda */
 .info-section {
   text-align: center;
+  padding-right: 0.5rem;
+  /* Espaciado pequeño */
 
 }
 
@@ -19,7 +22,8 @@
 }
 
 .highlight-text {
-  color: #ffc107; /* Amarillo */
+  color: #ffc107;
+  /* Amarillo */
 }
 
 /* Ilustración */
@@ -30,25 +34,34 @@
 
 /* Formulario */
 .form-section {
-  background-color: #f9f9f9; /* Gris claro */
+  background-color: #f9f9f9;
+  /* Gris claro */
+  padding-left: 0.5rem;
+  /* Espaciado pequeño */
+
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 40%; /* Ancho relativo (ajústalo como prefieras) */
-  max-width: 500px; /* Ancho máximo */
-  margin: 0 auto; /* Centra el formulario horizontalmente */
+  width: 40%;
+  /* Ancho relativo (ajústalo como prefieras) */
+  max-width: 500px;
+  /* Ancho máximo */
+  margin: 0 auto;
+  /* Centra el formulario horizontalmente */
 }
 
 
 .form-title {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
+  text-align: center;
   font-weight: bold;
   color: #ffc107;
 }
 
 .form-description {
   font-family: "Poppins", sans-serif;
+  text-align: center;
   color: #555;
   margin-bottom: 1rem;
 }
@@ -101,6 +114,7 @@ form .form-control:focus {
   color: #000;
   transform: scale(1.2);
 }
+
 
 /* Responsividad */
 @media (max-width: 768px) {
