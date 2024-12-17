@@ -23,7 +23,7 @@ const Benefits2 = () => {
           </Col>
           {/* Columna de beneficios */}
           <Col md={6}>
-            <h2 className="section-title text-warning">Beneficios</h2>
+            <h2 className="section-title-beneficios">Beneficios</h2>
             <p className="section-description">
               Nos enfocamos en ofrecer servicios de calidad para que hagas crecer tu negocio.
             </p>

@@ -25,12 +25,27 @@
 }
 
 /* Títulos y descripción */
-.section-title {
+.section-title-beneficios {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
+  text-align: center;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: #FFD700; /* Cambia el color del texto a #FFD800 */
+  position: relative; /* Necesario para posicionar la línea */
+
 }
+
+.section-title-beneficios::after {
+  content: ""; /* Crea la línea */
+  display: block;
+  width: 80px; /* Ajusta el ancho de la línea */
+  height: 4px; /* Ajusta el grosor de la línea */
+  background-color: #FFD800; /* Color de la línea */
+  margin: 0 auto; /* Centra la línea */
+  margin-top: 10px; /* Espaciado entre el texto y la línea */
+}
+
 
 .section-description {
   font-family: "Poppins", sans-serif;
@@ -42,7 +57,7 @@
 
 /* Tarjetas de beneficio */
 .benefit-card {
-  background-color: #ffc107;
+  background-color: #FFDF59;
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
