@@ -1,33 +1,70 @@
-/* Contenedor general del carrusel */
+/* Contenedor principal de la sección */
+.integrations-section {
+  background-color: #f8f9fa; /* Fondo claro */
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Título de la sección */
+.integrations-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #000000; /* Amarillo brillante */
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.integrations-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #ffc107;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Contenedor del carrusel */
 .carousel-container {
   position: relative;
-  overflow: hidden; /* Oculta los elementos fuera del área visible */
-  width: 100%; /* Asegura que ocupa todo el ancho disponible */
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #fff; /* Fondo blanco */
+  border-radius: 10px; /* Bordes suaves */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  border: 1px solid #e0e0e0; /* Borde claro */
 }
 
 /* Pista del carrusel */
 .carousel-track {
   display: flex;
-  gap: 2rem; /* Espacio entre los logos */
-  animation: scroll 20s linear infinite; /* Animación continua */
+  gap: 3rem; /* Espacio entre los logos */
+  animation: scroll 20s linear infinite; /* Animación de desplazamiento continuo */
+  align-items: center;
+  padding: 1rem 0;
 }
 
 /* Logos del carrusel */
 .integration-logo {
-  height: 160px; /* Tamaño fijo para los logos */
+  height: 120px; /* Tamaño uniforme */
   width: auto;
-  object-fit: contain; /* Ajusta la imagen sin distorsión */
-  transition: transform 0.2s ease-in-out;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
 }
 
 .integration-logo:hover {
-  transform: scale(1.1); /* Zoom al pasar el mouse */
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
 }
 
 /* Animación de desplazamiento continuo */
 @keyframes scroll {
   0% {
-    transform: translateX(0); /* Comienza en la posición inicial */
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-50%); /* Mueve la primera mitad del carrusel hacia la izquierda */
@@ -37,12 +74,18 @@
 /* Responsividad */
 @media (max-width: 768px) {
   .integration-logo {
-    height: 100px;
+    height: 90px; /* Reduce el tamaño del logo en pantallas medianas */
+  }
+  .carousel-track {
+    gap: 2rem;
   }
 }
 
 @media (max-width: 576px) {
   .integration-logo {
-    height: 60px;
+    height: 70px; /* Reduce aún más el tamaño en pantallas pequeñas */
+  }
+  .carousel-track {
+    gap: 1rem;
   }
 }

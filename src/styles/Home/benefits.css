@@ -1,6 +1,6 @@
 /* Sección principal */
 .logistics-process {
-  background-color: #f9f9f9;
+  background-color: #f8f9fa; /* Fondo claro */
   padding: 4rem 2rem;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -8,15 +8,30 @@
 
 .logistics-header h2 {
   font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #000000; /* Amarillo brillante */
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.logistics-header h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #ffc107;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .logistics-header p {
   font-size: 1.2rem;
-  color: #777;
+  color: #555555; /* Gris oscuro */
   margin-bottom: 3rem;
+  line-height: 1.6;
 }
 
 /* Contenedor de tarjetas */
@@ -29,7 +44,7 @@
 
 /* Tarjeta */
 .process-step {
-  background: linear-gradient(135deg, #ffffff, #f8f8f8);
+  background: #ffffff; /* Fondo blanco */
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -46,12 +61,45 @@
 
 /* Iconos */
 .icon-container {
-  font-size: 2.5rem; /* Tamaño del icono */
-  color: #ffc107; /* Color amarillo */
+  font-size: 2.5rem;
+  color: #ffc107; /* Amarillo brillante */
   margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Títulos */
+.process-step h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333333; /* Gris oscuro */
+  margin-bottom: 0.5rem;
+}
+
+/* Descripción */
+.process-step p {
+  font-size: 1rem;
+  color: #555555; /* Gris oscuro */
+  line-height: 1.5;
+}
+
+/* Botón CTA */
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffc107;
+  color: #333333; /* Gris oscuro */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #e0a800; /* Amarillo más oscuro */
+  transform: translateY(-3px);
 }
 
 /* Flechas */
@@ -80,20 +128,6 @@
 /* Quitar flecha en la última tarjeta de cada fila */
 .process-step:nth-child(3n) .arrow-container {
   display: none; /* Oculta la flecha en la última tarjeta de cada fila */
-}
-
-/* Título y descripción */
-.process-step h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.process-step p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
 }
 
 /* Responsividad */

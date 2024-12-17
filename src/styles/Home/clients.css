@@ -1,25 +1,25 @@
 /* Sección de clientes */
 .clients-section {
-  background-color: #f5f5f5; /* Fondo claro */
+  background-color: #f5f5f5;
   width: 100%;
   margin: 0 auto;
-  padding: 3rem 0; /* Más espacio vertical */
+  padding: 4rem 2rem; /* Espaciado vertical */
 }
 
 .clients-section h2 {
-  font-family: "Poppins", sans-serif; /* Fuente moderna */
+  font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: #000000;
   margin-bottom: 2rem;
   position: relative;
 }
 
 .clients-section h2::after {
   content: "";
-  width: 100px;
+  width: 80px;
   height: 4px;
-  background-color: #f4d03f; /* Subrayado amarillo */
+  background-color: #ffc107;
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -34,63 +34,101 @@
   margin: 10px;
   width: 150px;
   height: 150px;
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #ffffff; /* Fondo blanco */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-logo-container:hover {
+  transform: scale(1.1); /* Zoom en hover */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave en hover */
 }
 
 /* Estilos de los logos */
 .client-logo {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Asegura que la imagen se ajuste sin deformarse */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain; /* Ajuste proporcional */
 }
 
-.client-logo:hover {
-  transform: scale(1.1); /* Efecto de zoom */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
-}
-
-/* Controles del carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #f4d03f; /* Fondo amarillo */
-  border-radius: 50%; /* Bordes redondeados */
-  width: 50px;
-  height: 50px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-}
-
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-  background-color: #f1c40f; /* Hover más vibrante */
-}
-
+/* Ítems del carrusel */
 .carousel-item {
   background-color: inherit;
   padding: 1rem 0;
-  transition: transform 0.5s ease-in-out; /* Transición suave */
-  scroll-snap-align: center; /* Ajusta automáticamente al centro */
+  transition: transform 0.5s ease-in-out;
 }
 
-/* Responsividad */
+/* Controles personalizados del carrusel */
+.carousel-control-prev-icon-custom,
+.carousel-control-next-icon-custom {
+  background-color: transparent; /* Fondo transparente */
+  border: 3px solid #ffc107; /* Borde amarillo */
+  border-radius: 50%; /* Botón redondo */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+  transition: all 0.4s ease; /* Transición más suave */
+}
+
+.carousel-control-prev-icon-custom::before,
+.carousel-control-next-icon-custom::before {
+  content: ''; /* Limpia el ícono predeterminado */
+  position: absolute;
+  border: solid #ffc107; /* Color de la flecha */
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 7px;
+}
+
+.carousel-control-prev-icon-custom::before {
+  transform: rotate(135deg); /* Flecha izquierda */
+}
+
+.carousel-control-next-icon-custom::before {
+  transform: rotate(-45deg); /* Flecha derecha */
+}
+
+/* Hover para controles */
+.carousel-control-prev-icon-custom:hover,
+.carousel-control-next-icon-custom:hover {
+  background-color: #ffffff; /* Fondo blanco al hover */
+  border-color: #ff9800; /* Borde anaranjado más vibrante */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4); /* Sombra más fuerte */
+}
+
+.carousel-control-prev-icon-custom:hover::before,
+.carousel-control-next-icon-custom:hover::before {
+  border-color: #ff9800; /* Flecha más vibrante */
+}
+
+/* Ajustes responsivos */
 @media (max-width: 768px) {
-  .client-logo-container {
-    width: 100px;
-    height: 100px;
+  .carousel-control-prev-icon-custom,
+  .carousel-control-next-icon-custom {
+    width: 40px;
+    height: 40px;
   }
 
-  .clients-section h2 {
-    font-size: 2rem;
+  .carousel-control-prev-icon-custom::before,
+  .carousel-control-next-icon-custom::before {
+    border-width: 0 3px 3px 0;
+    padding: 5px;
   }
 }
 
 @media (max-width: 576px) {
-  .client-logo-container {
-    width: 80px;
-    height: 80px;
+  .carousel-control-prev-icon-custom,
+  .carousel-control-next-icon-custom {
+    width: 35px;
+    height: 35px;
   }
 
-  .clients-section h2 {
-    font-size: 1.8rem;
+  .carousel-control-prev-icon-custom::before,
+  .carousel-control-next-icon-custom::before {
+    padding: 4px;
   }
 }

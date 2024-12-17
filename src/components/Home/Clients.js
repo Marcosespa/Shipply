@@ -30,6 +30,18 @@ const Clients = () => {
           interval={2500} // Intervalo más rápido para mejorar la fluidez
           fade={true} // Transición de desvanecimiento suave
           wrap={true} // Activar el loop infinito
+          nextIcon={
+            <span
+              aria-hidden="true"
+              className="carousel-control-next-icon-custom"
+            />
+          }
+          prevIcon={
+            <span
+              aria-hidden="true"
+              className="carousel-control-prev-icon-custom"
+            />
+          }
         >
           {groupedLogos.map((group, index) => (
             <Carousel.Item key={index}>
