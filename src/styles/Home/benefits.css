@@ -1,35 +1,116 @@
-/* src/components/Benefits.css */
-.benefits-section {
+/* Sección principal */
+.logistics-process {
   background-color: #f9f9f9;
-  padding: 4rem 1rem; /* Espaciado uniforme */
-
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
-.benefits-section h5 {
-  color: #ffd700; /* Amarillo brillante */
+.logistics-header h2 {
+  font-size: 2.5rem;
   font-weight: bold;
-}
-
-.benefits-section h2 {
-  color: #000; /* Negro */
-  font-weight: bold;
-}
-.benefits-subtitle {
-  font-family: "Poppins", sans-serif; /* Fuente moderna */
-  color: #f4c20f; /* Amarillo brillante */
-  font-size: 1.5rem;
-  font-weight: 700;
+  color: #333;
   margin-bottom: 1rem;
 }
-.benefit-item {
-  padding: 20px;
+
+.logistics-header p {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 3rem;
 }
 
-.benefit-icon img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #fff;
-  padding: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+/* Contenedor de tarjetas */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila */
+  gap: 2rem; /* Espaciado entre tarjetas */
+  position: relative;
+}
+
+/* Tarjeta */
+.process-step {
+  background: linear-gradient(135deg, #ffffff, #f8f8f8);
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Iconos */
+.icon-container {
+  font-size: 2.5rem; /* Tamaño del icono */
+  color: #ffc107; /* Color amarillo */
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flechas */
+.arrow-container {
+  position: absolute;
+  top: 50%;
+  right: -1.5rem;
+  transform: translateY(-50%);
+}
+
+.arrow-animate {
+  font-size: 1.5rem;
+  color: #ffc107;
+  animation: moveArrow 1s infinite alternate; /* Animación de la flecha */
+}
+
+@keyframes moveArrow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}
+
+/* Quitar flecha en la última tarjeta de cada fila */
+.process-step:nth-child(3n) .arrow-container {
+  display: none; /* Oculta la flecha en la última tarjeta de cada fila */
+}
+
+/* Título y descripción */
+.process-step h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.process-step p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila */
+  }
+  .process-step:nth-child(2n) .arrow-container {
+    display: none; /* Sin flecha en la última de cada fila (2 por fila) */
+  }
+}
+
+@media (max-width: 576px) {
+  .process-steps {
+    grid-template-columns: 1fr; /* 1 tarjeta por fila */
+  }
+  .arrow-container {
+    display: none; /* Sin flechas en móviles */
+  }
 }
