@@ -14,10 +14,13 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px; /* Espaciado uniforme entre columnas */
-
-  margin-top: 1rem; /* Espacio adicional para bajar el logo */
+  margin-top: 4rem; /* Incrementa el espacio superior */
 }
-
+.footer-section .row {
+  display: flex !important;
+  align-items: start !important; /* Alinea todas las columnas al inicio */
+  flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas pequeñas */
+}
 /* Logo más grande */
 .footer-logo {
   max-width: 250px; /* Tamaño del logo aumentado */
