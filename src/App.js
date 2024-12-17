@@ -78,7 +78,6 @@ const App = () => {
                 <Services />
                 <Benefits2 />
                 <Testimonials />
-                <WhatsappButton />
               </>
             }
           />
@@ -122,6 +121,8 @@ const App = () => {
           />
         </Routes>
       </div>
+      <WhatsappButton />
+
       <Footer />
     </Router>
   );

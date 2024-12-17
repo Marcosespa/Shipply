@@ -10,7 +10,7 @@ const Footer = () => {
         <Row>
           {/* Logo */}
           <Col md={3} className="footer-col text-center text-md-start">
-            <img src={images.logo1} alt="Logo" className="footer-logo" />
+            <img src={images.ShipplyPNG} alt="Logo" className="footer-logo" />
           </Col>
 
           {/* Sección de menú */}

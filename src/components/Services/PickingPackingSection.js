@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "../../styles/Services/pickingpackingsection.css";
 import images from "../../assets/images/images";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const PickingPackingSection = () => {
   return (
@@ -34,11 +35,11 @@ const PickingPackingSection = () => {
           </Col>
           {/* Imagen a la derecha */}
           <Col md={6} className="text-center">
-            <img
-              src={images.pickingPackingImage}
-              alt="Picking Packing"
-              className="img-fluid fade-in-image"
+            <img src={images.ImagenAlmacentamiento}
+              alt="Logo 1"
+              className="img-fluid"
               loading="lazy"
+              style={{ height: "700px", width: "700px" }}
             />
           </Col>
         </Row>

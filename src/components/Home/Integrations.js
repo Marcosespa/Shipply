@@ -20,7 +20,7 @@ const Integrations = () => {
         <h2 className="integrations-title text-center">Nos integramos a tu Ecommerce</h2>
         <div className="carousel-container">
           <div className="carousel-track">
-            {/* Duplica los logos para crear el efecto continuo */}
+            {/* Renderiza los logos dos veces para simular el efecto de loop infinito */}
             {[...logos, ...logos].map((logo, index) => (
               <img
                 key={index}

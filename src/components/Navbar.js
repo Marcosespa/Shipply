@@ -11,7 +11,7 @@ const NavigationBar = () => {
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <img
-            src={images.logo1}
+            src={images.ShipplyPNG}
             alt="Logo 1"
             className="img-fluid"
             loading="lazy"

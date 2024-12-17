@@ -8,19 +8,15 @@ const EnvioSection = () => {
     <section id="envios" className="envio-section py-5">
       <Container>
         <Row className="align-items-center">
-          {/* Imagen con íconos decorativos */}
+          {/* Imagen con movimiento */}
           <Col md={6} className="position-relative text-center">
-            <img
-              src={images.truckImage}
-              alt="Envío"
-              className="img-fluid main-image"
-              loading="lazy"
-            />
-            <div className="icon-decorator piggy-icon">
-              <i className="bi bi-piggy-bank"></i>
-            </div>
-            <div className="icon-decorator clock-icon">
-              <i className="bi bi-clock"></i>
+            <div className="player-container">
+              <img
+                src={images.EnviosImg}
+                className="player floating-image"
+                alt="Envios"
+                style={{ height: "700px", width: "800px" }}
+              />
             </div>
           </Col>
           {/* Texto y ventajas */}

@@ -95,19 +95,6 @@
   height: auto;
 }
 
-/* Decoración detrás de la imagen */
-.decorator {
-  position: absolute;
-  top: 15%;
-  left: 80%;
-  background-color: #ffc107; /* Fondo amarillo */
-  width: 100px;
-  height: 100px;
-  border-radius: 50%; /* Forma circular */
-  z-index: -1; /* Coloca detrás de la imagen */
-  animation: float 3s ease-in-out infinite; /* Animación flotante */
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-}
 
 /* Animación flotante */
 @keyframes float {

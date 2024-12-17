@@ -1,46 +1,69 @@
 .navbar-custom {
-  background-color: #f5f5f5; /* Fondo gris claro */
-  position: relative; /* O usa fixed si deseas que esté siempre visible */
-  z-index: 1000; /* Asegúrate de que tenga un índice alto */
+  background-color: #f5f5f5;
+  /* Fondo gris claro */
+  position: relative;
+  /* O usa fixed si deseas que esté siempre visible */
+  z-index: 1000;
+  /* Asegúrate de que tenga un índice alto */
   padding: 15px 20px;
-  font-family: 'Poppins', sans-serif; /* Fuente moderna */
+  font-family: 'Poppins', sans-serif;
+  /* Fuente moderna */
   border-bottom: 2px solid #dedede;
   display: flex;
-  align-items: center; /* Alinea verticalmente todo */
+  align-items: center;
+  /* Alinea verticalmente todo */
 }
+
 .navbar-nav .dropdown-menu {
-  position: absolute; /* Es importante que esté en este modo */
-  z-index: 1050; /* Más alto que el Hero pero menor que modales */
+  position: absolute;
+  /* Es importante que esté en este modo */
+  z-index: 1050;
+  /* Más alto que el Hero pero menor que modales */
 }
+
 .navbar-custom .nav-link {
-  color: #333; /* Color de texto */
-  font-weight: 500;
-  margin-right: 15px;
+  color: #000000;
+  /* Color de texto */
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 1.1rem;
+  /* Aumenta ligeramente el tamaño del texto de los enlaces */
   display: flex;
-  align-items: center; /* Alinea verticalmente */
+  align-items: center;
+  /* Alinea verticalmente */
 }
 
 .navbar-custom .nav-link:hover {
-  color: #fbb900; /* Amarillo al pasar el mouse */
+  color: #fbb900;
+  /* Amarillo al pasar el mouse */
 }
 
 .navbar-custom .navbar-brand {
   display: flex;
-  align-items: center; /* Asegura que el logo esté alineado */
+  align-items: center;
+  /* Asegura que el logo esté alineado */
 }
 
 .navbar-custom .navbar-brand img {
-  max-height: 50px; /* Ajusta el tamaño del logo */
+  max-height: 80px;
+  /* Incrementa el tamaño del logo */
+  height: auto;
+  /* Asegura que la proporción del logo sea correcta */
+  width: auto;
+  /* Asegura que la proporción del logo sea correcta */
 }
 
 .navbar-custom .btn-custom {
-  background-color: #ffd700; /* Amarillo */
+  background-color: #ffd700;
+  /* Amarillo */
   color: #333;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: bold;
   border-radius: 8px;
   padding: 8px 16px;
   display: flex;
-  align-items: center; /* Alinea el texto de los botones */
+  align-items: center;
+  /* Alinea el texto de los botones */
 }
 
 .navbar-custom .btn-custom:hover {
@@ -49,16 +72,23 @@
 }
 
 .scroll-bar {
-  position: fixed; /* Fija la barra */
-  top: 70px; /* Debajo del Navbar */
+  position: fixed;
+  /* Fija la barra */
+  top: 70px;
+  /* Debajo del Navbar */
   left: 0;
   width: 100%;
-  height: 5px; /* Altura de la barra */
-  background-color: #ffd700; /* Amarillo */
-  z-index: 999; /* Sobre otros elementos */
-  transition: transform 0.3s ease; /* Animación al esconderse */
+  height: 5px;
+  /* Altura de la barra */
+  background-color: #ffd700;
+  /* Amarillo */
+  z-index: 999;
+  /* Sobre otros elementos */
+  transition: transform 0.3s ease;
+  /* Animación al esconderse */
 }
 
 .hidden {
-  transform: translateY(-100%); /* Mueve la barra hacia arriba */
+  transform: translateY(-100%);
+  /* Mueve la barra hacia arriba */
 }

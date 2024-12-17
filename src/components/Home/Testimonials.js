@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
 import "../../styles/Home/testimonials.css";
+import images from "../../assets/images/images";
 
 const Testimonials = () => {
   const testimonials = [
@@ -9,14 +10,14 @@ const Testimonials = () => {
         "Shipply es una opción excelente para empresas que buscan crecer y optimizar sus procesos logísticos. Su combinación de profesionalismo, tecnología y atención al cliente los sitúa como un socio confiable y valioso para cualquier negocio.",
       name: "Nury Cuarán",
       company: "Transporte Carga Libre",
-      logo: "logo1.png", // Reemplaza con la ruta correcta del logo
+      logo: images.cargalibre, 
     },
     {
       quote:
         "Son una empresa competente, responsable, dedicada y con ganas de crecer. Destaco la responsabilidad y atención que le brindan al cliente, ya que, al operar a distancia, es de vital importancia.",
       name: "Leonela",
       company: "Travel Blue",
-      logo: "logo2.png", // Reemplaza con la ruta correcta del logo
+      logo: images.travelBlue, 
     },
   ];
 

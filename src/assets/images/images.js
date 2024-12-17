@@ -7,7 +7,12 @@ const images = {
   logo6: require('./Almacentamiento.json'),
   logo7: require('./ImagenContacto.png'),
   logo8: require('./Quienes-somos.png'),
+  logo9: require('./DeliveryAnimation.json'),
+  ImagenAlmacentamiento: require('./ImagenAlmacentamiento.jpg'),
+  ShipplyPNG: require('./Shipply-SinFondo.png'),
+  EnviosImg: require('./EnviosImg.png'),
   // Logos empresas
+  cargalibre:require('./LOGO CARGALIBRE.png'),
   proimpo: require('./Proimpo.png'),
   travelBlue: require('./Travel-Blue.png'),
   dia11: require('./diaonce.webp'),

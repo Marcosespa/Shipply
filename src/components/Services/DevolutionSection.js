@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "../../styles/Services/devolutionsection.css";
 import images from "../../assets/images/images";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const DevolutionSection = () => {
   return (
@@ -36,13 +37,13 @@ const DevolutionSection = () => {
           {/* Imagen a la derecha */}
           <Col md={6} className="text-center">
             <div className="image-container position-relative">
-              <img
-                src={images.packageHandImage}
-                alt="Devoluciones"
-                className="img-fluid main-image"
-                loading="lazy"
+              <Player
+                src={images.logo9}
+                className="player"
+                loop
+                autoplay
+                style={{ height: "400px", width: "500px" }}
               />
-              <div className="decorator"></div>
             </div>
           </Col>
         </Row>
