@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "../../styles/Services/pickingpackingsection.css";
 import images from "../../assets/images/images";
-import { Player } from "@lottiefiles/react-lottie-player";
 
 const PickingPackingSection = () => {
   return (
