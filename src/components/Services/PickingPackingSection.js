@@ -11,7 +11,7 @@ const PickingPackingSection = () => {
         <Row className="align-items-center">
           {/* Texto a la izquierda */}
           <Col md={6}>
-            <h2 className="section-title">Picking / Packing</h2>
+            <h2 className="section-title-Picking">Picking / Packing</h2>
             <p className="section-description-picking mb-4">
               Seleccionamos tus productos, realizamos el alistamiento de tus órdenes de pedido, etiquetamos y empacamos a tu medida.
             </p>

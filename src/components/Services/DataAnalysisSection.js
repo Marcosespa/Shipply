@@ -21,7 +21,7 @@ const DataAnalysisSection = () => {
           </Col>
           {/* Texto a la derecha */}
           <Col md={6}>
-            <h2 className="section-title">Análisis de datos con tecnología avanzada</h2>
+            <h2 className="section-title-Analisis">Análisis de datos con tecnología avanzada</h2>
             <p className="section-description mb-4">
               Te presentamos un dashboard con los principales reportes y métricas de tu operación. Te enviamos alertas con las condiciones que quieras conocer en tiempo real.
             </p>

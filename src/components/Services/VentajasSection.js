@@ -23,7 +23,7 @@ const VentajasSection = () => {
           </Col>
           {/* Texto a la derecha */}
           <Col md={6}>
-            <h2 className="section-title">Almacenamiento</h2>
+            <h2 className="section-title-Almacenamiento">Almacenamiento</h2>
             <p className="section-description">
               Recolectamos, clasificamos y almacenamos tus productos de acuerdo
               a su naturaleza.

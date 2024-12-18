@@ -11,7 +11,7 @@ const DevolutionSection = () => {
         <Row className="align-items-center">
           {/* Texto a la izquierda */}
           <Col md={6}>
-            <h2 className="section-title">Gestión de devoluciones</h2>
+            <h2 className="section-title-devoluciones">Gestión de devoluciones</h2>
             <p className="section-description-devolution mb-4">
               Facilitamos tu proceso de devoluciones con una automatización
               integrada a nuestro WMS.

@@ -21,7 +21,7 @@ const EnvioSection = () => {
           </Col>
           {/* Texto y ventajas */}
           <Col md={6}>
-            <h2 className="section-title">Envío</h2>
+            <h2 className="section-title-Envio">Envío</h2>
             <p className="section-description mb-4">
               Contamos con una flota de transporte propia, y sostenemos alianzas con las principales empresas paqueteras para brindarte la solución de transporte que más se adapte a tu necesidad.
             </p>

@@ -24,10 +24,8 @@ import ServiceComparisonPage from "./components/Blog/ServiceComparisonPage"
 import UrbanLogisticsPage from "./components/Blog/UrbanLogisticsPage"
 import WarehouseAutomationPage from "./components/Blog/WarehouseAutomationPage"
 
-
-
 import WhatsappButton from "./components/WhatsappButton";
-import "./styles/Home/chestDrawer.css"; 
+import "./styles/Home/chestDrawer.css";
 
 import ProcessSection from "./components/Services/ProcessSection";
 import IntegracionesSection from "./components/Services/IntegracionesSection";
@@ -37,6 +35,7 @@ import DataAnalysisSection from "./components/Services/DataAnalysisSection";
 import DevolutionSection from "./components/Services/DevolutionSection";
 import EnvioSection from "./components/Services/EnvioSection";
 import ContactSection from "./components/Contact/ContactSection";
+import TalentSection from "./components/Contact/TalentSection";
 
 const ScrollToHash = () => {
   const { hash } = useLocation();
@@ -114,6 +113,27 @@ const App = () => {
             path="/blog/automatizacion-almacenes"
             element={<WarehouseAutomationPage title="Automatización en Almacenes" />}
           />
+
+
+          <Route
+            path="/talento"
+            element={
+              <>
+                <TalentSection />
+                {/* PARTE A CAMBIAR POR FORMS PARA CONTRATAR */}
+              </>
+            }
+          />
+          <Route
+            path="/faq"
+            element={
+              <>
+                <WarehouseAutomationPage />
+                {/* PARTE A CAMBIAR POR FORMS PARA CONTRATAR */}
+              </>
+            }
+          />
+
         </Routes>
       </div>
       <WhatsappButton />

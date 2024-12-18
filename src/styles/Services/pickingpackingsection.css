@@ -7,14 +7,27 @@
 }
 
 /* Título */
-.section-title {
+.section-title-Picking {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ffc107; /* Amarillo */
+  text-align: center;
+  color: #FFD700; /* Amarillo */
   margin-bottom: 1.5rem;
 }
 
+.section-title-Picking::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #FFD700;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /* Descripción */
 .section-description-picking {
   font-family: "Poppins", sans-serif;
