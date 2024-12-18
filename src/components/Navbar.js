@@ -26,7 +26,7 @@ const NavigationBar = () => {
               title={
                 <span
                   onClick={() => {
-                    window.location.href = "/servicios"; // Redirige a Servicios
+                    window.location.href = "/servicios#processsection"; 
                   }}
                 >
                   Servicios

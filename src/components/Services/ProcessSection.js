@@ -4,7 +4,7 @@ import images from "../../assets/images/images";
 
 const ProcessSection = () => {
   return (
-    <section className="process-section text-center py-5">
+    <section id="processsection"className="process-section text-center py-5">
       <div className="custom-container">
         <h2 className="section-title-Servicios">Conoce Nuestro Proceso Integral</h2>
         <p className="section-description-Servicios">
