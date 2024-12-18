@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import "../../styles/Talento/talentsection.css";
+import "../../styles/Contact/talentsection.css";
 import images from "../../assets/images/images";
 
 const TalentSection = () => {

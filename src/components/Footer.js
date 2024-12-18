@@ -26,7 +26,7 @@ const Footer = () => {
                 <a href="#casos">Casos de éxito</a>
               </li>
               <li>
-                <a href="#talento">Talento</a>
+                <a href="/talento">Talento</a>
               </li>
               <li>
                 <a href="/contacto">Asesoría Colombia</a>

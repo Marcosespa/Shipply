@@ -12,7 +12,7 @@ const ContactSection = () => {
           <img
             src={images.logo7}
             alt="Ilustración Shipply"
-            className="illustration"
+            className="illustration-Shipply"
             loading="lazy"
           />
         </Col>
