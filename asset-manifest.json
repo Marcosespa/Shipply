@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Shipply/static/css/main.d006fe5d.css",
-    "main.js": "/Shipply/static/js/main.7e2978bd.js",
+    "main.js": "/Shipply/static/js/main.c6b8676e.js",
     "static/media/NoticiasRecientes.png": "/Shipply/static/media/NoticiasRecientes.25e68a1886097c06bf35.png",
     "static/media/EnviosImg.png": "/Shipply/static/media/EnviosImg.34db79c15445fe2425a0.png",
     "static/media/fa-solid-900.ttf": "/Shipply/static/media/fa-solid-900.ad1782c70927ebc5bc87.ttf",
@@ -40,10 +40,10 @@
     "static/media/fa-v4compatibility.woff2": "/Shipply/static/media/fa-v4compatibility.c3ea317a0f10f201597f.woff2",
     "index.html": "/Shipply/index.html",
     "main.d006fe5d.css.map": "/Shipply/static/css/main.d006fe5d.css.map",
-    "main.7e2978bd.js.map": "/Shipply/static/js/main.7e2978bd.js.map"
+    "main.c6b8676e.js.map": "/Shipply/static/js/main.c6b8676e.js.map"
   },
   "entrypoints": [
     "static/css/main.d006fe5d.css",
-    "static/js/main.7e2978bd.js"
+    "static/js/main.c6b8676e.js"
   ]
 }
