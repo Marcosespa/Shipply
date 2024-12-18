@@ -15,7 +15,6 @@ const EnvioSection = () => {
                 src={images.EnviosImg}
                 className="player floating-image"
                 alt="Envios"
-                style={{ height: "700px", width: "800px" }}
               />
             </div>
           </Col>
@@ -23,11 +22,15 @@ const EnvioSection = () => {
           <Col md={6}>
             <h2 className="section-title-Envio">Envío</h2>
             <p className="section-description mb-4">
-              Contamos con una flota de transporte propia, y sostenemos alianzas con las principales empresas paqueteras para brindarte la solución de transporte que más se adapte a tu necesidad.
+              Contamos con una flota de transporte propia, y sostenemos alianzas
+              con las principales empresas paqueteras para brindarte la solución
+              de transporte que más se adapte a tu necesidad.
             </p>
             <p className="highlighted-text">
               <strong>
-                Entrega same day o next day en las principales ciudades del país. Contamos con motorizados y vehículos propios para nunca fallar tu entrega importante.
+                Entrega same day o next day en las principales ciudades del
+                país. Contamos con motorizados y vehículos propios para nunca
+                fallar tu entrega importante.
               </strong>
             </p>
             <div className="advantages">
@@ -39,7 +42,12 @@ const EnvioSection = () => {
                 <li>Recibimos pago contraentrega</li>
               </ul>
             </div>
-            <Button variant="dark" className="cta-button mt-3">
+            <Button
+              href="https://wa.me/573184516959"
+              target="_blank"
+              variant="dark"
+              className="cta-button mt-3"
+            >
               <i className="bi bi-whatsapp me-2"></i>
               Cotizar ahora
             </Button>

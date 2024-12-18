@@ -6,14 +6,19 @@
 }
 
 /* Títulos */
-.section-title-Envio{
+.section-title-Envio {
   font-family: "Poppins", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
   text-align: center;
-  color: #FFD700; /* Amarillo */
-  margin-bottom: 1.5rem;
+  color: #000; /* Texto base en negro */
+  background: linear-gradient(90deg, #FFD700, #FF8C00); /* Gradiente atractivo */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  margin-bottom: 2rem;
 }
+
 .section-title-Envio::after {
   content: "";
   width: 80px;
@@ -46,10 +51,13 @@
 
 /* Imagen con movimiento flotante */
 .floating-image {
-  animation: float 4s ease-in-out infinite; /* Aplica la animación de movimiento */
-  border-radius: 10px; /* Opcional: bordes redondeados */
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+  animation: float 6s ease-in-out infinite; /* Movimientos más suaves y pausados */
+  border-radius: 15px; /* Bordes más redondeados */
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  max-width: 100%; /* Responsiva */
+  height: auto;
 }
+
 
 /* Animación flotante */
 @keyframes float {
@@ -86,7 +94,9 @@
   line-height: 1.6;
   margin-bottom: 0.8rem;
   position: relative;
-  padding-left: 20px;
+  padding-left: 40px;
+  transition: color 0.3s ease;
+
 }
 
 .advantages-list li::before {

@@ -11,7 +11,9 @@ const DevolutionSection = () => {
         <Row className="align-items-center">
           {/* Texto a la izquierda */}
           <Col md={6}>
-            <h2 className="section-title-devoluciones">Gestión de devoluciones</h2>
+            <h2 className="section-title-devoluciones">
+              Gestión de devoluciones
+            </h2>
             <p className="section-description-devolution mb-4">
               Facilitamos tu proceso de devoluciones con una automatización
               integrada a nuestro WMS.
@@ -29,7 +31,12 @@ const DevolutionSection = () => {
                 <li>Incremento del nivel de satisfacción de tus clientes</li>
               </ul>
             </div>
-            <Button variant="dark" className="cta-button mt-3">
+            <Button
+              href="https://wa.me/573184516959"
+              target="_blank"
+              variant="dark"
+              className="cta-button mt-3"
+            >
               <i className="bi bi-whatsapp me-2"></i>
               Cotizar ahora
             </Button>

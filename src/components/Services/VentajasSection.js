@@ -31,8 +31,9 @@ const VentajasSection = () => {
             <p className="highlighted-text">
               <strong>
                 Contamos con bodegas especializadas en las principales ciudades
-                de Colombia, las cuales funcionan con un modelo de almacenamiento optimizado
-                para minimizar tus costos y mejorar la efectividad de tus entregas.
+                de Colombia, las cuales funcionan con un modelo de
+                almacenamiento optimizado para minimizar tus costos y mejorar la
+                efectividad de tus entregas.
               </strong>
             </p>
             <div className="advantages">
@@ -46,7 +47,12 @@ const VentajasSection = () => {
                 </li>
               </ul>
             </div>
-            <Button variant="dark" className="cta-button mt-3">
+            <Button
+              href="https://wa.me/573184516959"
+              target="_blank"
+              variant="dark"
+              className="cta-button mt-3"
+            >
               <i className="bi bi-whatsapp me-2"></i>
               Cotizar ahora
             </Button>

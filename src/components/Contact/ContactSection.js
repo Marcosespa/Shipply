@@ -19,7 +19,7 @@ const ContactSection = () => {
 
         {/* Formulario */}
         <Col md={5} className="form-section ps-2">
-        <h3 className="form-title">Déjanos un mensaje</h3>
+          <h3 className="form-title">Déjanos un mensaje</h3>
           <p className="form-description">
             Y un asesor se contactará contigo lo antes posible
           </p>
@@ -80,13 +80,14 @@ const ContactSection = () => {
           </form>
           <p className="social-text mt-4">Síguenos en nuestras redes sociales</p>
           <div className="social-icons">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/shipply.col/" target="_blank" rel="noreferrer">
               <i className="bi bi-instagram"></i>
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61550521441472" target="_blank" rel="noreferrer">
               <i className="bi bi-facebook"></i>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/company/shipply-sas"
+              target="_blank" rel="noreferrer">
               <i className="bi bi-linkedin"></i>
             </a>
           </div>

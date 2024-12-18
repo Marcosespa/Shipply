@@ -33,7 +33,12 @@ const IntegracionesSection = () => {
                 </li>
               </ul>
             </div>
-            <Button variant="dark" className="cta-button mt-3">
+            <Button
+              href="https://wa.me/573184516959"
+              target="_blank"
+              variant="dark"
+              className="cta-button mt-3"
+            >
               <i className="bi bi-whatsapp me-2"></i>
               Cotizar ahora
             </Button>

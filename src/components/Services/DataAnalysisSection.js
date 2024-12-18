@@ -21,9 +21,13 @@ const DataAnalysisSection = () => {
           </Col>
           {/* Texto a la derecha */}
           <Col md={6}>
-            <h2 className="section-title-Analisis">Análisis de datos con tecnología avanzada</h2>
+            <h2 className="section-title-Analisis">
+              Análisis de datos con tecnología avanzada
+            </h2>
             <p className="section-description mb-4">
-              Te presentamos un dashboard con los principales reportes y métricas de tu operación. Te enviamos alertas con las condiciones que quieras conocer en tiempo real.
+              Te presentamos un dashboard con los principales reportes y
+              métricas de tu operación. Te enviamos alertas con las condiciones
+              que quieras conocer en tiempo real.
             </p>
             <p className="highlighted-text">
               <strong>Dashboard ajustado a tu necesidad.</strong>
@@ -34,7 +38,12 @@ const DataAnalysisSection = () => {
                 <li>Actualización 24/7</li>
               </ul>
             </div>
-            <Button variant="dark" className="cta-button mt-3">
+            <Button
+              href="https://wa.me/573184516959"
+              target="_blank"
+              variant="dark"
+              className="cta-button mt-3"
+            >
               <i className="bi bi-whatsapp me-2"></i>
               Cotizar ahora
             </Button>
