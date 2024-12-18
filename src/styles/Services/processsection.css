@@ -10,21 +10,20 @@
 }
 
 /* Título de la sección */
-.section-title {
+.section-title-Servicios {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ffc107; /* Amarillo */
+  color: #FFD700; /* Amarillo */
   margin-bottom: 1.5rem;
   letter-spacing: 1px;
 }
 
 /* Descripción */
-.section-description {
+.section-description-Servicios {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   color: #666666; /* Gris oscuro */
-  margin-bottom: 3rem;
   line-height: 1.6;
 }
 

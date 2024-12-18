@@ -13,7 +13,7 @@ const VentajasSection = () => {
           <Col md={6} className="text-center">
             <div className="player-container">
               <Player
-                src={images.logo6}
+                src={images.AnimationAlmacentamient}
                 className="player"
                 loop
                 autoplay

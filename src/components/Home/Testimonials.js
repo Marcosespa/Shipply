@@ -19,6 +19,16 @@ const Testimonials = () => {
       company: "Travel Blue",
       logo: images.travelBlue, 
     },
+    {
+      quote:
+        "Son una empresa competente, responsable, dedicada y con ganas de crecer. Destaco la responsabilidad y atención que le brindan al cliente, ya que, al operar a distancia, es de vital importancia.",
+      name: "Francisco Vaca",
+      company: "AV Plastics Trade SAS",
+      logo: images.avplasticsTrade, 
+    },
+
+
+
   ];
 
   return (
@@ -26,8 +36,8 @@ const Testimonials = () => {
       <Container>
         <Row className="text-center">
           <Col>
-            <h2 className="section-title">Testimonios</h2>
-            <p className="section-description">¿Qué dicen nuestros clientes?</p>
+            <h2 className="section-title-testimonials">Testimonios</h2>
+            <p className="section-description-testimonials">¿Qué dicen nuestros clientes?</p>
           </Col>
         </Row>
         <Carousel controls={true} indicators={true} interval={5000}>

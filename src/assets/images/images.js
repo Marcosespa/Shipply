@@ -12,6 +12,7 @@ const images = {
   ShipplyPNG: require('./Shipply-SinFondo.png'),
   EnviosImg: require('./EnviosImg.png'),
   AnimationAnalytics: require('./AnimationAnalytics.json'),
+  AnimationAlmacentamient: require('./Animation-Almacenamiento.json'),
   //Fotos Blog
   GuiasPracticas: require('./Guiaspracticas.jpg.webp'),
   AnalisisNoticias: require('./NoticiasRecientes.png'),
@@ -26,6 +27,7 @@ const images = {
   alohaBaby: require('./alohaBaby.png'),
   anasac: require('./anasac.png'),
   santaAnita: require('./SantaAnita.png.webp'),
+  avplasticsTrade: require('./avplastics.jpeg'),
   // Logos empresas integraciones
   shopify: require('./shopify.png'),
   vtex: require('./vtex.png'),

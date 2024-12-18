@@ -52,7 +52,7 @@ const Hero = () => {
       <div className="hero-container">
         <Row className="align-items-center">
           <Col md={6} className="text-container">
-            <h5 className="hero-subtitle">
+            <h5 className="hero-subtitle-initial">
               Simplifica tu logística y acelera el crecimiento de tu E-commerce
             </h5>
             <h1 className="hero-title">

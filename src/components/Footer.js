@@ -20,7 +20,7 @@ const Footer = () => {
             <h5 className="footer-title">SHIPPLY</h5>
             <ul className="footer-menu">
               <li>
-                <a href="#blog">Blog</a>
+                <a href="/blog">Blog</a>
               </li>
               <li>
                 <a href="#casos">Casos de éxito</a>
@@ -29,10 +29,7 @@ const Footer = () => {
                 <a href="#talento">Talento</a>
               </li>
               <li>
-                <a href="#prensa">Prensa y Medios</a>
-              </li>
-              <li>
-                <a href="#asesoria-colombia">Asesoría Colombia</a>
+                <a href="/contacto">Asesoría Colombia</a>
               </li>
             </ul>
           </Col>
@@ -42,13 +39,10 @@ const Footer = () => {
             <h5 className="footer-title">PRODUCTO</h5>
             <ul className="footer-menu">
               <li>
-                <a href="#fulfillment">Fulfillment</a>
+                <a href="/Servicios">Servicios</a>
               </li>
               <li>
-                <a href="#centros">Centros de fulfillment</a>
-              </li>
-              <li>
-                <a href="#integraciones">Integraciones</a>
+                <a href="/Servicios#integraciones">Integraciones</a>
               </li>
               <li>
                 <a href="#faq">Preguntas frecuentes (FAQ)</a>

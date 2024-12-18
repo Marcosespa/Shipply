@@ -19,7 +19,7 @@ const IntegracionesSection = () => {
           </Col>
           {/* Texto a la derecha */}
           <Col md={6}>
-            <h2 className="section-title">Integraciones</h2>
+            <h2 className="section-title-Integraciones">Integraciones</h2>
             <p className="section-description">
               Nos integramos a tu canal de ventas e-commerce.
             </p>

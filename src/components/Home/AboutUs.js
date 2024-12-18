@@ -10,7 +10,7 @@ const AboutUs = () => {
       <Container>
         <Row className="align-items-center">
           <Col md={6} className="text-section">
-            <h2 className="section-title text-warning">¿Quiénes somos?</h2>
+            <h2 className="section-title-aboutUs">¿Quiénes somos?</h2>
             <p className="section-description">
               Somos una empresa de logística fulfillment especializada en diseñar soluciones adaptadas a las necesidades de las empresas E-commerce.
             </p>

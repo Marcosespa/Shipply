@@ -55,8 +55,8 @@ const Services = () => {
   return (
     <div className="services-section" ref={servicesRef}>
       <Container>
-        <h2 className="text-center section-title">Nuestros Servicios</h2>
-        <p className="text-center section-description">
+        <h2 className="text-center section-title-services">Nuestros Servicios</h2>
+        <p className="text-center section-description-services">
           En Shipply encontrarás una serie de servicios que facilitarán el
           crecimiento de tu E-commerce.
         </p>
