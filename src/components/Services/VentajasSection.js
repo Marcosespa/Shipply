@@ -17,8 +17,8 @@ const VentajasSection = () => {
                 className="player"
                 loop
                 autoplay
-                style={{ height: "400px", width: "500px" }}
-              />
+                style={{ height: "400px", width: "500px", marginLeft: "-100px" }} // Ajuste aquí
+                />
             </div>
           </Col>
           {/* Texto a la derecha */}
