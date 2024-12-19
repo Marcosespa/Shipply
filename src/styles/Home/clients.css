@@ -34,15 +34,15 @@
   margin: 10px;
   width: 150px;
   height: 150px;
-  border-radius: 10px; /* Bordes redondeados */
-  background-color: #ffffff; /* Fondo blanco */
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .client-logo-container:hover {
-  transform: scale(1.1); /* Zoom en hover */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave en hover */
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos de los logos */
@@ -50,8 +50,7 @@
   max-width: 100%;
   max-height: 100%;
   border-radius: inherit; /* Hereda el borde redondeado del contenedor */
-
-  object-fit: contain; /* Ajuste proporcional */
+  object-fit: contain; 
 }
 
 /* Ítems del carrusel */
@@ -132,5 +131,51 @@
   .carousel-control-prev-icon-custom::before,
   .carousel-control-next-icon-custom::before {
     padding: 4px;
+  }
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .client-logo-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .clients-section h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-control-prev-icon-custom,
+  .carousel-control-next-icon-custom {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-control-prev-icon-custom::before,
+  .carousel-control-next-icon-custom::before {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .client-logo-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .carousel-control-prev-icon-custom,
+  .carousel-control-next-icon-custom {
+    width: 35px;
+    height: 35px;
+  }
+
+  .carousel-control-prev-icon-custom::before,
+  .carousel-control-next-icon-custom::before {
+    padding: 4px;
+  }
+
+  .clients-section h2 {
+    font-size: 1.8rem;
   }
 }

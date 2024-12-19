@@ -14,7 +14,7 @@ const Clients = () => {
   ];
 
   const groupedLogos = clientLogos.reduce((acc, curr, index) => {
-    const groupIndex = Math.floor(index / 3);
+    const groupIndex = Math.floor(index / 3); // Agrupa logos de 3 en 3
     acc[groupIndex] = acc[groupIndex] || [];
     acc[groupIndex].push(curr);
     return acc;
@@ -30,24 +30,17 @@ const Clients = () => {
           interval={2500} // Intervalo más rápido para mejorar la fluidez
           fade={true} // Transición de desvanecimiento suave
           wrap={true} // Activar el loop infinito
-          nextIcon={
-            <span
-              aria-hidden="true"
-              className="carousel-control-next-icon-custom"
-            />
-          }
-          prevIcon={
-            <span
-              aria-hidden="true"
-              className="carousel-control-prev-icon-custom"
-            />
-          }
+          nextIcon={<span aria-hidden="true" className="carousel-control-next-icon-custom" />}
+          prevIcon={<span aria-hidden="true" className="carousel-control-prev-icon-custom" />}
         >
           {groupedLogos.map((group, index) => (
             <Carousel.Item key={index}>
               <div className="d-flex justify-content-center align-items-center flex-wrap">
                 {group.map((logo, idx) => (
-                  <div key={idx} className="d-flex justify-content-center align-items-center mx-3 client-logo-container">
+                  <div
+                    key={idx}
+                    className="d-flex justify-content-center align-items-center mx-3 client-logo-container"
+                  >
                     {logo}
                   </div>
                 ))}
