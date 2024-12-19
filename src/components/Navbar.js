@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaUsers, FaPhoneAlt } from "react-icons/fa";
 
 const NavigationBar = () => {
-  const navigate = useNavigate(); // Hook para navegación programática
+  const navigate = useNavigate();
 
   const handleRedirect = () => {
     navigate("/servicios");
@@ -15,7 +15,6 @@ const NavigationBar = () => {
   return (
     <Navbar bg="light" expand="lg" className="navbar-custom">
       <Container>
-        {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <img
             src={images.ShipplyPNG}
@@ -24,20 +23,11 @@ const NavigationBar = () => {
             loading="lazy"
           />
         </Navbar.Brand>
-
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            {/* Botón principal de Servicios */}
             <NavDropdown
-              title={
-                <span
-                  style={{ cursor: "pointer" }}
-                  onClick={handleRedirect} // Maneja la redirección programática
-                >
-                  Servicios
-                </span>
-              }
+              title={<span style={{ cursor: "pointer" }}>Servicios</span>}
               id="basic-nav-dropdown"
             >
               <NavDropdown.Item as={Link} to="/servicios#integraciones">
@@ -53,12 +43,8 @@ const NavigationBar = () => {
                 Envío
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/contacto">
-              Contacto
-            </Nav.Link>
-            <Nav.Link as={Link} to="/blog">
-              Blog
-            </Nav.Link>
+            <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
+            <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
             <Nav.Link
               href="https://cargalibre.com.co/"
               target="_blank"
@@ -67,7 +53,6 @@ const NavigationBar = () => {
               Carga Libre
             </Nav.Link>
           </Nav>
-          {/* Botones adicionales */}
           <Button
             variant="warning"
             className="btn-custom ms-2 d-flex align-items-center"
