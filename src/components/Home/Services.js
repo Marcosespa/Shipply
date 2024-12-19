@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom"; // Importa Link
 import "../../styles/Home/services.css";
 
 const Services = () => {
@@ -76,13 +77,12 @@ const Services = () => {
           ))}
         </Row>
         <div className="text-center mt-5">
-          <Button
-            variant="warning"
-            size="lg"
-            className="cta-button"
-            href="/servicios" 
-          >            Conoce nuestros servicios
-          </Button>
+          <Link
+            to="/servicios" // Cambia href por to
+            className="btn btn-warning btn-lg cta-button" // Usa clases de Bootstrap
+          >
+            Conoce nuestros servicios
+          </Link>
         </div>
       </Container>
     </div>

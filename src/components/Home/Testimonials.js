@@ -21,7 +21,7 @@ const Testimonials = () => {
     },
     {
       quote:
-        "Son una empresa competente, responsable, dedicada y con ganas de crecer. Destaco la responsabilidad y atención que le brindan al cliente, ya que, al operar a distancia, es de vital importancia.",
+        "Shiply es excelente con los servicios de almacenamiento, alistamiento y distribución de mis productos. Lo hacen de una manera oportuna y eficaz, y lo mejor es que dan respuesta rápida a las necesidades.",
       name: "Francisco Vaca",
       company: "AV Plastics Trade SAS",
       logo: images.avplasticsTrade, 

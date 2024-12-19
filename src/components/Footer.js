@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom"; // Importa Link
 import "../styles/footer.css";
 import images from "../assets/images/images";
 
@@ -20,16 +21,16 @@ const Footer = () => {
             <h5 className="footer-title">SHIPPLY</h5>
             <ul className="footer-menu">
               <li>
-                <a href="/blog">Blog</a>
+                <Link to="/blog">Blog</Link>
               </li>
               <li>
-                <a href="#casos">Casos de éxito</a>
+                <a href="#casos">Casos de éxito</a> {/* Sigue siendo un hash */}
               </li>
               <li>
-                <a href="/talento">Talento</a>
+                <Link to="/talento">Talento</Link>
               </li>
               <li>
-                <a href="/contacto">Asesoría Colombia</a>
+                <Link to="/contacto">Asesoría Colombia</Link>
               </li>
             </ul>
           </Col>
@@ -39,13 +40,13 @@ const Footer = () => {
             <h5 className="footer-title">PRODUCTO</h5>
             <ul className="footer-menu">
               <li>
-                <a href="/Servicios">Servicios</a>
+                <Link to="/servicios">Servicios</Link>
               </li>
               <li>
-                <a href="/Servicios#integraciones">Integraciones</a>
+                <Link to="/servicios#integraciones">Integraciones</Link>
               </li>
               <li>
-                <a href="#faq">Preguntas frecuentes (FAQ)</a>
+                <a href="#faq">Preguntas frecuentes (FAQ)</a> {/* Sigue siendo un hash */}
               </li>
             </ul>
           </Col>

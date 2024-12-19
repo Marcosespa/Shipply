@@ -3,6 +3,8 @@ import { Row, Col } from "react-bootstrap";
 import "../../styles/Home/hero.css";
 import { Player } from "@lottiefiles/react-lottie-player";
 import images from "../../assets/images/images";
+import { Link } from "react-router-dom";
+
 const wrapText = (text) => {
   return text.split(" ").map((word, index) => (
     <span
@@ -60,7 +62,7 @@ const Hero = () => {
                 "Centraliza tu inventario, automatiza el proceso de pedidos y garantiza entregas rápidas y seguras."
               )}
             </h1>
-            <a href="/contacto" className="button">
+            <Link to="/contacto" className="button">
               <span className="text">Contactanos</span>
               <span className="svg">
                 <svg
@@ -76,7 +78,7 @@ const Hero = () => {
                   ></path>
                 </svg>
               </span>
-            </a>
+            </Link>
             <p className="hero-text mt-3">
               La mudanza corre por cuenta nuestra
             </p>

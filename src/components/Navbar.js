@@ -9,6 +9,7 @@ const NavigationBar = () => {
   return (
     <Navbar bg="light" expand="lg" className="navbar-custom">
       <Container>
+        {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <img
             src={images.ShipplyPNG}
@@ -23,17 +24,8 @@ const NavigationBar = () => {
           <Nav className="ms-auto">
             {/* Botón principal de Servicios */}
             <NavDropdown
-              title={
-                <span
-                  onClick={() => {
-                    window.location.href = "/servicios#processsection"; 
-                  }}
-                >
-                  Servicios
-                </span>
-              }
-              id="basic-nav-dropdown"
-            >
+              title={<Link to="/servicios" className="nav-link">Servicios</Link>}
+              id="basic-nav-dropdown">              
               <NavDropdown.Item as={Link} to="/servicios#integraciones">
                 Integraciones
               </NavDropdown.Item>
@@ -61,6 +53,16 @@ const NavigationBar = () => {
               Carga Libre
             </Nav.Link>
           </Nav>
+
+          {/* Botones de acción */}
+          <Button
+            variant="warning"
+            className="btn-custom ms-2 d-flex align-items-center"
+            as={Link}
+            to="/contacto"
+          >
+            <FaPhoneAlt className="me-2" /> Contactar
+          </Button>
           <Button
             variant="warning"
             className="btn-custom ms-2 d-flex align-items-center"
@@ -69,15 +71,6 @@ const NavigationBar = () => {
             rel="noopener noreferrer"
           >
             <FaUsers className="me-2" /> Portal Clientes
-          </Button>
-          <Button
-            variant="warning"
-            className="btn-custom ms-2 d-flex align-items-center"
-            href="/contacto"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaPhoneAlt className="me-2" /> Contactar
           </Button>
         </Navbar.Collapse>
       </Container>

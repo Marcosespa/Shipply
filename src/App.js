@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation,
 } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -19,13 +18,14 @@ import AboutUs from "./components/Home/AboutUs";
 import Benefits2 from "./components/Home/Benefits2";
 import BlogSection from "./components/Blog/BlogSection";
 import GuidesPage from "./components/Blog/GuidesPage";
-import NewsAnalysisPage from "./components/Blog/NewsAnalysisPage"
-import ServiceComparisonPage from "./components/Blog/ServiceComparisonPage"
-import UrbanLogisticsPage from "./components/Blog/UrbanLogisticsPage"
-import WarehouseAutomationPage from "./components/Blog/WarehouseAutomationPage"
+import NewsAnalysisPage from "./components/Blog/NewsAnalysisPage";
+import ServiceComparisonPage from "./components/Blog/ServiceComparisonPage";
+import UrbanLogisticsPage from "./components/Blog/UrbanLogisticsPage";
+import WarehouseAutomationPage from "./components/Blog/WarehouseAutomationPage";
 
 import WhatsappButton from "./components/WhatsappButton";
 import "./styles/Home/chestDrawer.css";
+import ScrollToHash from "./components/ScrollToHash"; // Importa el componente
 
 import ProcessSection from "./components/Services/ProcessSection";
 import IntegracionesSection from "./components/Services/IntegracionesSection";
@@ -37,28 +37,12 @@ import EnvioSection from "./components/Services/EnvioSection";
 import ContactSection from "./components/Contact/ContactSection";
 import TalentSection from "./components/Contact/TalentSection";
 
-const ScrollToHash = () => {
-  const { hash } = useLocation();
-
-  useEffect(() => {
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }
-  }, [hash]);
-
-  return null;
-};
-
 const App = () => {
   return (
     <Router>
       <Navbar />
+      <ScrollToHash /> {/* Incluye el componente solo una vez aquí */}
       <div style={{ minHeight: "100vh", minWidth: "100vh" }}>
-        {" "}
-        <ScrollToHash />
         <Routes>
           <Route
             path="/"
