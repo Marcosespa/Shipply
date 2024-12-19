@@ -46,7 +46,7 @@ const Footer = () => {
                 <Link to="/servicios#integraciones">Integraciones</Link>
               </li>
               <li>
-                <a href="#faq">Preguntas frecuentes (FAQ)</a> {/* Sigue siendo un hash */}
+              <Link to="/faq">Preguntas frecuentes (FAQ)</Link>
               </li>
             </ul>
           </Col>

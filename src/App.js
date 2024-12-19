@@ -37,6 +37,13 @@ import EnvioSection from "./components/Services/EnvioSection";
 import ContactSection from "./components/Contact/ContactSection";
 import TalentSection from "./components/Contact/TalentSection";
 import PrivacyPolitic from "./components/Contact/PrivacyPolitic";
+import Faq from "./components/Faq/Faq";
+
+
+
+
+
+
 
 const App = () => {
   return (
@@ -113,7 +120,7 @@ const App = () => {
             path="/faq"
             element={
               <>
-                <WarehouseAutomationPage />
+                <Faq />
                 {/* PARTE A CAMBIAR POR FORMS PARA CONTRATAR */}
               </>
             }
