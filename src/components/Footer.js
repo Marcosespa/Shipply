@@ -58,11 +58,6 @@ const Footer = () => {
               <li>
                 <Link to="/politica-de-privacidad">Política de privacidad</Link>
               </li>
-              <li>
-                <a href="#proteccion-datos">
-                  Política de protección de datos Colombia
-                </a>
-              </li>
             </ul>
           </Col>
         </Row>
