@@ -1,68 +1,68 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Shipply - Página Web de la Empresa
 
-## Available Scripts
+## Descripción
 
-In the project directory, you can run:
+Shipply es una empresa que ofrece soluciones innovadoras en logística y envío de paquetes. Esta página web está desarrollada utilizando **React** y **Bootstrap**, brindando una experiencia moderna, responsiva y fácil de usar.
 
-### `yarn start`
+## Tecnologías utilizadas
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **Bootstrap**: Framework CSS para diseño responsivo y componentes estilizados.
+- **JavaScript**: Lenguaje de programación principal.
+- **HTML**: Lenguaje de marcado para estructurar las páginas.
+- **CSS**: Lenguaje de estilos para el diseño visual.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Funcionalidades principales
 
-### `yarn test`
+1. **Página de inicio**: Información general sobre Shipply y sus servicios.
+2. **Catálogo de servicios**: Detalles sobre las soluciones logísticas que ofrece Shipply.
+3. **Formulario de contacto**: Permite a los usuarios comunicarse con la empresa para consultas o soporte.
+4. **Seguimiento de envíos**: Herramienta interactiva para rastrear paquetes en tiempo real.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instalación
 
-### `yarn build`
+Sigue estos pasos para ejecutar el proyecto localmente:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clona este repositorio:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/usuario/shipply.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navega al directorio del proyecto:
 
-### `yarn eject`
+   ```bash
+   cd shipply
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Instala las dependencias:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Inicia el servidor de desarrollo:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+5. Abre [http://localhost:3000](http://localhost:3000) para ver la página en tu navegador.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contribuciones
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+¡Las contribuciones son bienvenidas! Por favor, abre un issue o envía un pull request si tienes ideas para mejorar el proyecto.
 
-### Code Splitting
+## Autor
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Este proyecto fue desarrollado por el equipo de Shipply(Yo solito solin). Si tienes preguntas o necesitas soporte, no dudes en contactarnos.
 
-### Analyzing the Bundle Size
+## Licencia
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Este proyecto está licenciado bajo la [MIT License](LICENSE).
 
-### Making a Progressive Web App
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+¡Gracias por visitar Shipply!
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
