@@ -61,7 +61,7 @@ const Benefits = () => {
       description: "Monitoreamos cada entrega para garantizar la satisfacción del cliente.",
       icon: <FaMapMarkedAlt />,
       cta: "Consulta el Seguimiento",
-      link: "/servicios#seguimiento",
+      link: "/servicios#DataAnalysis",
     },
   ];
 

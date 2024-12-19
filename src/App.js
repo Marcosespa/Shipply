@@ -36,6 +36,7 @@ import DevolutionSection from "./components/Services/DevolutionSection";
 import EnvioSection from "./components/Services/EnvioSection";
 import ContactSection from "./components/Contact/ContactSection";
 import TalentSection from "./components/Contact/TalentSection";
+import PrivacyPolitic from "./components/Contact/PrivacyPolitic";
 
 const App = () => {
   return (
@@ -118,6 +119,15 @@ const App = () => {
             }
           />
 
+          <Route
+            path="/politica-de-privacidad"
+            element={
+              <>
+                <PrivacyPolitic />
+                {/* PARTE A CAMBIAR POR FORMS PARA CONTRATAR */}
+              </>
+            }
+          />
         </Routes>
       </div>
       <WhatsappButton />

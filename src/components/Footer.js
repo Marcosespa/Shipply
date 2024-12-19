@@ -56,7 +56,7 @@ const Footer = () => {
             <h5 className="footer-title">PRIVACIDAD</h5>
             <ul className="footer-menu">
               <li>
-                <a href="#politica-privacidad">Política de privacidad</a>
+                <Link to="/politica-de-privacidad">Política de privacidad</Link>
               </li>
               <li>
                 <a href="#proteccion-datos">

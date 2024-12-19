@@ -6,7 +6,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 
 const DataAnalysisSection = () => {
   return (
-    <section className="data-analysis-section py-5">
+    <section id="DataAnalysis" className="data-analysis-section py-5">
       <Container>
         <Row className="align-items-center">
           {/* Imagen a la izquierda */}
