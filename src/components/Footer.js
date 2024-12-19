@@ -23,9 +23,9 @@ const Footer = () => {
               <li>
                 <Link to="/blog">Blog</Link>
               </li>
-              <li>
-                <a href="#casos">Casos de éxito</a> {/* Sigue siendo un hash */}
-              </li>
+              {/* <li>
+                <a href="#casos">Casos de éxito</a>
+              </li> */}
               <li>
                 <Link to="/talento">Talento</Link>
               </li>
