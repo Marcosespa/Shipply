@@ -108,11 +108,6 @@ const Benefits = () => {
             <Link to={step.link} className="cta-button">
               {step.cta}
             </Link>
-            {index < steps.length - 1 && (
-              <div className="arrow-container">
-                <span className="arrow-animate">→</span>
-              </div>
-            )}
           </div>
         ))}
       </div>

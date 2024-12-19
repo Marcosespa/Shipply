@@ -156,18 +156,18 @@
 /* Responsividad */
 @media (max-width: 992px) {
   .process-steps {
-    grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem; /* Ajuste del espaciado entre tarjetas */
   }
+
   .process-step:nth-child(2n) .arrow-container {
-    display: none; /* Sin flecha en la última de cada fila (2 por fila) */
+    display: none; /* Sin flecha en la última tarjeta de cada fila (2 por fila) */
+  }
+
+  .cta-button {
+    font-size: 1rem; /* Tamaño del texto de los botones */
   }
 }
 
-@media (max-width: 576px) {
-  .process-steps {
-    grid-template-columns: 1fr; /* 1 tarjeta por fila */
-  }
-  .arrow-container {
-    display: none; /* Sin flechas en móviles */
-  }
-}
+
+
