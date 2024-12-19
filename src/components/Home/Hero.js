@@ -53,7 +53,7 @@ const Hero = () => {
     >
       <div className="hero-container">
         <Row className="align-items-center">
-          <Col md={6} className="text-container">
+          <Col xs={12} md={6} className="text-container">
             <h5 className="hero-subtitle-initial">
               Simplifica tu logística y acelera el crecimiento de tu E-commerce
             </h5>
@@ -63,7 +63,7 @@ const Hero = () => {
               )}
             </h1>
             <Link to="/contacto" className="button">
-              <span className="text">Contactanos</span>
+              <span className="text">Contáctanos</span>
               <span className="svg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const Hero = () => {
               La mudanza corre por cuenta nuestra
             </p>
           </Col>
-          <Col md={6} className="image-container">
+          <Col xs={12} md={6} className="image-container">
             <div className="player-container">
               <Player src={images.logo3} className="player" loop autoplay />
             </div>
