@@ -2,10 +2,16 @@ import React from "react";
 import images from "../assets/images/images";
 import { Navbar, Nav, Button, Container, NavDropdown } from "react-bootstrap";
 import "../styles/Navbar.css";
-import { Link } from "react-router-dom";
-import { FaUsers, FaPhoneAlt } from "react-icons/fa"; // Importar íconos
+import { Link, useNavigate } from "react-router-dom";
+import { FaUsers, FaPhoneAlt } from "react-icons/fa";
 
 const NavigationBar = () => {
+  const navigate = useNavigate(); // Hook para navegación programática
+
+  const handleRedirect = () => {
+    navigate("/servicios");
+  };
+
   return (
     <Navbar bg="light" expand="lg" className="navbar-custom">
       <Container>
@@ -24,8 +30,16 @@ const NavigationBar = () => {
           <Nav className="ms-auto">
             {/* Botón principal de Servicios */}
             <NavDropdown
-              title={<Link to="/servicios" className="nav-link">Servicios</Link>}
-              id="basic-nav-dropdown">              
+              title={
+                <span
+                  style={{ cursor: "pointer" }}
+                  onClick={handleRedirect} // Maneja la redirección programática
+                >
+                  Servicios
+                </span>
+              }
+              id="basic-nav-dropdown"
+            >
               <NavDropdown.Item as={Link} to="/servicios#integraciones">
                 Integraciones
               </NavDropdown.Item>
@@ -53,16 +67,7 @@ const NavigationBar = () => {
               Carga Libre
             </Nav.Link>
           </Nav>
-
-          {/* Botones de acción */}
-          <Button
-            variant="warning"
-            className="btn-custom ms-2 d-flex align-items-center"
-            as={Link}
-            to="/contacto"
-          >
-            <FaPhoneAlt className="me-2" /> Contactar
-          </Button>
+          {/* Botones adicionales */}
           <Button
             variant="warning"
             className="btn-custom ms-2 d-flex align-items-center"
@@ -71,6 +76,14 @@ const NavigationBar = () => {
             rel="noopener noreferrer"
           >
             <FaUsers className="me-2" /> Portal Clientes
+          </Button>
+          <Button
+            variant="warning"
+            className="btn-custom ms-2 d-flex align-items-center"
+            as={Link}
+            to="/contacto"
+          >
+            <FaPhoneAlt className="me-2" /> Contactar
           </Button>
         </Navbar.Collapse>
       </Container>
