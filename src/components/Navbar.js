@@ -8,28 +8,26 @@ import { FaUsers, FaPhoneAlt } from "react-icons/fa";
 const NavigationBar = () => {
   const navigate = useNavigate();
 
-  const handleRedirect = () => {
-    navigate("/servicios");
-  };
-
   return (
     <Navbar bg="light" expand="lg" className="navbar-custom">
       <Container>
+        {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <img
             src={images.ShipplyPNG}
-            alt="Logo 1"
+            alt="Logo"
             className="img-fluid"
             loading="lazy"
           />
         </Navbar.Brand>
+
+        {/* Toggle para pantallas pequeñas */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+        {/* Elementos del Navbar */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavDropdown
-              title={<span style={{ cursor: "pointer" }}>Servicios</span>}
-              id="basic-nav-dropdown"
-            >
+            <NavDropdown title="Servicios" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/servicios#integraciones">
                 Integraciones
               </NavDropdown.Item>
@@ -53,23 +51,27 @@ const NavigationBar = () => {
               Carga Libre
             </Nav.Link>
           </Nav>
-          <Button
-            variant="warning"
-            className="btn-custom ms-2 d-flex align-items-center"
-            href="https://control.logystix.co/site/login"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaUsers className="me-2" /> Portal Clientes
-          </Button>
-          <Button
-            variant="warning"
-            className="btn-custom ms-2 d-flex align-items-center"
-            as={Link}
-            to="/contacto"
-          >
-            <FaPhoneAlt className="me-2" /> Contactar
-          </Button>
+
+          {/* Botones */}
+          <div className="d-flex flex-column flex-lg-row align-items-center mt-3 mt-lg-0">
+            <Button
+              variant="warning"
+              className="btn-custom me-lg-2 mb-2 mb-lg-0"
+              href="https://control.logystix.co/site/login"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaUsers className="me-2" /> Portal Clientes
+            </Button>
+            <Button
+              variant="warning"
+              className="btn-custom"
+              as={Link}
+              to="/contacto"
+            >
+              <FaPhoneAlt className="me-2" /> Contactar
+            </Button>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

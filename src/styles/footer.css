@@ -23,7 +23,7 @@
 }
 /* Logo más grande */
 .footer-logo {
-  max-width: 250px; /* Tamaño del logo aumentado */
+  max-width: 100%;
   height: auto; /* Mantiene la proporción */
   margin-bottom: 1rem;
   transition: transform 0.3s ease; /* Transición suave */
@@ -50,6 +50,7 @@
 
 /* Menú */
 .footer-menu {
+  /* text-align: center; */
   list-style: none;
   padding: 0;
 }
@@ -98,42 +99,4 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Alineación a la izquierda */
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-  .footer-section {
-    text-align: center;
-  }
-
-  .footer-logo-container {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footer-logo {
-    max-width: 200px; /* Reduce el tamaño del logo en pantallas más pequeñas */
-  }
-
-  .footer-title {
-    text-align: center; /* Alinea los títulos al centro en pantallas pequeñas */
-  }
-
-  .footer-col {
-    text-align: center; /* Centra las columnas en dispositivos pequeños */
-  }
-}
-
-@media (max-width: 576px) {
-  .footer-logo {
-    max-width: 150px; /* Reduce el tamaño del logo en dispositivos móviles */
-  }
-
-  .footer-menu a {
-    font-size: 0.9rem;
-  }
-
-  .social-icons a {
-    font-size: 1.3rem;
-  }
 }
