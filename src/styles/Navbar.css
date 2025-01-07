@@ -1,62 +1,98 @@
-/* Estilos generales para la barra de navegación */
+/* Estilo general del navbar */
 .navbar-custom {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5; /* Fondo claro */
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
-  padding: 15px 20px;
-  font-family: "Poppins", sans-serif;
-  border-bottom: 2px solid #dedede;
+  z-index: 1000; /* Asegura que el navbar siempre esté encima */
+  padding: 15px 20px; /* Espaciado interno */
+  font-family: "Poppins", sans-serif; /* Tipografía moderna */
+  border-bottom: 2px solid #dedede; /* Línea inferior sutil */
   display: flex;
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
 }
 
-/* Estilos para enlaces del Navbar */
-.navbar-custom .nav-link {
-  color: #000000;
-  font-weight: bold;
-  margin-right: 20px;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-}
-
-.navbar-custom .nav-link:hover {
-  color: #fbb900;
-}
-
-/* Logo */
+/* Logo del navbar */
 .navbar-custom .navbar-brand {
   display: flex;
   align-items: center;
 }
 
 .navbar-custom .navbar-brand img {
-  max-height: 80px;
+  max-height: 80px; /* Altura máxima para evitar que el logo sea muy grande */
   height: auto;
   width: auto;
 }
 
-/* Botones adicionales */
-.navbar-custom .btn-custom {
-  background-color: #ffd700;
-  color: #333;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 8px;
-  padding: 8px 16px;
+/* Enlaces del navbar */
+.navbar-custom .nav-link {
+  color: #000000; /* Texto negro */
+  font-weight: bold; /* Texto destacado */
+  margin-right: 20px; /* Espaciado entre enlaces */
+  font-size: 1.1rem; /* Tamaño del texto */
   display: flex;
   align-items: center;
+  transition: color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+.navbar-custom .nav-link:hover {
+  color: #fbb900; /* Color dorado al pasar el mouse */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Dropdown menu */
+.navbar-nav .dropdown-menu {
+  background-color: #f5f5f5; /* Fondo claro */
+  border: none; /* Sin borde */
+  font-size: 1rem; /* Tamaño de texto estándar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+  color: #000000; /* Texto negro */
+  padding: 10px 20px; /* Espaciado interno */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+  background-color: #ffd700; /* Fondo dorado */
+  color: #333; /* Texto oscuro */
+}
+
+/* Botones del navbar */
+.navbar-custom .btn-custom {
+  background-color: #ffd700; /* Fondo dorado */
+  color: #333; /* Texto oscuro */
+  font-size: 1.1rem; /* Tamaño del texto */
+  font-weight: bold; /* Destacar texto */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 8px 16px; /* Espaciado interno */
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animaciones */
 }
 
 .navbar-custom .btn-custom:hover {
-  background-color: #ffc300;
-  color: #000;
+  background-color: #ffc300; /* Fondo dorado más intenso */
+  color: #000; /* Texto negro */
 }
 
-/* Estilo para dropdown */
-.navbar-nav .dropdown-menu {
-  position: absolute;
-  z-index: 1050;
+/* Ajustes para pantallas pequeñas */
+.navbar-custom .navbar-toggler {
+  border: none; /* Sin borde para el botón de colapso */
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  width: 30px; /* Tamaño del icono */
+  height: 30px;
+}
+
+/* Espaciado entre botones en pantallas pequeñas */
+@media (max-width: 992px) {
+  .navbar-custom .btn-custom {
+    width: 100%; /* Botones a lo ancho */
+    margin-bottom: 10px; /* Espacio entre botones */
+  }
 }

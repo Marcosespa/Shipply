@@ -53,10 +53,10 @@ const NavigationBar = () => {
           </Nav>
 
           {/* Botones */}
-          <div className="d-flex flex-column flex-lg-row align-items-center mt-3 mt-lg-0">
+          <div className="d-flex flex-column flex-lg-row align-items-center mt-3 mt-lg-0 gap-3">
             <Button
               variant="warning"
-              className="btn-custom me-lg-2 mb-2 mb-lg-0"
+              className="btn-custom"
               href="https://control.logystix.co/site/login"
               target="_blank"
               rel="noopener noreferrer"

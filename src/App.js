@@ -56,14 +56,14 @@ const App = () => {
             path="/"
             element={
               <>
-                <Hero />
-                <Clients />
+                {/* <Hero /> */}
+                {/* <Clients />
                 <Benefits />
                 <Integrations />
                 <AboutUs />
                 <Services />
                 <Benefits2 />
-                <Testimonials />
+                <Testimonials /> */}
               </>
             }
           />
@@ -72,13 +72,13 @@ const App = () => {
             path="/servicios"
             element={
               <>
-                <ProcessSection />
+                {/* <ProcessSection />
                 <IntegracionesSection />
                 <VentajasSection />
                 <PickingPackingSection />
                 <EnvioSection />
                 <DevolutionSection />
-                <DataAnalysisSection />
+                <DataAnalysisSection /> */}
               </>
             }
           />
@@ -139,7 +139,7 @@ const App = () => {
       </div>
       <WhatsappButton />
 
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 };
