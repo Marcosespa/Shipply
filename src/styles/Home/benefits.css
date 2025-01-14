@@ -145,9 +145,6 @@
   animation: moveArrow 1s infinite alternate;
 }
 
-
-
-
 /* Quitar flecha en la última tarjeta de cada fila */
 .process-step:nth-child(3n) .arrow-container {
   display: none; /* Oculta la flecha en la última tarjeta de cada fila */
@@ -169,5 +166,35 @@
   }
 }
 
+@media (max-width: 768px) {
+  .process-steps {
+    grid-template-columns: 1fr; /* 1 tarjeta por fila */
+    gap: 1rem; /* Ajuste del espaciado entre tarjetas */
+  }
 
+  .cta-button {
+    font-size: 0.9rem; /* Tamaño del texto de los botones */
+  }
+}
 
+@media (max-width: 576px) {
+  .logistics-header h2 {
+    font-size: 2rem;
+  }
+
+  .logistics-header p {
+    font-size: 1rem;
+  }
+
+  .process-step h3 {
+    font-size: 1rem;
+  }
+
+  .process-step p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    font-size: 0.8rem; /* Tamaño del texto de los botones */
+  }
+}
