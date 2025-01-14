@@ -50,20 +50,19 @@ const App = () => {
     <Router>
       <Navbar />
       <ScrollToHash /> {/* Incluye el componente solo una vez aquí */}
-      <div style={{ minHeight: "100vh", minWidth: "100vh" }}>
         <Routes>
           <Route
             path="/"
             element={
               <>
-                {/* <Hero /> */}
-                {/* <Clients />
+                <Hero />
+                <Clients />
                 <Benefits />
                 <Integrations />
                 <AboutUs />
                 <Services />
                 <Benefits2 />
-                <Testimonials /> */}
+                <Testimonials />
               </>
             }
           />
@@ -72,13 +71,13 @@ const App = () => {
             path="/servicios"
             element={
               <>
-                {/* <ProcessSection />
+                <ProcessSection />
                 <IntegracionesSection />
                 <VentajasSection />
                 <PickingPackingSection />
                 <EnvioSection />
                 <DevolutionSection />
-                <DataAnalysisSection /> */}
+                <DataAnalysisSection />
               </>
             }
           />
@@ -136,10 +135,9 @@ const App = () => {
             }
           />
         </Routes>
-      </div>
       <WhatsappButton />
 
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 };
