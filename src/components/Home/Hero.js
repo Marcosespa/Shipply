@@ -4,6 +4,7 @@ import "../../styles/Home/hero.css";
 import { Player } from "@lottiefiles/react-lottie-player";
 import images from "../../assets/images/images";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const wrapText = (text) => {
   return text.split(" ").map((word, index) => (
@@ -51,6 +52,21 @@ const Hero = () => {
       className={`hero-section ${isVisible ? "visible" : ""}`}
       ref={sectionRef}
     >
+      <Helmet>
+        <title>Shipply</title>
+        <meta name="description" content="Centraliza tu inventario, automatiza el proceso de pedidos y garantiza entregas rápidas y seguras." />
+        <meta name="keywords" content="logística, ecommerce, inventario, automatización, entregas rápidas" />
+        <meta property="og:title" content="Shipply - Simplifica tu logística" />
+        <meta property="og:description" content="Centraliza tu inventario, automatiza el proceso de pedidos y garantiza entregas rápidas y seguras." />
+        <meta property="og:url" content="https://shipply.com.co" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Shipply - Simplifica tu logística" />
+        <meta name="twitter:description" content="Centraliza tu inventario, automatiza el proceso de pedidos y garantiza entregas rápidas y seguras." />
+        <link rel="canonical" href="https://shipply.com.co" />
+        <meta name="language" content="es" />
+      </Helmet>
+
       <div className="hero-container">
         <Row className="align-items-center">
           <Col xs={12} md={6} className="text-container">
