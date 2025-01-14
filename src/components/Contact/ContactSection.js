@@ -2,9 +2,15 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import "../../styles/Contact/contactsection.css";
 import images from "../../assets/images/images";
+import { Helmet } from "react-helmet";
 
 const ContactSection = () => {
   return (
+    <>
+        <Helmet>
+        <title>Contáctanos - Shipply</title>
+        <meta name="description" content="Ponte en contacto con nuestro equipo para resolver tus dudas y empezar a optimizar tu logística." />
+      </Helmet>
     <section className="contact-section py-5">
       <Row className="align-items-center gx-1">
         {/* Columna de la imagen */}
@@ -94,6 +100,7 @@ const ContactSection = () => {
         </Col>
       </Row>
     </section>
+    </>
   );
 };
 
