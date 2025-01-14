@@ -9,7 +9,7 @@ const PickingPackingSection = () => {
       <Container>
         <Row className="align-items-center">
           {/* Texto a la izquierda */}
-          <Col md={6}>
+          <Col xs={12} md={6}>
             <h2 className="section-title-Picking">Picking / Packing</h2>
             <p className="section-description-picking mb-4">
               Seleccionamos tus productos, realizamos el alistamiento de tus
@@ -44,13 +44,12 @@ const PickingPackingSection = () => {
             </Button>
           </Col>
           {/* Imagen a la derecha */}
-          <Col md={6} className="text-center">
+          <Col xs={12} md={6} className="text-center">
             <img
               src={images.ImagenAlmacentamiento}
               alt="Logo 1"
-              className="img-fluid"
+              className="img-fluid fade-in-image"
               loading="lazy"
-              style={{ height: "700px", width: "700px" }}
             />
           </Col>
         </Row>

@@ -10,17 +10,17 @@ const DataAnalysisSection = () => {
       <Container>
         <Row className="align-items-center">
           {/* Imagen a la izquierda */}
-          <Col md={6} className="text-center position-relative">
+          <Col xs={12} md={6} className="text-center position-relative">
             <Player
               src={images.AnimationAnalytics}
               className="player"
               loop
               autoplay
-              style={{ height: "400px", width: "500px" }}
+              style={{ height: "100%", width: "100%" }}
             />
           </Col>
           {/* Texto a la derecha */}
-          <Col md={6}>
+          <Col xs={12} md={6}>
             <h2 className="section-title-Analisis">
               Análisis de datos con tecnología avanzada
             </h2>

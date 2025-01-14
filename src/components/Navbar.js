@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import images from "../assets/images/images";
 import { Navbar, Nav, Button, Container, NavDropdown } from "react-bootstrap";
 import "../styles/Navbar.css";
@@ -7,9 +7,18 @@ import { FaUsers, FaPhoneAlt } from "react-icons/fa";
 
 const NavigationBar = () => {
   const navigate = useNavigate();
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleToggle = () => setIsExpanded(!isExpanded);
+  const closeNavbar = () => setIsExpanded(false);
 
   return (
-    <Navbar bg="light" expand="lg" className="navbar-custom">
+    <Navbar
+      bg="light"
+      expand="lg"
+      expanded={isExpanded}
+      className="navbar-custom"
+    >
       <Container>
         {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
@@ -22,31 +31,52 @@ const NavigationBar = () => {
         </Navbar.Brand>
 
         {/* Toggle para pantallas pequeñas */}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
 
         {/* Elementos del Navbar */}
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+          <Nav className="ms-auto" onClick={closeNavbar}>
             <NavDropdown title="Servicios" id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/servicios#integraciones">
+              <NavDropdown.Item
+                as={Link}
+                to="/servicios#integraciones"
+                onClick={closeNavbar}
+              >
                 Integraciones
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/servicios#almacenamiento">
+              <NavDropdown.Item
+                as={Link}
+                to="/servicios#almacenamiento"
+                onClick={closeNavbar}
+              >
                 Almacenamiento
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/servicios#picking">
+              <NavDropdown.Item
+                as={Link}
+                to="/servicios#picking"
+                onClick={closeNavbar}
+              >
                 Picking / Packing
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/servicios#envios">
+              <NavDropdown.Item
+                as={Link}
+                to="/servicios#envios"
+                onClick={closeNavbar}
+              >
                 Envío
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
-            <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
+            <Nav.Link as={Link} to="/contacto" onClick={closeNavbar}>
+              Contacto
+            </Nav.Link>
+            <Nav.Link as={Link} to="/blog" onClick={closeNavbar}>
+              Blog
+            </Nav.Link>
             <Nav.Link
               href="https://cargalibre.com.co/"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={closeNavbar}
             >
               Carga Libre
             </Nav.Link>
@@ -68,6 +98,7 @@ const NavigationBar = () => {
               className="btn-custom"
               as={Link}
               to="/contacto"
+              onClick={closeNavbar}
             >
               <FaPhoneAlt className="me-2" /> Contactar
             </Button>

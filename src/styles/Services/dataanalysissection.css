@@ -28,6 +28,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
 .advantages-title {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
@@ -108,8 +109,6 @@
   height: auto;
 }
 
-
-
 /* Animación flotante */
 @keyframes float {
   0%, 100% {
@@ -122,7 +121,7 @@
 
 /* Responsividad */
 @media (max-width: 768px) {
-  .section-title {
+  .section-title-Analisis {
     font-size: 2rem;
   }
 
@@ -137,6 +136,29 @@
 
   .advantages-list li {
     font-size: 0.9rem;
+  }
+
+  .main-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title-Analisis {
+    font-size: 1.8rem;
+  }
+
+  .section-description,
+  .highlighted-text {
+    font-size: 0.9rem;
+  }
+
+  .advantages-title {
+    font-size: 1.2rem;
+  }
+
+  .advantages-list li {
+    font-size: 0.8rem;
   }
 
   .main-image {

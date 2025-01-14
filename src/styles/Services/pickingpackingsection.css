@@ -28,6 +28,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
 /* Descripción */
 .section-description-picking {
   font-family: "Poppins", sans-serif;
@@ -81,7 +82,6 @@
   color: #ffc107; /* Color amarillo para el check */
 }
 
-
 /* Botón */
 .cta-button {
   background-color: #000000; /* Botón negro */
@@ -108,6 +108,7 @@
   border-radius: 8px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
+
 @keyframes fadeInZoom {
   0% {
     opacity: 0;
@@ -119,10 +120,9 @@
   }
 }
 
-
 /* Responsividad */
 @media (max-width: 768px) {
-  .section-title {
+  .section-title-Picking {
     font-size: 2rem;
   }
 
@@ -140,16 +140,32 @@
 
   .advantages-list-picking li {
     font-size: 0.9rem;
-
   }
 }
 
 @media (max-width: 576px) {
-  .animated-image {
-    max-width: 100%;
+  .section-title-Picking {
+    font-size: 1.8rem;
   }
 
-  .section-title {
-    font-size: 1.8rem;
+  .section-description-picking {
+    font-size: 0.9rem;
+  }
+
+  .highlighted-text {
+    font-size: 0.9rem;
+  }
+
+  .advantages-title {
+    font-size: 1.2rem;
+  }
+
+  .advantages-list-picking li {
+    font-size: 0.8rem;
+  }
+
+  .fade-in-image {
+    width: 100%;
+    height: auto;
   }
 }
