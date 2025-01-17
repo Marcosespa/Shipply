@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Página principal -->
+    <url>
+        <loc>https://shipply.com.co/</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- página de servicios -->
+    <url>
+        <loc>https://shipply.com.co/servicios</loc>
+        <lastmod>2025-01-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- página de contacto -->
+    <url>
+        <loc>https://shipply.com.co/contacto</loc>
+        <lastmod>2025-01-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- página de blog -->
+    <url>
+        <loc>https://shipply.com.co/blog</loc>
+        <lastmod>2025-01-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <!-- página de faq -->
+    <url>
+        <loc>https://shipply.com.co/faq</loc>
+        <lastmod>2025-01-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>
