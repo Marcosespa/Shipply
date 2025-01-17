@@ -5,15 +5,32 @@ import images from "../../assets/images/images";
 import { Helmet } from "react-helmet";
 
 const ContactSection = () => {
+  // Helper function to delay navigation after sending a gtag event
+  const gtagSendEvent = (url) => {
+    const callback = () => {
+      if (typeof url === "string") {
+        window.location = url;
+      }
+    };
+    window.gtag("event", "conversion_event_contact", {
+      event_callback: callback,
+      event_timeout: 2000,
+      // <event_parameters> can be added here if needed
+    });
+    return false; // Prevent default action
+  };
+
   return (
     <>
       <Helmet>
         <title>Contáctanos - Shipply</title>
-        <meta name="description" content="Ponte en contacto con nuestro equipo para resolver tus dudas y empezar a optimizar tu logística." />
+        <meta
+          name="description"
+          content="Ponte en contacto con nuestro equipo para resolver tus dudas y empezar a optimizar tu logística."
+        />
       </Helmet>
       <section className="contact-section py-5">
         <Row className="align-items-center gx-1">
-          {/* Columna de la imagen */}
           <Col md={6} className="info-section pe-2">
             <img
               src={images.logo7}
@@ -23,7 +40,6 @@ const ContactSection = () => {
             />
           </Col>
 
-          {/* Formulario */}
           <Col md={5} className="form-section ps-2">
             <h3 className="form-title">Déjanos un mensaje</h3>
             <p className="form-description">
@@ -74,13 +90,27 @@ const ContactSection = () => {
                 placeholder="Ciudad"
                 className="form-control mb-3"
               />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Número de teléfono"
+                className="form-control mb-3"
+                required
+              />
               <textarea
                 name="message"
                 rows="4"
                 placeholder="Mensaje"
                 className="form-control mb-3"
               ></textarea>
-              <button type="submit" className="btn btn-dark w-100">
+              <button
+                type="submit"
+                className="btn btn-dark w-100"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent form submission
+                  gtagSendEvent("https://formspree.io/f/myzyqebw"); // Call gtagSendEvent with URL
+                }}
+              >
                 Enviar
               </button>
             </form>
@@ -92,8 +122,11 @@ const ContactSection = () => {
               <a href="https://www.facebook.com/profile.php?id=61550521441472" target="_blank" rel="noreferrer">
                 <i className="bi bi-facebook"></i>
               </a>
-              <a href="https://www.linkedin.com/company/shipply-sas"
-                target="_blank" rel="noreferrer">
+              <a
+                href="https://www.linkedin.com/company/shipply-sas"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i className="bi bi-linkedin"></i>
               </a>
             </div>

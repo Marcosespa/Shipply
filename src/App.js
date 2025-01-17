@@ -50,6 +50,7 @@ const App = () => {
     <Router>
       <Navbar />
       <ScrollToHash /> {/* Incluye el componente solo una vez aquí */}
+      <WhatsappButton/>
         <Routes>
           <Route
             path="/"
@@ -135,7 +136,7 @@ const App = () => {
             }
           />
         </Routes>
-      <WhatsappButton />
+      {/* <WhatsappButton /> */}
 
       <Footer />
     </Router>
