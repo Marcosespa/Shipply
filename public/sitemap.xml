@@ -8,7 +8,7 @@
         <priority>1.0</priority>
     </url>
     
-    <!-- página de servicios -->
+    <!-- Página de servicios -->
     <url>
         <loc>https://shipply.com.co/servicios</loc>
         <lastmod>2025-01-14</lastmod>
@@ -16,26 +16,27 @@
         <priority>0.8</priority>
     </url>
     
-    <!-- página de contacto -->
+    <!-- Página de contacto -->
     <url>
         <loc>https://shipply.com.co/contacto</loc>
         <lastmod>2025-01-14</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
     </url>
     
-    <!-- página de blog -->
+    <!-- Página de blog -->
     <url>
         <loc>https://shipply.com.co/blog</loc>
         <lastmod>2025-01-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    <!-- página de faq -->
+    
+    <!-- Página de preguntas frecuentes (FAQ) -->
     <url>
         <loc>https://shipply.com.co/faq</loc>
         <lastmod>2025-01-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
     </url>
 </urlset>
