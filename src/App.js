@@ -40,6 +40,11 @@ import PrivacyPolitic from "./components/Contact/PrivacyPolitic";
 import Faq from "./components/Faq/Faq";
 
 
+// index.js o App.js
+import ReactGA from "react-ga4";
+
+// Inicializa Google Analytics con tu ID de rastreo
+ReactGA.initialize("G-Z7LYPT9LHY"); // Reemplaza con tu ID de Google Analytics, por ejemplo: "G-XXXXXXXXXX"
 
 
 

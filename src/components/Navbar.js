@@ -67,9 +67,9 @@ const NavigationBar = () => {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/contacto" onClick={closeNavbar}>
-              Contacto
+              {/* Contacto
             </Nav.Link>
-            <Nav.Link as={Link} to="/blog" onClick={closeNavbar}>
+            <Nav.Link as={Link} to="/blog" onClick={closeNavbar}> */}
               Blog
             </Nav.Link>
             <Nav.Link
