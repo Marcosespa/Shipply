@@ -22,12 +22,7 @@ const NavigationBar = () => {
       <Container>
         {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-          <img
-            src={images.ShipplyPNG}
-            alt="Logo"
-            className="img-fluid"
-            loading="lazy"
-          />
+        <img src="./static/media/Shipply-SinFondo.ee3aae52d82a4811dc5c.webp" alt="Logo" class="img-fluid" width="200" height="100"></img>
         </Navbar.Brand>
 
         {/* Toggle para pantallas pequeñas */}
