@@ -52,7 +52,7 @@ const ContactSection = () => {
             </p>
             <form
               ref={formRef}
-              action="https://formspree.io/f/myzyqebw"
+              action="https://formspree.io/f/xdkaoyaa"
               method="POST"
             >
               <Row>
