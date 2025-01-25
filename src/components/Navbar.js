@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import images from "../assets/images/images";
 import { Navbar, Nav, Button, Container, NavDropdown } from "react-bootstrap";
 import "../styles/Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -61,10 +60,10 @@ const NavigationBar = () => {
                 Envío
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/contacto" onClick={closeNavbar}>
-              {/* Contacto
-            </Nav.Link>
-            <Nav.Link as={Link} to="/blog" onClick={closeNavbar}> */}
+            {/* <Nav.Link as={Link} to="/contacto" onClick={closeNavbar}>
+              Contacto
+            </Nav.Link> */}
+            <Nav.Link as={Link} to="/blog" onClick={closeNavbar}>
               Blog
             </Nav.Link>
             <Nav.Link
