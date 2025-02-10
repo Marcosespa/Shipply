@@ -63,7 +63,7 @@ const NavigationBar = () => {
               Contacto
             </Nav.Link> */}
             <Nav.Link as={Link} to="/blog" onClick={closeNavbar}>
-              Blog
+              Recursos
             </Nav.Link>
             <Nav.Link
               href="https://cargalibre.com.co/"
