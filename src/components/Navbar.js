@@ -3,6 +3,7 @@ import { Navbar, Nav, Button, Container, NavDropdown } from "react-bootstrap";
 import "../styles/Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FaUsers, FaPhoneAlt } from "react-icons/fa";
+import images from "../assets/images/images";
 
 const NavigationBar = () => {
   const navigate = useNavigate();
@@ -21,7 +22,12 @@ const NavigationBar = () => {
       <Container>
         {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-        <img src="./static/media/Shipply-SinFondo.ee3aae52d82a4811dc5c.webp" alt="Logo" class="img-fluid" width="200" height="100"></img>
+        {/* <img src="./static/media/Shipply-SinFondo.ee3aae52d82a4811dc5c.webp" alt="Logo" class="img-fluid" width="200" height="100"></img> */}
+
+        <img
+              src={images.ShipplyPNG}
+              alt="Logo" class="img-fluid" width="200" height="100" loading="lazy"
+            />
         </Navbar.Brand>
 
         {/* Toggle para pantallas pequeñas */}
