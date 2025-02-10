@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/whatsappButton.css";
 
 const WhatsappButton = () => {
-  const [position, setPosition] = useState(500); // Posición inicial desde arriba
+  const [position, setPosition] = useState(700); // Posición inicial desde arriba
 
   useEffect(() => {
     const handleScroll = () => {
