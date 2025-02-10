@@ -72,7 +72,7 @@ const NavigationBar = () => {
               rel="noopener noreferrer"
               onClick={closeNavbar}
             >
-              Carga Libre
+              Envios masivos
             </Nav.Link>
           </Nav>
 

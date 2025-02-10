@@ -62,13 +62,14 @@ const App = () => {
             element={
               <>
                 <Hero />
-                <Clients />
                 <Benefits />
+                <Services />
                 <Integrations />
                 <AboutUs />
-                <Services />
-                <Benefits2 />
                 <Testimonials />
+                <Clients />
+                {/* <Services /> */}
+                <Benefits2 />
               </>
             }
           />
