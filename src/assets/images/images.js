@@ -4,6 +4,7 @@ const images = {
   logo3: require('./Animation.json'),
   logo4: require('./Recogemos tu inventario.png'),
   logo5: require('./integracionesimg.jpeg'),
+  logo5_1 : require('./integracionesimg2.png'),
   logo6: require('./Almacentamiento.json'),
   logo7: require('./ImagenContacto.png'),
   logo8: require('./Quienes-somos.webp'),
@@ -13,6 +14,8 @@ const images = {
   EnviosImg: require('./EnviosImg.png'),
   AnimationAnalytics: require('./AnimationAnalytics.json'),
   AnimationAlmacentamient: require('./Animation-Almacenamiento.json'),
+  //Logistics Section
+  LogisticSection: require('./LogisticSection.png'),
   //Fotos Blog
   GuiasPracticas: require('./Guiaspracticas.jpg.webp'),
   AnalisisNoticias: require('./NoticiasRecientes.png'),

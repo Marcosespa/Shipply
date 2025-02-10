@@ -11,7 +11,7 @@ const IntegracionesSection = () => {
           {/* Imagen a la izquierda */}
           <Col md={6} className="text-center">
             <img
-              src={images.logo5}
+              src={images.logo5_1}
               alt="Integraciones"
               className="img-fluid integration-image"
               loading="lazy"

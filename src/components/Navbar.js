@@ -36,28 +36,21 @@ const NavigationBar = () => {
                 to="/servicios#integraciones"
                 onClick={closeNavbar}
               >
-                Integraciones
+                Fullfilment ecommerce
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
-                to="/servicios#almacenamiento"
+                to="/bussinesToBussines"
                 onClick={closeNavbar}
               >
-                Almacenamiento
+                B2B
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
-                to="/servicios#picking"
+                to="/b2b"
                 onClick={closeNavbar}
               >
-                Picking / Packing
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                as={Link}
-                to="/servicios#envios"
-                onClick={closeNavbar}
-              >
-                Envío
+                Soluciones de Valor agregado
               </NavDropdown.Item>
             </NavDropdown>
             {/* <Nav.Link as={Link} to="/contacto" onClick={closeNavbar}>

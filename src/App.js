@@ -38,10 +38,11 @@ import ContactSection from "./components/Contact/ContactSection";
 import TalentSection from "./components/Contact/TalentSection";
 import PrivacyPolitic from "./components/Contact/PrivacyPolitic";
 import Faq from "./components/Faq/Faq";
-
+import {LogisticaCreceSection,InovacionSection} from "./components/Services/B2B";
 
 // index.js o App.js
 import ReactGA from "react-ga4";
+// import { InovacionSection } from "./components/Services/B2B";
 
 // Inicializa Google Analytics con tu ID de rastreo
 ReactGA.initialize("G-Z7LYPT9LHY"); // Reemplaza con tu ID de Google Analytics, por ejemplo: "G-XXXXXXXXXX"
@@ -73,7 +74,13 @@ const App = () => {
               </>
             }
           />
-
+          <Route
+            path="/bussinesToBussines"
+            element={<>
+            <LogisticaCreceSection/>
+            <InovacionSection/>
+            </>}
+          />
           <Route
             path="/servicios"
             element={
@@ -111,6 +118,7 @@ const App = () => {
             path="/blog/automatizacion-almacenes"
             element={<WarehouseAutomationPage title="Automatización en Almacenes" />}
           />
+
 
 
           <Route
