@@ -14,6 +14,7 @@ const images = {
   InovacionSection: require('./inovationSection.png'),
   RetailerSection: require('./retailerslideresSection.png'),
   RespaldoSection: require('./respaldoSection.png'),
+  RespaldoAnimation: require('./AnimacionRespaldo.json'),
   ImagenAlmacentamiento: require('./ImagenAlmacentamiento.jpg'),
   ShipplyPNG: require('./Shipply-SinFondo.webp'),
   EnviosImg: require('./EnviosImg.png'),

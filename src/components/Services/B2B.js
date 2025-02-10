@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import "../../styles/Services/logisticsection.css";
 import images from "../../assets/images/images";
 import { Link } from "react-router-dom";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const LogisticaCreceSection = () => {
   return (
@@ -170,12 +171,9 @@ const RespaldoSection = () => {
           </Col>
           {/* Imagen a la derecha */}
           <Col md={6} className="text-center">
-          <img
-              src={images.RespaldoSection}
-              alt="Integraciones"
-              className="img-fluid integration-image"
-              loading="lazy"
-            />
+          <div className="player-container">
+              <Player src={images.RespaldoAnimation} className="player" loop autoplay aria-label="Animación del logo de Shipply" />
+            </div>
           </Col>
         </Row>
       </Container>
