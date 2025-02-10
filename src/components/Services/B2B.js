@@ -9,7 +9,6 @@ const LogisticaCreceSection = () => {
     <section id="logistica-crece" className="logistica-crece-section py-5">
       <Container>
         <Row className="align-items-center">
-          {/* Imagen a la izquierda */}
           <Col md={6} className="text-center">
             <img
               src={images.LogisticSection}
@@ -18,7 +17,6 @@ const LogisticaCreceSection = () => {
               loading="lazy"
             />
           </Col>
-          {/* Texto a la derecha */}
           <Col md={6}>
             <h2 className="section-title-Logistic">
               Optimiza tu Logística B2B con Shipply
@@ -27,7 +25,7 @@ const LogisticaCreceSection = () => {
               Agiliza, expande y potencia tus alianzas con retailers. 🚀
             </p>
             <Button
-              // id="btn-cta-logistic"
+               id="btn-cta-logistic"
               className="btn-cta-logistic"
               as={Link}
               to="/contacto"
@@ -48,7 +46,7 @@ const InovacionSection = () => {
         <Row className="align-items-center">
           {/* Texto a la izquierda */}
           <Col md={6}>
-            <h2 className="section-title-devoluciones">
+            <h2 className="section-title-Logistic">
             Experiencia, Innovación y Soporte
             </h2>
             <p className="section-description-devolution mb-4">
@@ -66,19 +64,18 @@ const InovacionSection = () => {
               </ul>
             </div>
             <Button
-              href="https://wa.me/573184516959"
-              target="_blank"
-              variant="dark"
-              className="cta-button mt-3"
+               id="btn-cta-logistic"
+              className="btn-cta-logistic"
+              as={Link}
+              to="/contacto"
             >
-              <i className="bi bi-whatsapp me-2"></i>
-              Cotizar ahora
+              Iniciemos una conversación
             </Button>
           </Col>
           {/* Imagen a la derecha */}
           <Col md={6} className="text-center">
           <img
-              src={images.LogisticSection}
+              src={images.InovacionSection}
               alt="Integraciones"
               className="img-fluid integration-image"
               loading="lazy"
@@ -91,4 +88,99 @@ const InovacionSection = () => {
 };
 
 
-export { LogisticaCreceSection, InovacionSection };
+const RetailersLideresSection = () => {
+  return (
+    <section id="logistica-crece" className="logistica-crece-section py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Imagen a la izquierda */}
+          <Col md={6} className="text-center">
+            <img
+              src={images.RetailerSection}
+              alt="Integraciones"
+              className="img-fluid main-image"
+              loading="lazy"
+            />
+          </Col>
+          {/* Texto a la derecha */}
+          <Col md={6}>
+            <h2 className="section-title-Logistic">
+            Entregamos a los retailers lideres en Colombia
+            </h2>
+            <p className="section-description-Logistic">
+            En Shipply, contamos con el respaldo de CargaLibre, una empresa con amplia trayectoria en logística y distribución. Gracias a esta alianza, hemos perfeccionado nuestros procesos y adquirido una vasta experiencia en la entrega eficiente y segura a grandes superficies y clientes B2B.
+            </p>
+            <Button
+              // id="btn-cta-logistic"
+              className="btn-cta-logistic"
+              as={Link}
+              to="/contacto"
+            >
+              Iniciemos una conversación
+            </Button>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
+};
+
+const RespaldoSection = () => {
+  return (
+    <section className="devolution-section py-5">
+      <Container>
+        <Row className="align-items-center">
+          {/* Texto a la izquierda */}
+          <Col md={6}>
+            <h2 className="section-title-devoluciones">
+            El respaldo experto que necesitas
+            </h2>
+            <div className="Respaldo-services">
+              <h3 className="Respaldo-advantages-title">Crossdocking y Almacenamiento</h3>
+              <p className="Respaldo-description">
+                En Shipply, conocemos a fondo los desafíos y singularidades que implica la entrega en cross-docking y el almacenamiento para retailers. Nos especializamos en optimizar cada fase del proceso logístico, asegurando eficiencia, cumplimiento y precisión en cada entrega.
+              </p>
+
+              <h3 className="Respaldo-advantages-title">Manejo de Órdenes de Compra</h3>
+              <p className="Respaldo-description">
+                Ordenamos tus pedidos y productos de acuerdo a las necesidades del retailer, incluyendo los rótulos requeridos para garantizar una entrega sin contratiempos.
+              </p>
+
+              <h3 className="Respaldo-advantages-title">Control de Calidad</h3>
+              <p className="Respaldo-description">
+                En el cumplimiento B2B, la conformidad lo es todo. En Shipply nos aseguramos de que tu marca cumpla constantemente con los estándares de presentación y empaque de los retailers.
+              </p>
+
+              {/* Lista de Beneficios */}
+              <ul className="Respaldo-advantages-list">
+                <li> Inspección de primera muestra y control de daños.</li>
+                <li> Destrucción certificada y etiquetado de lotes.</li>
+                <li> Códigos de barras y seguimiento de fechas de vencimiento.</li>
+                <li> Minimización de costos por devoluciones y cargos adicionales.</li>
+              </ul>
+            </div>
+            <Button
+               id="btn-cta-logistic"
+              className="btn-cta-logistic"
+              as={Link}
+              to="/contacto"
+            >
+              Iniciemos una conversación
+            </Button>
+          </Col>
+          {/* Imagen a la derecha */}
+          <Col md={6} className="text-center">
+          <img
+              src={images.RespaldoSection}
+              alt="Integraciones"
+              className="img-fluid integration-image"
+              loading="lazy"
+            />
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
+};
+
+export { LogisticaCreceSection, InovacionSection,RetailersLideresSection,RespaldoSection };

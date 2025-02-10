@@ -38,7 +38,7 @@ import ContactSection from "./components/Contact/ContactSection";
 import TalentSection from "./components/Contact/TalentSection";
 import PrivacyPolitic from "./components/Contact/PrivacyPolitic";
 import Faq from "./components/Faq/Faq";
-import {LogisticaCreceSection,InovacionSection} from "./components/Services/B2B";
+import {LogisticaCreceSection,InovacionSection,RetailersLideresSection,RespaldoSection} from "./components/Services/B2B";
 
 // index.js o App.js
 import ReactGA from "react-ga4";
@@ -79,6 +79,8 @@ const App = () => {
             element={<>
             <LogisticaCreceSection/>
             <InovacionSection/>
+            <RetailersLideresSection/>
+            <RespaldoSection/>
             </>}
           />
           <Route

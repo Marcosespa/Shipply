@@ -47,7 +47,7 @@ const NavigationBar = () => {
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
-                to="/b2b"
+                to="/bussinesToBussines"
                 onClick={closeNavbar}
               >
                 Soluciones de Valor agregado

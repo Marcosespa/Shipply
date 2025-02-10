@@ -1,3 +1,5 @@
+import { InovacionSection, RespaldoSection } from '../../components/Services/B2B';
+
 const images = {
   logo1: require('./Imagenrecortada.png'),
   logo2: require('./logBeneficios2.webp'),
@@ -9,6 +11,9 @@ const images = {
   logo7: require('./ImagenContacto.png'),
   logo8: require('./Quienes-somos.webp'),
   logo9: require('./DeliveryAnimation.json'),
+  InovacionSection: require('./inovationSection.png'),
+  RetailerSection: require('./retailerslideresSection.png'),
+  RespaldoSection: require('./respaldoSection.png'),
   ImagenAlmacentamiento: require('./ImagenAlmacentamiento.jpg'),
   ShipplyPNG: require('./Shipply-SinFondo.webp'),
   EnviosImg: require('./EnviosImg.png'),
