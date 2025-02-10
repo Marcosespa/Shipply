@@ -1,5 +1,5 @@
 .whatsapp-button {
-  position: fixed; /* Botón fijo en la pantalla */
+  position: absolute !important ; /* Botón fijo en la pantalla */
   bottom: 20px; /* Posición desde el fondo */
   right: 20px; /* Posición desde la derecha */
   width: 60px;
