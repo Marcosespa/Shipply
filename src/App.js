@@ -23,7 +23,7 @@ import ServiceComparisonPage from "./components/Blog/ServiceComparisonPage";
 import UrbanLogisticsPage from "./components/Blog/UrbanLogisticsPage";
 import WarehouseAutomationPage from "./components/Blog/WarehouseAutomationPage";
 import InventoryControlPage from "./components/Blog/InventoryControlPage";
-
+import ValueAddedServicesPage from "./components/Services/ValueAddedServicesPage";
 import WhatsappButton from "./components/WhatsappButton";
 import "./styles/Home/chestDrawer.css";
 import ScrollToHash from "./components/ScrollToHash"; // Importa el componente
@@ -84,6 +84,13 @@ const App = () => {
             <RespaldoSection/>
             </>}
           />
+            <Route
+            path="/valueaddedsservices"
+            element={<>
+            <ValueAddedServicesPage/>
+            </>}
+          />
+
           <Route
             path="/servicios"
             element={

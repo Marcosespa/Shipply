@@ -4,7 +4,6 @@ import "../styles/Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FaUsers, FaPhoneAlt } from "react-icons/fa";
 import images from "../assets/images/images";
-// PRUEBAS
 const NavigationBar = () => {
   const navigate = useNavigate();
   const [isExpanded, setIsExpanded] = useState(false);
@@ -53,7 +52,7 @@ const NavigationBar = () => {
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
-                to="/bussinesToBussines"
+                to="/valueaddedsservices"
                 onClick={closeNavbar}
               >
                 Soluciones de Valor agregado
