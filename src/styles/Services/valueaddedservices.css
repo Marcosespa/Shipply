@@ -48,6 +48,24 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
+.value-added-section .content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.value-added-section.image-right .content-wrapper {
+  flex-direction: row;
+}
+
+.value-added-section.image-left .content-wrapper {
+  flex-direction: row-reverse;
+}
+
+.value-added-section .text-content {
+  flex: 1;
+}
+
 .value-added-section h2 {
   font-size: 1.75rem;
   font-weight: 600;
@@ -75,6 +93,15 @@
 .value-added-section strong {
   color: #2d3748;
   font-weight: 600;
+}
+
+.value-added-section .section-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
 /* Botón de Retorno */
@@ -124,12 +151,26 @@
     padding: 1.5rem;
   }
 
+  .value-added-section .content-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .value-added-section.image-right .content-wrapper,
+  .value-added-section.image-left .content-wrapper {
+    flex-direction: column;
+  }
+
   .value-added-section h2 {
     font-size: 1.5rem;
   }
 
   .value-added-section p {
     font-size: 1rem;
+  }
+
+  .value-added-section .section-image {
+    max-width: 100%;
   }
 
   .back-button {
