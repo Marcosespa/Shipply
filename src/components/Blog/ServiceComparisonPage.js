@@ -9,139 +9,80 @@ const ServiceComparisonPage = () => {
     <div className="comparison-page">
       {/* Título principal */}
       <header className="comparison-header">
-        <h1>Comparativas de Servicios</h1>
-        <p>
-          Conoce las diferencias entre diversas soluciones logísticas para tomar
-          decisiones informadas que beneficien a tu negocio.
-        </p>
+        <h1>Apertura Logística en Colombia</h1>
+        <p>Claves para un Inicio Exitoso</p>
       </header>
 
-      {/* Sección: Envío Nacional vs. Internacional */}
+      {/* Sección: Introducción */}
       <section className="comparison-section">
-        <h2>Servicios de Envío Nacional vs. Internacional</h2>
-        <table className="comparison-table">
-          <thead>
-            <tr>
-              <th>Criterio</th>
-              <th>Envío Nacional</th>
-              <th>Envío Internacional</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Tiempo de Entrega</td>
-              <td>1-3 días</td>
-              <td>5-15 días</td>
-            </tr>
-            <tr>
-              <td>Costo</td>
-              <td>Bajo</td>
-              <td>Alto</td>
-            </tr>
-            <tr>
-              <td>Confiabilidad</td>
-              <td>Alta</td>
-              <td>Moderada</td>
-            </tr>
-          </tbody>
-        </table>
+        <h2>Introducción</h2>
         <p>
-          <strong>Recomendación:</strong> Opta por envíos nacionales para
-          entregas rápidas y económicas dentro del país. Usa envíos
-          internacionales para productos de mayor valor o mercados globales.
+          La apertura logística en Colombia es un proceso clave para cualquier empresa que quiera operar eficientemente en el país. Desde la planificación de rutas hasta la gestión de proveedores y almacenes, cada paso es crucial para garantizar una cadena de suministro fluida y rentable. En este artículo, exploraremos cómo hacer una apertura logística exitosa y cómo en Carga Libre y Shipply podemos ser tu aliado estratégico en este desafío.
         </p>
       </section>
 
-      {/* Sección: Flotas Propias vs. Tercerizadas */}
+      {/* Sección: Pasos para una Apertura Logística Exitosa */}
       <section className="comparison-section">
-        <h2>Flotas Propias vs. Tercerizadas</h2>
+        <h2>Pasos para una Apertura Logística Exitosa en Colombia</h2>
         <div className="comparison-content">
           <ul>
             <li>
-              <strong>Flotas Propias:</strong> Ofrecen control total sobre
-              operaciones y personalización, pero conllevan altos costos fijos.
+              <strong>Análisis del Mercado y Regulaciones:</strong> Antes de iniciar operaciones, es fundamental conocer el mercado y las regulaciones logísticas en Colombia. Esto incluye normativas de transporte, aduanas y permisos específicos según el tipo de carga que manejes.
             </li>
             <li>
-              <strong>Flotas Tercerizadas:</strong> Brindan flexibilidad y
-              menores costos, pero dependen de la disponibilidad y calidad del
-              proveedor.
+              <strong>Diseño de la Red de Distribución:</strong> La eficiencia logística comienza con un diseño estratégico de la red de distribución. Definir si se operará con centros de distribución, almacenes regionales o entregas directas es clave para optimizar costos y tiempos.
+            </li>
+            <li>
+              <strong>Selección de Proveedores y Aliados Estratégicos:</strong> Contar con aliados logísticos confiables es fundamental. Desde transportistas hasta operadores de última milla, elegir proveedores eficientes garantiza entregas a tiempo y costos controlados.
+            </li>
+            <li>
+              <strong>Implementación de Tecnología Logística:</strong> La digitalización de procesos es una ventaja competitiva. Sistemas de gestión de transporte (TMS), rastreo en tiempo real y análisis de datos mejoran la visibilidad y eficiencia de la cadena de suministro.
+            </li>
+            <li>
+              <strong>Optimización de Costos y Operaciones:</strong> Reducir costos sin afectar la calidad del servicio es un reto constante. Esto se logra con estrategias como consolidación de cargas, optimización de rutas y negociaciones con proveedores.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Sección: ¿Por Qué Carga Libre y Shipply? */}
+      <section className="comparison-section">
+        <h2>¿Por Qué Carga Libre y Shipply Son Tu Mejor Opción?</h2>
+        <p>
+          En <strong>Carga Libre</strong> y <strong>Shipply</strong>, entendemos los retos de la logística en Colombia y ofrecemos soluciones adaptadas a cada necesidad:
+        </p>
+        <div className="comparison-content">
+          <ul>
+            <li><strong>Red de Transporte Nacional:</strong> Con cobertura en todo el país para garantizar entregas seguras y eficientes.</li>
+            <li><strong>Plataformas Tecnológicas:</strong> Herramientas digitales que permiten gestionar y rastrear envíos en tiempo real.</li>
+            <li><strong>Optimización de Costos:</strong> Modelos de transporte flexibles que reducen costos logísticos sin comprometer la calidad.</li>
+            <li><strong>Experiencia y Soporte:</strong> Un equipo experto que te guía en cada etapa de tu operación logística.</li>
+            <li><strong>Entregas Masivas B2B y Fulfillment B2C:</strong> Facilitamos tanto las entregas a negocios (B2B) como el fulfillment para clientes finales (B2C), asegurando una experiencia logística integral y eficiente.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Sección: Contáctanos */}
+      <section className="comparison-section">
+        <h2>Contáctanos y Optimiza tu Logística</h2>
+        <p>
+          En <strong>Carga Libre</strong> y <strong>Shipply</strong>, estamos listos para ser tu aliado estratégico en logística.
+        </p>
+        <div className="comparison-content">
+          <ul>
+            <li>
+              🔹 Visita nuestra página web para conocer más sobre nuestros servicios: <a href="https://www.cargalibre.com/" target="_blank" rel="noopener noreferrer">www.cargalibre.com</a>
+            </li>
+            <li>
+              🔹 Contáctanos y agenda una consulta con nuestros expertos: <a href="https://www.cargalibre.com/contacto" target="_blank" rel="noopener noreferrer">Contacto</a>
+            </li>
+            <li>
+              🔹 Síguenos en nuestras redes sociales para estar al tanto de novedades y soluciones logísticas innovadoras.
             </li>
           </ul>
         </div>
         <p>
-          Ejemplo: Compañías como Amazon combinan flotas propias para áreas
-          clave y servicios tercerizados para temporadas de alta demanda.
-        </p>
-      </section>
-
-      {/* Sección: Sistemas de Gestión Logística */}
-      <section className="comparison-section">
-        <h2>Sistemas de Gestión Logística</h2>
-        <table className="comparison-table">
-          <thead>
-            <tr>
-              <th>Software</th>
-              <th>Puntos Fuertes</th>
-              <th>Limitaciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>SAP</td>
-              <td>Escalabilidad, integración empresarial</td>
-              <td>Alto costo inicial</td>
-            </tr>
-            <tr>
-              <td>Oracle SCM</td>
-              <td>Gestión en tiempo real</td>
-              <td>Curva de aprendizaje</td>
-            </tr>
-            <tr>
-              <td>Software Económico</td>
-              <td>Accesible para PYMES</td>
-              <td>Funcionalidades limitadas</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      {/* Sección: Opciones de Transporte */}
-      <section className="comparison-section">
-        <h2>Opciones de Transporte</h2>
-        <table className="comparison-table">
-          <thead>
-            <tr>
-              <th>Opción</th>
-              <th>Costos</th>
-              <th>Tiempos</th>
-              <th>Adaptabilidad</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Terrestre</td>
-              <td>Bajo</td>
-              <td>Lento</td>
-              <td>Alta</td>
-            </tr>
-            <tr>
-              <td>Marítimo</td>
-              <td>Moderado</td>
-              <td>Muy lento</td>
-              <td>Alta</td>
-            </tr>
-            <tr>
-              <td>Aéreo</td>
-              <td>Alto</td>
-              <td>Rápido</td>
-              <td>Baja</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          <strong>Consejo:</strong> Usa transporte terrestre para distancias
-          cortas, marítimo para grandes volúmenes y aéreo para entregas urgentes
-          de menor tamaño.
+          Realizar una apertura logística en Colombia requiere planificación, estrategia y los aliados correctos. En <strong>Carga Libre</strong> y <strong>Shipply</strong>, te ayudamos a construir una operación eficiente, rentable y adaptada a las necesidades del mercado. ¡No esperes más y lleva tu logística al siguiente nivel! 🚛📦
         </p>
       </section>
 

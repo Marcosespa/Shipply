@@ -18,11 +18,10 @@ const BlogSection = () => {
   const blogCategories = [
     {
       id: 1,
-      title: "Guías Prácticas",
+      title: "Logistica para grandes superficies",
       description:
-        "Educación y ayuda para resolver problemas específicos en logística y transporte, como optimización y cálculos de costos.",
-      image: images.GuiasPracticas, // Ruta de la imagen desde el archivo importado
-      route: "/blog/guias-practicas",
+      "Explora procesos y particularidades de entregas en grandes superficies en Colombia, con claves para optimizar la logística.",      image: images.GuiasPracticas, // Ruta de la imagen desde el archivo importado
+      route: "/blog/logistica-grandes-superficies",
     },
     {
       id: 2,
@@ -34,27 +33,34 @@ const BlogSection = () => {
     },
     {
       id: 3,
-      title: "Comparativas de Servicios",
+      title: "Apertura Logística en Colombia: Claves para un Inicio Exitoso",
       description:
-        "Comparación de servicios logísticos, flotas, sistemas de gestión y opciones de transporte para una toma de decisiones informada.",
-      image: images.ComparativaServicios, // Ruta de la imagen desde el archivo importado
-      route: "/blog/comparativas-servicios",
+      "Guía para iniciar operaciones logísticas en Colombia con estrategias, tecnología y aliados clave para optimizar tu cadena de suministro.",      image: images.ComparativaServicios, // Ruta de la imagen desde el archivo importado
+      route: "/blog/apertura-logistica",
     },
     {
       id: 4,
-      title: "Logística Urbana",
+      title: "Transporte de Carga en Colombia",
       description:
-        "Soluciones y estrategias para enfrentar los retos de las ciudades congestionadas y la optimización de la última milla.",
+    "Explora los tipos de transporte de carga en Colombia y soluciones estratégicas para optimizar tu logística.",
       image: images.LogisticaUrbana, // Ruta de la imagen desde el archivo importado
-      route: "/blog/logistica-urbana",
+      route: "/blog/transporte-carga-colombia",
     },
     {
       id: 5,
       title: "Automatización en Almacenes",
       description:
         "Explora tecnologías innovadoras como robots autónomos, sistemas AS/RS y sus beneficios para la eficiencia.",
-      image: images.AutomatizacionAlmacenes, // Ruta de la imagen desde el archivo importado
+      image: images.AutomatizacionAlmacenes, 
       route: "/blog/automatizacion-almacenes",
+    },
+    {
+      id: 6,
+      title: "Mejora del Control de Inventarios en Fulfillment",
+      description:
+        "Estrategias y tecnologías para optimizar la gestión de inventarios en Colombia con soluciones efectivas.",
+      image: images.InventoryControlPage,
+      route: "/blog/control-inventarios",
     },
   ];
 

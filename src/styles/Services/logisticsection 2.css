@@ -1,0 +1,125 @@
+/* Sección principal */
+.logistica-crece-section {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #333333; /* Texto gris oscuro */
+  padding: 4rem 1rem;
+}
+
+/* Títulos */
+
+.section-title-Logistic {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #FFD700; 
+  margin-bottom: 2rem; 
+  letter-spacing: 1.5px;
+  line-height: 1.4 !important;  
+  position: relative;
+}
+
+.section-title-Logistic::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background-color: #FFD700;
+  display: block;
+  margin: 1rem auto 0 !important;  
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Descripciones */
+.section-description-Logistic {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #666666; /* Gris medio */
+  line-height: 1.6;
+}
+/* Botón interactivo */
+.btn-cta-logistic {
+  background-color: #000000!important;  /* Botón negro */
+  color: #ffffff!important; 
+  border: none !important; 
+  font-family: "Poppins", sans-serif !important; 
+  padding: 0.8rem 1.5rem !important; 
+  font-size: 1rem !important; 
+  font-weight: 600 !important; 
+  border-radius: 50px !important; 
+  text-align: center !important; 
+  transition: background-color 0.3s ease, transform 0.3s ease !important; 
+}
+
+.btn-cta-logistic:hover {
+  background-color: #555555 !important;  /* Botón más claro */
+  transform: translateY(-2px) !important; 
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2) !important; 
+}
+
+
+
+
+
+
+/* Imagen principal */
+.main-image {
+  border-radius: 8px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  height: auto;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .section-title-Logistic {
+    font-size: 2rem;
+  }
+
+  .section-description-Logistic {
+    font-size: 1rem;
+  }
+
+  .btn-cta-logistic {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .main-image {
+    max-width: 100%;
+  }
+}
+
+
+/* SECCION DE RespaldoSection.css  */
+.Respaldo-advantages-title{
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5  rem;
+  font-weight: 700;
+  color: #e4d167; /* Amarillo brillante */
+  margin-bottom: 2rem;
+  position: relative;
+  text-align: left;
+  letter-spacing: 1.5px;
+  line-height: 1.4 !important;
+}
+
+.Respaldo-description {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: #999999; /* Gris medio */
+  line-height: 1.6;
+}
+
+.Respaldo-advantages-list{
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #999999 !important; 
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 40px;
+}

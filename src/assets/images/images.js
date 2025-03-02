@@ -1,3 +1,4 @@
+import InventoryControlPage from '../../components/Blog/InventoryControlPage';
 import { InovacionSection, RespaldoSection } from '../../components/Services/B2B';
 
 const images = {
@@ -28,6 +29,7 @@ const images = {
   ComparativaServicios: require('./ComparativaServicios.jpg.webp'),
   LogisticaUrbana: require('./LogisticaUrbana.avif'),
   AutomatizacionAlmacenes: require('./Automatizacion.avif'),
+  InventoryControlPage: require('./Inventory.png'),
   // Logos empresas
   cargalibre: require('./LOGO CARGALIBRE.png'),
   proimpo: require('./Proimpo.png'),

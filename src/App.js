@@ -22,6 +22,7 @@ import NewsAnalysisPage from "./components/Blog/NewsAnalysisPage";
 import ServiceComparisonPage from "./components/Blog/ServiceComparisonPage";
 import UrbanLogisticsPage from "./components/Blog/UrbanLogisticsPage";
 import WarehouseAutomationPage from "./components/Blog/WarehouseAutomationPage";
+import InventoryControlPage from "./components/Blog/InventoryControlPage";
 
 import WhatsappButton from "./components/WhatsappButton";
 import "./styles/Home/chestDrawer.css";
@@ -101,27 +102,29 @@ const App = () => {
           {/* Blog Routes */}
           <Route path="/blog" element={<BlogSection />} />
           <Route
-            path="/blog/guias-practicas"
-            element={<GuidesPage title="Guías Prácticas" />}
+            path="/blog/logistica-grandes-superficies"
+            element={<GuidesPage title="Logistica grandes Superficies" />}
           />
           <Route
             path="/blog/analisis-noticias"
             element={<NewsAnalysisPage title="Análisis de Noticias" />}
           />
           <Route
-            path="/blog/comparativas-servicios"
-            element={<ServiceComparisonPage title="Comparativas de Servicios" />}
+            path="/blog/apertura-logistica"
+            element={<ServiceComparisonPage title="Apertura logistica" />}
           />
           <Route
-            path="/blog/logistica-urbana"
-            element={<UrbanLogisticsPage title="Logística Urbana" />}
+            path="/blog/transporte-carga-colombia"
+            element={<UrbanLogisticsPage title="Transporte de Carga en Colombia" />}
           />
           <Route
             path="/blog/automatizacion-almacenes"
             element={<WarehouseAutomationPage title="Automatización en Almacenes" />}
           />
-
-
+          <Route
+            path="/blog/control-inventarios"
+            element={<InventoryControlPage title="Control de inventarios" />}
+          />
 
           <Route
             path="/talento"
