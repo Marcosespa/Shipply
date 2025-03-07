@@ -3,6 +3,50 @@ import { useNavigate } from "react-router-dom";
 import "../../styles/Services/valueaddedservices.css";
 import images from "../../assets/images/images";
 
+// Datos de las secciones en un array para reutilización
+const services = [
+  {
+    title: "Personalización de Pedidos",
+    description:
+      "Agregamos un toque especial a cada envío con opciones como <strong>empaques personalizados</strong>, <strong>notas de regalo</strong> y <strong>material promocional</strong> para reforzar tu marca.",
+    image: images.Personalizacion,
+    alt: "Personalización de Pedidos",
+    imagePosition: "right",
+  },
+  {
+    title: "Maquila y Ensamblaje",
+    description:
+      "Simplificamos la preparación de pedidos combinando productos en <strong>paquetes personalizados</strong> o ensamblando <strong>kits listos para su distribución</strong>.",
+    image: images.Maquila,
+    alt: "Maquila y Ensamblaje",
+    imagePosition: "left",
+  },
+  {
+    title: "Control de Calidad",
+    description:
+      "Verificamos cada producto antes del despacho para garantizar que llegue en <strong>perfectas condiciones</strong> y evitar <strong>devoluciones innecesarias</strong>.",
+    image: images.Control,
+    alt: "Control de Calidad",
+    imagePosition: "right",
+  },
+  {
+    title: "Gestión de Devoluciones",
+    description:
+      "Facilitamos el proceso de retornos con una solución eficiente que mejora la <strong>experiencia del cliente</strong> y optimiza la <strong>reposición de inventario</strong>.",
+    image: images.GestionDevolucion,
+    alt: "Gestión de Devoluciones",
+    imagePosition: "left",
+  },
+  {
+    title: "Etiquetado y Reetiketado",
+    description:
+      "Adaptamos el etiquetado de los productos según los <strong>requisitos del mercado</strong> o de los <strong>canales de distribución</strong>.",
+    image: images.Etiquetado,
+    alt: "Etiquetado y Reetiquetado",
+    imagePosition: "right",
+  },
+];
+
 const ValueAddedServicesPage = () => {
   const navigate = useNavigate();
 
@@ -16,75 +60,41 @@ const ValueAddedServicesPage = () => {
         </p>
       </header>
 
-      {/* Sección: Personalización de Pedidos (Imagen a la derecha) */}
-      <section className="value-added-section image-right">
-        <div className="content-wrapper">
-          <div className="text-content">
-            <h2>Personalización de Pedidos</h2>
-            <p>
-              Agregamos un toque especial a cada envío con opciones como <strong>empaques personalizados</strong>, <strong>notas de regalo</strong> y <strong>material promocional</strong> para reforzar tu marca.
-            </p>
+      {/* Secciones dinámicas */}
+      {services.map((service, index) => (
+        <section
+          key={index}
+          className={`value-added-section image-${service.imagePosition}`}
+        >
+          <div className="content-wrapper">
+            {service.imagePosition === "left" && (
+              <img
+                src={service.image}
+                alt={service.alt}
+                className="section-image"
+                loading="lazy" // Optimización de carga
+              />
+            )}
+            <div className="text-content">
+              <h2>{service.title}</h2>
+              <p dangerouslySetInnerHTML={{ __html: service.description }} />
+            </div>
+            {service.imagePosition === "right" && (
+              <img
+                src={service.image}
+                alt={service.alt}
+                className="section-image"
+                loading="lazy" // Optimización de carga
+              />
+            )}
           </div>
-          <img src={images.Personalizacion} alt="Personalización de Pedidos" className="section-image" />
-        </div>
-      </section>
-
-      {/* Sección: Maquila y Ensamblaje (Imagen a la izquierda) */}
-      <section className="value-added-section image-left">
-        <div className="content-wrapper">
-          <img src={images.Maquila} alt="Maquila y Ensamblaje" className="section-image" />
-          <div className="text-content">
-            <h2>Maquila y Ensamblaje</h2>
-            <p>
-              Simplificamos la preparación de pedidos combinando productos en <strong>paquetes personalizados</strong> o ensamblando <strong>kits listos para su distribución</strong>.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Sección: Control de Calidad (Imagen a la derecha) */}
-      <section className="value-added-section image-right">
-        <div className="content-wrapper">
-          <div className="text-content">
-            <h2>Control de Calidad</h2>
-            <p>
-              Verificamos cada producto antes del despacho para garantizar que llegue en <strong>perfectas condiciones</strong> y evitar <strong>devoluciones innecesarias</strong>.
-            </p>
-          </div>
-          <img src={images.Control} alt="Control de Calidad" className="section-image" />
-        </div>
-      </section>
-
-      {/* Sección: Gestión de Devoluciones (Imagen a la izquierda) */}
-      <section className="value-added-section image-left">
-        <div className="content-wrapper">
-          <img src={images.GestionDevolucion} alt="Gestión de Devoluciones" className="section-image" />
-          <div className="text-content">
-            <h2>Gestión de Devoluciones</h2>
-            <p>
-              Facilitamos el proceso de retornos con una solución eficiente que mejora la <strong>experiencia del cliente</strong> y optimiza la <strong>reposición de inventario</strong>.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Sección: Etiquetado y Reetiquetado (Imagen a la derecha) */}
-      <section className="value-added-section image-right">
-        <div className="content-wrapper">
-          <div className="text-content">
-            <h2>Etiquetado y Reetiquetado</h2>
-            <p>
-              Adaptamos el etiquetado de los productos según los <strong>requisitos del mercado</strong> o de los <strong>canales de distribución</strong>.
-            </p>
-          </div>
-          <img src={images.Etiquetado} alt="Etiquetado y Reetiquetado" className="section-image" />
-        </div>
-      </section>
+        </section>
+      ))}
 
       {/* Botón de Retorno */}
       <div className="back-button-container">
         <button className="back-button" onClick={() => navigate("/")}>
-          Volver 
+          Volver
         </button>
       </div>
     </div>
