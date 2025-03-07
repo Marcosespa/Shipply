@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../../styles/Services/valueaddedservices.css";
-
+import images from "../../assets/images/images";
 
 const ValueAddedServicesPage = () => {
   const navigate = useNavigate();
@@ -25,14 +25,14 @@ const ValueAddedServicesPage = () => {
               Agregamos un toque especial a cada envío con opciones como <strong>empaques personalizados</strong>, <strong>notas de regalo</strong> y <strong>material promocional</strong> para reforzar tu marca.
             </p>
           </div>
-          <img src="https://via.placeholder.com/300x200?text=Personalización" alt="Personalización de Pedidos" className="section-image" />
+          <img src={images.Personalizacion} alt="Personalización de Pedidos" className="section-image" />
         </div>
       </section>
 
       {/* Sección: Maquila y Ensamblaje (Imagen a la izquierda) */}
       <section className="value-added-section image-left">
         <div className="content-wrapper">
-          <img src="https://via.placeholder.com/300x200?text=Maquila" alt="Maquila y Ensamblaje" className="section-image" />
+          <img src={images.Maquila} alt="Maquila y Ensamblaje" className="section-image" />
           <div className="text-content">
             <h2>Maquila y Ensamblaje</h2>
             <p>
@@ -51,14 +51,14 @@ const ValueAddedServicesPage = () => {
               Verificamos cada producto antes del despacho para garantizar que llegue en <strong>perfectas condiciones</strong> y evitar <strong>devoluciones innecesarias</strong>.
             </p>
           </div>
-          <img src="https://via.placeholder.com/300x200?text=Calidad" alt="Control de Calidad" className="section-image" />
+          <img src={images.Control} alt="Control de Calidad" className="section-image" />
         </div>
       </section>
 
       {/* Sección: Gestión de Devoluciones (Imagen a la izquierda) */}
       <section className="value-added-section image-left">
         <div className="content-wrapper">
-          <img src="https://via.placeholder.com/300x200?text=Devoluciones" alt="Gestión de Devoluciones" className="section-image" />
+          <img src={images.GestionDevolucion} alt="Gestión de Devoluciones" className="section-image" />
           <div className="text-content">
             <h2>Gestión de Devoluciones</h2>
             <p>
@@ -77,7 +77,7 @@ const ValueAddedServicesPage = () => {
               Adaptamos el etiquetado de los productos según los <strong>requisitos del mercado</strong> o de los <strong>canales de distribución</strong>.
             </p>
           </div>
-          <img src="https://via.placeholder.com/300x200?text=Etiquetado" alt="Etiquetado y Reetiquetado" className="section-image" />
+          <img src={images.Etiquetado} alt="Etiquetado y Reetiquetado" className="section-image" />
         </div>
       </section>
 

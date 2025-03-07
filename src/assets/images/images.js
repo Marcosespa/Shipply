@@ -21,6 +21,13 @@ const images = {
   EnviosImg: require('./EnviosImg.png'),
   AnimationAnalytics: require('./AnimationAnalytics.json'),
   AnimationAlmacentamient: require('./Animation-Almacenamiento.json'),
+  //Servicios
+  Personalizacion: require('./Personalizacion.jpeg'),
+  Maquila: require('./MaquilaEmbalaje.jpeg'),
+  Control: require('./ControlCalidad.jpeg'),
+  GestionDevolucion: require('./GestionDevoluciones.jpeg'),
+  Etiquetado: require('./Etiquetado.jpeg'),
+  
   //Logistics Section
   LogisticSection: require('./LogisticSection.png'),
   //Fotos Blog

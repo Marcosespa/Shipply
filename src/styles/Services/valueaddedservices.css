@@ -52,18 +52,21 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  justify-content: space-between; /* Asegura que el contenido se distribuya bien */
+  flex-wrap: nowrap; /* Evita que se apilen en pantallas grandes */
 }
 
 .value-added-section.image-right .content-wrapper {
-  flex-direction: row;
+  flex-direction: row important!;
 }
 
 .value-added-section.image-left .content-wrapper {
-  flex-direction: row-reverse;
+  flex-direction: row-reverse  important!;
 }
 
 .value-added-section .text-content {
-  flex: 1;
+  flex: 1; /* El texto ocupa el espacio disponible */
+  min-width: 0; /* Evita desbordamiento */
 }
 
 .value-added-section h2 {
