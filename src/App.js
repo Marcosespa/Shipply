@@ -27,6 +27,7 @@ import ValueAddedServicesPage from "./components/Services/ValueAddedServicesPage
 import WhatsappButton from "./components/WhatsappButton";
 import "./styles/Home/chestDrawer.css";
 import ScrollToHash from "./components/ScrollToHash"; // Importa el componente
+import ScrollToTop from "./components/ScrollToTop"; // Importa el componente para scroll al inicio
 
 import ProcessSection from "./components/Services/ProcessSection";
 import IntegracionesSection from "./components/Services/IntegracionesSection";
@@ -41,12 +42,10 @@ import PrivacyPolitic from "./components/Contact/PrivacyPolitic";
 import Faq from "./components/Faq/Faq";
 import {LogisticaCreceSection,InovacionSection,RetailersLideresSection,RespaldoSection} from "./components/Services/B2B";
 
-// index.js o App.js
 import ReactGA from "react-ga4";
-// import { InovacionSection } from "./components/Services/B2B";
 
-// Inicializa Google Analytics con tu ID de rastreo
-ReactGA.initialize("G-Z7LYPT9LHY"); // Reemplaza con tu ID de Google Analytics, por ejemplo: "G-XXXXXXXXXX"
+// Inicializa Google Analytics
+ReactGA.initialize("G-Z7LYPT9LHY");
 
 
 
@@ -54,11 +53,12 @@ ReactGA.initialize("G-Z7LYPT9LHY"); // Reemplaza con tu ID de Google Analytics, 
 
 const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <ScrollToHash /> {/* Incluye el componente solo una vez aquí */}
-      <WhatsappButton/>
-        <Routes>
+          <Router>
+        <ScrollToTop /> {/* Hace scroll al inicio en cada navegación */}
+        <Navbar />
+        <ScrollToHash /> {/* Incluye el componente solo una vez aquí */}
+        <WhatsappButton/>
+          <Routes>
           <Route
             path="/"
             element={
@@ -70,7 +70,6 @@ const App = () => {
                 <AboutUs />
                 <Testimonials />
                 <Clients />
-                {/* <Services /> */}
                 <Benefits2 />
               </>
             }
@@ -135,35 +134,18 @@ const App = () => {
 
           <Route
             path="/talento"
-            element={
-              <>
-                <TalentSection />
-                {/* PARTE A CAMBIAR POR FORMS PARA CONTRATAR */}
-              </>
-            }
+            element={<TalentSection />}
           />
           <Route
             path="/faq"
-            element={
-              <>
-                <Faq />
-                {/* PARTE A CAMBIAR POR FORMS PARA CONTRATAR */}
-              </>
-            }
+            element={<Faq />}
           />
 
           <Route
             path="/politica-de-privacidad"
-            element={
-              <>
-                <PrivacyPolitic />
-                {/* PARTE A CAMBIAR POR FORMS PARA CONTRATAR */}
-              </>
-            }
+            element={<PrivacyPolitic />}
           />
         </Routes>
-      {/* <WhatsappButton /> */}
-
       <Footer />
     </Router>
   );

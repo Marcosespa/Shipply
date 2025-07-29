@@ -1,8 +1,4 @@
-import InventoryControlPage from "../../components/Blog/InventoryControlPage";
-import {
-  InovacionSection,
-  RespaldoSection,
-} from "../../components/Services/B2B";
+
 
 const images = {
   logo1: require("./Imagenrecortada.png"),
