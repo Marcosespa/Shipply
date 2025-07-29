@@ -5,20 +5,36 @@ import images from "../../assets/images/images";
 
 const Clients = () => {
   const clientLogos = [
-    <img src={images.proimpo} alt="Proimpo" key="proimpo" className="client-logo" />,
+    // <img src={images.proimpo} alt="Proimpo" key="proimpo" className="client-logo" />,
     <img src={images.travelBlue} alt="Travel Blue" key="travelBlue" className="client-logo" />,
     <img src={images.dia11} alt="Dia 11" key="dia11" className="client-logo" />,
+
     <img src={images.alohaBaby} alt="Aloha Baby" key="alohababy" className="client-logo" />,
-    <img src={images.anasac} alt="Ana Sac" key="anasac" className="client-logo" />,
+    // <img src={images.anasac} alt="Ana Sac" key="anasac" className="client-logo" />,
     <img src={images.santaAnita} alt="Santa Anita" key="santaanita" className="client-logo" />,
+    <img src={images.scribe} alt="Scribe" key="Scribe" className="client-logo" />,
+    <img src={images.casaLuker} alt="CasaLuker" key="CasaLuker" className="client-logo" />,
+    <img src={images.maestriEmocional} alt="MaestriaEmocional" key="MaestriaEmocional" className="client-logo" />
+
+
   ];
 
-  const groupedLogos = clientLogos.reduce((acc, curr, index) => {
-    const groupIndex = Math.floor(index / 3); // Agrupa logos de 3 en 3
-    acc[groupIndex] = acc[groupIndex] || [];
-    acc[groupIndex].push(curr);
-    return acc;
-  }, []);
+  // Asegurar que siempre tengamos grupos de 3 elementos
+  const ensureGroupsOfThree = (logos) => {
+    const groups = [];
+    for (let i = 0; i < logos.length; i += 3) {
+      const group = logos.slice(i, i + 3);
+      // Si el grupo no tiene 3 elementos, rellenar con logos existentes
+      while (group.length < 3) {
+        const logoIndex = group.length; // Usar el índice del grupo para seleccionar un logo
+        group.push(logos[logoIndex]);
+      }
+      groups.push(group);
+    }
+    return groups;
+  };
+
+  const groupedLogos = ensureGroupsOfThree(clientLogos);
 
   return (
     <div className="clients-section py-5">

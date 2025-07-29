@@ -10,9 +10,9 @@ const TalentSection = () => {
         {/* Columna de la imagen */}
         <Col md={6} className="info-section pe-2">
           <img
-            src={images.talentIllustration}
+            src={images.logo7}
             alt="Ilustración Talento Shipply"
-            className="illustration"
+            className="illustration-Shipply"
             loading="lazy"
           />
         </Col>
@@ -21,7 +21,8 @@ const TalentSection = () => {
         <Col md={5} className="form-section ps-2">
           <h3 className="form-title">Únete a nuestro equipo</h3>
           <p className="form-description">
-            Estamos en busca de personas apasionadas que quieran construir el futuro de la logística con Shipply.
+            Estamos en busca de personas apasionadas que quieran construir el
+            futuro de la logística con Shipply.
           </p>
           <form action="https://formspree.io/f/mnqwerty" method="POST">
             <Row>
@@ -84,7 +85,9 @@ const TalentSection = () => {
               Enviar
             </button>
           </form>
-          <p className="social-text mt-4">Síguenos en nuestras redes sociales</p>
+          <p className="social-text mt-4">
+            Síguenos en nuestras redes sociales
+          </p>
           <div className="social-icons">
             <a href="https://instagram.com" target="_blank" rel="noreferrer">
               <i className="bi bi-instagram"></i>

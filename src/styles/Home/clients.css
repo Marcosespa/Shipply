@@ -53,6 +53,8 @@
   object-fit: contain; 
 }
 
+
+
 /* Ítems del carrusel */
 .carousel-item {
   background-color: inherit;
@@ -142,6 +144,8 @@
     height: 120px;
   }
 
+
+
   .clients-section h2 {
     font-size: 2rem;
   }
@@ -163,6 +167,8 @@
     width: 100px;
     height: 100px;
   }
+
+
 
   .carousel-control-prev-icon-custom,
   .carousel-control-next-icon-custom {
