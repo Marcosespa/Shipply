@@ -1,0 +1,41 @@
+/* Estilos para el componente de carga */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.loading-spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 0.25em solid #f3f3f3;
+  border-top: 0.25em solid #ffc107;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-top: 1rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .loading-container {
+    min-height: 150px;
+  }
+  
+  .loading-spinner {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+} 
