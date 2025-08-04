@@ -14,7 +14,8 @@ const Clients = () => {
     <img src={images.santaAnita} alt="Santa Anita" key="santaanita" className="client-logo" />,
     <img src={images.scribe} alt="Scribe" key="Scribe" className="client-logo" />,
     <img src={images.casaLuker} alt="CasaLuker" key="CasaLuker" className="client-logo" />,
-    <img src={images.maestriEmocional} alt="MaestriaEmocional" key="MaestriaEmocional" className="client-logo" />
+    <img src={images.maestriEmocional} alt="MaestriaEmocional" key="MaestriaEmocional" className="client-logo" />,
+    <img src={images.cacaoHunter} alt="cacaoHunter" key="cacaoHunter" className="client-logo" />
 
 
   ];

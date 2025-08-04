@@ -1,5 +1,3 @@
-
-
 const images = {
   logo1: require("./Imagenrecortada.png"),
   logo2: require("./logBeneficios2.webp"),
@@ -46,6 +44,7 @@ const images = {
   travelBlue: require("./Travel-Blue.png"),
   dia11: require("./diaonce.webp"),
   alohaBaby: require("./alohaBaby.png"),
+  cacaoHunter: require("./cacao-hunters-logo.png"),
   // anasac: require('./anasac.png'),
   santaAnita: require("./SantaAnita.png.webp"),
   avplasticsTrade: require("./avplastics.jpeg"),
