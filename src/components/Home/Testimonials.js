@@ -50,6 +50,7 @@ const Testimonials = () => {
                     src={testimonial.logo}
                     alt={testimonial.company}
                     className="testimonial-logo"
+                    loading="lazy"
                   />
                   <div>
                     <h5 className="testimonial-name">{testimonial.name}</h5>

@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Logo */}
           <Col xs={12} md={3} className="mb-4 mb-md-0">
             <div className="footer-logo-container">
-              <img src={images.ShipplyPNG} alt="Logo" className="footer-logo" />
+              <img src={images.ShipplyPNG} alt="Logo" className="footer-logo" loading="lazy" />
             </div>
           </Col>
 

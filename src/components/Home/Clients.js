@@ -6,16 +6,16 @@ import images from "../../assets/images/images";
 const Clients = () => {
   const clientLogos = [
     // <img src={images.proimpo} alt="Proimpo" key="proimpo" className="client-logo" />,
-    <img src={images.travelBlue} alt="Travel Blue" key="travelBlue" className="client-logo" />,
-    <img src={images.dia11} alt="Dia 11" key="dia11" className="client-logo" />,
+    <img src={images.travelBlue} alt="Travel Blue" key="travelBlue" className="client-logo" loading="lazy" />,
+    <img src={images.dia11} alt="Dia 11" key="dia11" className="client-logo" loading="lazy" />,
 
-    <img src={images.alohaBaby} alt="Aloha Baby" key="alohababy" className="client-logo" />,
+    <img src={images.alohaBaby} alt="Aloha Baby" key="alohababy" className="client-logo" loading="lazy" />,
     // <img src={images.anasac} alt="Ana Sac" key="anasac" className="client-logo" />,
-    <img src={images.santaAnita} alt="Santa Anita" key="santaanita" className="client-logo" />,
-    <img src={images.scribe} alt="Scribe" key="Scribe" className="client-logo" />,
-    <img src={images.casaLuker} alt="CasaLuker" key="CasaLuker" className="client-logo" />,
-    <img src={images.maestriEmocional} alt="MaestriaEmocional" key="MaestriaEmocional" className="client-logo" />,
-    <img src={images.cacaoHunter} alt="cacaoHunter" key="cacaoHunter" className="client-logo" />
+    <img src={images.santaAnita} alt="Santa Anita" key="santaanita" className="client-logo" loading="lazy" />,
+    <img src={images.scribe} alt="Scribe" key="Scribe" className="client-logo" loading="lazy" />,
+    <img src={images.casaLuker} alt="CasaLuker" key="CasaLuker" className="client-logo" loading="lazy" />,
+    <img src={images.maestriEmocional} alt="MaestriaEmocional" key="MaestriaEmocional" className="client-logo" loading="lazy" />,
+    <img src={images.cacaoHunter} alt="cacaoHunter" key="cacaoHunter" className="client-logo" loading="lazy" />
 
 
   ];
