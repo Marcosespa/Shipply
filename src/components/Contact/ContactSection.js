@@ -1,25 +1,28 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
+import { useSearchParams } from "react-router-dom";
 import "../../styles/Contact/contactsection.css";
 import images from "../../assets/images/images";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga4";
+import ContactSectionInternational from "./ContactSectionInternational";
 
-const ContactSection = () => {
-  // Referencia al formulario para enviarlo manualmente
+/**
+ * Spanish form (default). For international funnel use ?lang=en on the same /contacto path
+ * (works reliably on static hosts like Hostinger where subpaths may resolve incorrectly).
+ */
+const ContactSectionEs = () => {
   const formRef = React.useRef(null);
 
   const handleFormSubmit = (e) => {
-    e.preventDefault(); // Evita la acción predeterminada de enviar el formulario
+    e.preventDefault();
 
-    // Envía el evento a Google Analytics
     ReactGA.event({
       category: "Contact",
       action: "Submit Form",
       label: "Contact Form",
     });
 
-    // Envía el formulario manualmente
     if (formRef.current) {
       formRef.current.submit();
     }
@@ -115,7 +118,7 @@ const ContactSection = () => {
               <button
                 type="submit"
                 className="btn btn-dark w-100"
-                onClick={handleFormSubmit} // Llama a la función al hacer clic
+                onClick={handleFormSubmit}
               >
                 Enviar
               </button>
@@ -149,6 +152,17 @@ const ContactSection = () => {
       </section>
     </>
   );
+};
+
+const ContactSection = () => {
+  const [searchParams] = useSearchParams();
+  const lang = searchParams.get("lang");
+
+  if (lang === "en") {
+    return <ContactSectionInternational />;
+  }
+
+  return <ContactSectionEs />;
 };
 
 export default ContactSection;

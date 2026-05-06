@@ -4,8 +4,11 @@ import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
 import { FaUsers, FaPhoneAlt } from "react-icons/fa";
 import images from "../assets/images/images";
+import { useEnglishMarketingShell } from "../utils/useEnglishMarketingShell";
+
 const NavigationBar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const en = useEnglishMarketingShell();
 
   const handleToggle = () => setIsExpanded(!isExpanded);
   const closeNavbar = () => setIsExpanded(false);
@@ -18,29 +21,28 @@ const NavigationBar = () => {
       className="navbar-custom"
     >
       <Container>
-        {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-        {/* <img src="./static/media/Shipply-SinFondo.ee3aae52d82a4811dc5c.webp" alt="Logo" class="img-fluid" width="200" height="100"></img> */}
-
-        <img
-              src={images.ShipplyPNG}
-              alt="Logo" class="img-fluid" width="200" height="100" loading="lazy"
-            />
+          <img
+            src={images.ShipplyPNG}
+            alt={en ? "Shipply logo" : "Logo"}
+            className="img-fluid"
+            width="200"
+            height="100"
+            loading="lazy"
+          />
         </Navbar.Brand>
 
-        {/* Toggle para pantallas pequeñas */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggle} />
 
-        {/* Elementos del Navbar */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto" onClick={closeNavbar}>
-            <NavDropdown title="Servicios" id="basic-nav-dropdown">
+            <NavDropdown title={en ? "Services" : "Servicios"} id="basic-nav-dropdown">
               <NavDropdown.Item
                 as={Link}
                 to="/servicios#integraciones"
                 onClick={closeNavbar}
               >
-                Fullfilment ecommerce
+                {en ? "E‑commerce fulfillment" : "Fullfilment ecommerce"}
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
@@ -54,14 +56,20 @@ const NavigationBar = () => {
                 to="/valueaddedsservices"
                 onClick={closeNavbar}
               >
-                Soluciones de Valor agregado
+                {en ? "Value‑added services" : "Soluciones de Valor agregado"}
               </NavDropdown.Item>
             </NavDropdown>
-            {/* <Nav.Link as={Link} to="/contacto" onClick={closeNavbar}>
-              Contacto
-            </Nav.Link> */}
+            {en ? (
+              <Nav.Link as={Link} to="/">
+                Español
+              </Nav.Link>
+            ) : (
+              <Nav.Link as={Link} to="/international">
+                International
+              </Nav.Link>
+            )}
             <Nav.Link as={Link} to="/blog" onClick={closeNavbar}>
-              Recursos
+              {en ? "Resources" : "Recursos"}
             </Nav.Link>
             <Nav.Link
               href="https://cargalibre.com.co/"
@@ -69,11 +77,10 @@ const NavigationBar = () => {
               rel="noopener noreferrer"
               onClick={closeNavbar}
             >
-              Envios masivos
+              {en ? "Bulk shipping" : "Envios masivos"}
             </Nav.Link>
           </Nav>
 
-          {/* Botones */}
           <div className="d-flex flex-column flex-lg-row align-items-center mt-3 mt-lg-0 gap-3">
             <Button
               variant="warning"
@@ -82,16 +89,16 @@ const NavigationBar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaUsers className="me-2" /> Portal Clientes
+              <FaUsers className="me-2" /> {en ? "Client portal" : "Portal Clientes"}
             </Button>
             <Button
               variant="warning"
               className="btn-custom"
               as={Link}
-              to="/contacto"
+              to={en ? "/contacto?lang=en" : "/contacto"}
               onClick={closeNavbar}
             >
-              <FaPhoneAlt className="me-2" /> Contactar
+              <FaPhoneAlt className="me-2" /> {en ? "Contact us" : "Contactar"}
             </Button>
           </div>
         </Navbar.Collapse>

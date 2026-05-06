@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
 } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./styles/Home/chestDrawer.css";
@@ -42,9 +43,15 @@ const DataAnalysisSection = React.lazy(() => import("./components/Services/DataA
 const DevolutionSection = React.lazy(() => import("./components/Services/DevolutionSection"));
 const EnvioSection = React.lazy(() => import("./components/Services/EnvioSection"));
 const ContactSection = React.lazy(() => import("./components/Contact/ContactSection"));
+const ContactSectionInternational = React.lazy(() =>
+  import("./components/Contact/ContactSectionInternational")
+);
 const TalentSection = React.lazy(() => import("./components/Contact/TalentSection"));
 const PrivacyPolitic = React.lazy(() => import("./components/Contact/PrivacyPolitic"));
 const Faq = React.lazy(() => import("./components/Faq/Faq"));
+const InternationalLanding = React.lazy(() =>
+  import("./components/International/InternationalLanding")
+);
 
 // Lazy loading para componentes B2B
 const B2BComponents = React.lazy(() => import("./components/Services/B2B").then(module => ({
@@ -121,7 +128,19 @@ const App = () => {
                 </>
               }
             />
+            <Route
+              path="/contacto/international"
+              element={<Navigate to="/contacto?lang=en" replace />}
+            />
+            <Route
+              path="/international/contact"
+              element={<ContactSectionInternational />}
+            />
             <Route path="/contacto" element={<ContactSection />} />
+            <Route
+              path="/international"
+              element={<InternationalLanding />}
+            />
             {/* Blog Routes */}
             <Route path="/blog" element={<BlogSection />} />
             <Route
