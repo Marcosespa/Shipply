@@ -1,16 +1,22 @@
-/* Full English experience: offset fixed navbar + optional top language bar */
+/* Full English experience: navbar fixed height (align with Shipply navbar) */
+:root {
+  --shipply-navbar-h: 96px;
+}
+
 .intl-landing {
   background: #eef1f4;
   color: #1a1d21;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  padding-top: 112px;
+  /* Sin padding-top global: la franja era el fondo gris bajo el navbar fijo */
+  padding-top: 0;
 }
 
 .intl-lang-bar {
   background: #0d1b2a;
   color: rgba(255, 255, 255, 0.92);
   font-size: 0.8125rem;
-  padding: 0.4rem 0;
+  /* Relleno bajo navbar fijo dentro de la barra oscura (sin hueco gris) */
+  padding: calc(var(--shipply-navbar-h, 96px) + 0.35rem) 0 0.4rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -27,7 +33,7 @@
 /* Sticky in-page anchors (desktop) */
 .intl-anchor-nav-wrap {
   position: sticky;
-  top: 112px;
+  top: calc(var(--shipply-navbar-h, 96px) + 3rem);
   z-index: 990;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(10px);

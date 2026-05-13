@@ -1,65 +1,108 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "../styles/footer.css";
+import "../styles/footer-shipply-v2.css";
 import images from "../assets/images/images";
 import { useEnglishMarketingShell } from "../utils/useEnglishMarketingShell";
+import FadeIn from "./motion/FadeIn";
+import StaggerSection from "./motion/StaggerSection";
 
 const Footer = () => {
   const en = useEnglishMarketingShell();
 
   return (
-    <footer className="footer-section">
+    <StaggerSection as="footer" className={`footer-section ${!en ? "footer-shipply-v2" : ""}`}>
       <Container>
         <Row className="align-items-center text-center text-md-start">
-          <Col xs={12} md={3} className="mb-4 mb-md-0">
-            <div className="footer-logo-container">
-              <img src={images.ShipplyPNG} alt={en ? "Shipply logo" : "Logo"} className="footer-logo" loading="lazy" />
-            </div>
-          </Col>
-
-          <Col xs={12} sm={6} md={3} className="mb-4 mb-md-0">
-            <h5 className="footer-title">{en ? "SHIPPLY" : "SHIPPLY"}</h5>
-            <ul className="footer-menu">
-              <li><Link to="/blog">Blog</Link></li>
-              <li><Link to="/talento">{en ? "Careers" : "Talento"}</Link></li>
-              {en ? (
-                <li><Link to="/">Spanish site</Link></li>
-              ) : (
-                <li><Link to="/international">International — EN</Link></li>
+          <Col xs={12} md={!en ? 2 : 3} className="mb-4 mb-md-0">
+            <FadeIn y={14}>
+              <div className="footer-logo-container">
+                <img src={images.ShipplyPNG} alt={en ? "Shipply logo" : "Logo"} className="footer-logo" loading="lazy" />
+              </div>
+              {!en && (
+                <p className="footer-tagline small mt-2 mb-0">
+                  Fulfillment y logística para marcas que venden en Colombia.
+                </p>
               )}
-              <li>
-                <Link to={en ? "/contacto?lang=en" : "/contacto"}>
-                  {en ? "Contact us" : "Asesoría Colombia"}
-                </Link>
-              </li>
-            </ul>
+            </FadeIn>
           </Col>
 
-          <Col xs={12} sm={6} md={3} className="mb-4 mb-md-0">
-            <h5 className="footer-title">{en ? "PRODUCT" : "PRODUCTO"}</h5>
-            <ul className="footer-menu">
-              <li><Link to="/servicios">{en ? "Services" : "Servicios"}</Link></li>
-              <li><Link to="/servicios#integraciones">{en ? "Integrations" : "Integraciones"}</Link></li>
-              <li><Link to="/faq">{en ? "FAQ" : "Preguntas frecuentes (FAQ)"}</Link></li>
-            </ul>
+          <Col xs={12} sm={6} md={!en ? 2 : 3} className="mb-4 mb-md-0">
+            <FadeIn delay={0.04} y={14}>
+              <h5 className="footer-title">SHIPPLY</h5>
+              <ul className="footer-menu">
+                <li><Link to="/blog">Blog</Link></li>
+                <li><Link to="/talento">{en ? "Careers" : "Talento"}</Link></li>
+                {en ? (
+                  <li><Link to="/">Spanish site</Link></li>
+                ) : (
+                  <li><Link to="/international">International — EN</Link></li>
+                )}
+                <li>
+                  <Link to={en ? "/contacto?lang=en" : "/contacto"}>
+                    {en ? "Contact us" : "Contacto / cotización"}
+                  </Link>
+                </li>
+              </ul>
+            </FadeIn>
           </Col>
 
-          <Col xs={12} md={3} className="mb-4 mb-md-0">
-            <h5 className="footer-title">{en ? "LEGAL" : "PRIVACIDAD"}</h5>
-            <ul className="footer-menu">
-              <li>
-                <Link to="/politica-de-privacidad">
-                  {en ? "Privacy policy" : "Política de privacidad"}
-                </Link>
-              </li>
-            </ul>
+          {!en && (
+            <Col xs={12} sm={6} md={4} className="mb-4 mb-md-0">
+              <FadeIn delay={0.08} y={14}>
+                <h5 className="footer-title">SOLUCIONES</h5>
+                <ul className="footer-menu mb-4">
+                  <li>
+                    <Link to="/soluciones/marca-digital-colombiana">Marca digital</Link>
+                  </li>
+                  <li>
+                    <Link to="/soluciones/b2b-y-ecommerce">B2B + e‑commerce</Link>
+                  </li>
+                  <li>
+                    <Link to="/soluciones/internacional-colombia">Internacional</Link>
+                  </li>
+                </ul>
+                <h5 className="footer-title">EXPLORAR</h5>
+                <ul className="footer-menu">
+                  <li><HashLink smooth to="/#que-hacemos">Qué hacemos</HashLink></li>
+                  <li><HashLink smooth to="/#servicios">Servicios</HashLink></li>
+                  <li><HashLink smooth to="/#casos">Casos de uso</HashLink></li>
+                  <li><HashLink smooth to="/#faq">Preguntas</HashLink></li>
+                </ul>
+              </FadeIn>
+            </Col>
+          )}
+
+          <Col xs={12} sm={6} md={!en ? 2 : 3} className="mb-4 mb-md-0">
+            <FadeIn delay={0.12} y={14}>
+              <h5 className="footer-title">{en ? "PRODUCT" : "PRODUCTO"}</h5>
+              <ul className="footer-menu">
+                <li><Link to="/servicios">{en ? "Services" : "Servicios"}</Link></li>
+                <li><Link to="/servicios#integraciones">{en ? "Integrations" : "Integraciones"}</Link></li>
+                <li><Link to="/faq">{en ? "FAQ" : "Preguntas frecuentes (FAQ)"}</Link></li>
+              </ul>
+            </FadeIn>
+          </Col>
+
+          <Col xs={12} md={!en ? 2 : 3} className="mb-4 mb-md-0">
+            <FadeIn delay={0.16} y={14}>
+              <h5 className="footer-title">{en ? "LEGAL" : "PRIVACIDAD"}</h5>
+              <ul className="footer-menu">
+                <li>
+                  <Link to="/politica-de-privacidad">
+                    {en ? "Privacy policy" : "Política de privacidad"}
+                  </Link>
+                </li>
+              </ul>
+            </FadeIn>
           </Col>
         </Row>
 
         <Row className="justify-content-center mt-4">
           <Col xs={12} className="text-center">
-            <div className="social-icons">
+            <FadeIn className="social-icons" delay={0.12} y={12}>
               <a href="https://www.linkedin.com/company/shipply-sas" target="_blank" rel="noreferrer">
                 <i className="fab fa-linkedin" aria-hidden="true"></i>
               </a>
@@ -69,21 +112,23 @@ const Footer = () => {
               <a href="https://www.facebook.com/profile.php?id=61550521441472" target="_blank" rel="noreferrer">
                 <i className="fab fa-facebook" aria-hidden="true"></i>
               </a>
-            </div>
+            </FadeIn>
           </Col>
         </Row>
 
         <Row className="text-center mt-4">
           <Col>
+            <FadeIn as="div" delay={0.14} y={10}>
             <p className="footer-rights">
               {en
-                ? "© 2025 Shipply. All rights reserved."
-                : "© 2025 Todos los derechos reservados."}
+                ? "© 2026 Shipply. All rights reserved."
+                : "© 2026 Shipply. Todos los derechos reservados."}
             </p>
+            </FadeIn>
           </Col>
         </Row>
       </Container>
-    </footer>
+    </StaggerSection>
   );
 };
 

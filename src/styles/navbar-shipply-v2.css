@@ -1,0 +1,158 @@
+/* Navbar moderno — colores marca, sin romper .navbar-custom */
+
+/* Logo estable: sin que flex lo comprima a “pixel” invisible */
+.navbar-shipply-v2 .navbar-brand-shipply {
+  flex: 0 0 auto !important;
+  margin-right: 1rem !important;
+  max-width: min(230px, 42vw);
+}
+
+/* Gana a .navbar-custom .navbar-brand img { max-height: 80px } */
+.navbar-shipply-v2.navbar-custom .navbar-brand-shipply .navbar-logo-shipply {
+  display: block !important;
+  height: 56px !important;
+  width: auto !important;
+  max-height: none !important;
+  min-height: 44px !important;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.navbar-shipply-v2 .navbar-nav-main .nav-link,
+.navbar-shipply-v2 .navbar-nav-main .nav-link.dropdown-toggle {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+  margin-right: 0 !important;
+  font-size: 0.875rem !important;
+  white-space: nowrap;
+}
+
+.navbar-shipply-v2 .btn-navbar-compact {
+  padding: 0.45rem 1rem !important;
+  font-size: 0.82rem !important;
+  white-space: nowrap;
+  justify-content: center;
+}
+
+.navbar-shipply-v2 .navbar-actions-shipply {
+  flex-shrink: 0;
+}
+
+@media (min-width: 992px) {
+  .navbar-shipply-v2 .navbar-collapse.navbar-collapse-shipply,
+  .navbar-shipply-v2 .navbar-collapse {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.35rem 0.75rem;
+  }
+
+  .navbar-shipply-v2 .navbar-actions-shipply {
+    flex-direction: row;
+    margin-left: 0;
+    margin-top: 0 !important;
+  }
+
+  .navbar-shipply-v2 .navbar-nav-main {
+    margin-right: 0;
+  }
+}
+
+.navbar-shipply-v2.navbar {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06) !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Ruta activa — subrayado oro en el toggle del dropdown */
+.navbar-shipply-v2 .nav-dd--active > .dropdown-toggle,
+.navbar-shipply-v2 .navbar-nav .nav-link.active {
+  color: #0f172a !important;
+  box-shadow: inset 0 -2px 0 0 #fbb900;
+}
+
+.navbar-shipply-v2 .navbar-nav .dropdown-menu .dropdown-item.active,
+.navbar-shipply-v2 .navbar-nav .dropdown-menu .dropdown-item:active {
+  background: rgba(251, 185, 0, 0.2) !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+.navbar-shipply-v2 .nav-link {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  transition: color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.navbar-shipply-v2 .nav-link:hover {
+  color: #c48f00 !important;
+  transform: translateY(-1px);
+}
+
+.navbar-shipply-v2 .navbar-nav .dropdown-menu {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.1) !important;
+  padding: 0.5rem 0 !important;
+  animation: navbar-dropdown-rise 0.16s ease-out;
+}
+
+.navbar-shipply-v2 .navbar-nav .dropdown-item:hover {
+  background: rgba(251, 185, 0, 0.18) !important;
+  color: #0f172a !important;
+}
+
+.navbar-shipply-v2 .btn-custom {
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #fbb900 0%, #ffd700 100%) !important;
+  border: none !important;
+  font-size: 0.95rem !important;
+  box-shadow: 0 4px 16px rgba(251, 185, 0, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.navbar-shipply-v2 .btn-custom:hover {
+  background: linear-gradient(135deg, #e0a800 0%, #fbb900 100%) !important;
+  color: #0f172a !important;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(251, 185, 0, 0.38);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-shipply-v2 .navbar-nav {
+    padding-top: 1rem;
+  }
+}
+
+@keyframes navbar-dropdown-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-shipply-v2 *,
+  .navbar-shipply-v2 .navbar-nav .dropdown-menu {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .navbar-shipply-v2 .nav-link:hover,
+  .navbar-shipply-v2 .btn-custom:hover {
+    transform: none;
+  }
+}

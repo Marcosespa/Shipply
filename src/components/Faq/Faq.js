@@ -47,7 +47,7 @@ const Faq = () => {
     {
       question: "¿Qué opciones de envío ofrecen?",
       answer:
-        "Ofrecemos envíos Same Day – Next Day en Cali y Bogotá con opción de recaudo contra-entrega. Envíos nacionales al 98% del país, con opción de recaudo contra-entrega.",
+        "Ofrecemos envíos Same Day – Next Day en Bogotá, Cali y Medellín con opción de recaudo contra-entrega. Envíos nacionales al 98% del país, con opción de recaudo contra-entrega.",
     },
     {
       question: "¿Shipply tiene servicio al cliente disponible?",

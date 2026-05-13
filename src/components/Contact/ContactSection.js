@@ -70,9 +70,28 @@ const ContactSectionEs = () => {
                 </Col>
                 <Col md={6}>
                   <input
+                    type="text"
+                    name="company"
+                    placeholder="Empresa"
+                    className="form-control mb-3"
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Col md={6}>
+                  <input
                     type="email"
                     name="email"
                     placeholder="Correo electrónico"
+                    className="form-control mb-3"
+                    required
+                  />
+                </Col>
+                <Col md={6}>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Teléfono / WhatsApp"
                     className="form-control mb-3"
                     required
                   />
@@ -82,32 +101,43 @@ const ContactSectionEs = () => {
                 <Col md={6}>
                   <input
                     type="text"
-                    name="productType"
-                    placeholder="Tipo de producto"
+                    name="city"
+                    placeholder="Ciudad"
                     className="form-control mb-3"
                   />
                 </Col>
                 <Col md={6}>
                   <input
                     type="text"
+                    name="productType"
+                    placeholder="Tipo de producto"
+                    className="form-control mb-3"
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Col md={6}>
+                  <input
+                    type="text"
                     name="ordersPerMonth"
-                    placeholder="Número de pedidos por mes"
+                    placeholder="Órdenes aproximadas por mes"
+                    className="form-control mb-3"
+                  />
+                </Col>
+                <Col md={6}>
+                  <input
+                    type="text"
+                    name="salesChannels"
+                    placeholder="Canales de venta (ej. Shopify, ML)"
                     className="form-control mb-3"
                   />
                 </Col>
               </Row>
               <input
                 type="text"
-                name="city"
-                placeholder="Ciudad"
+                name="needToSolve"
+                placeholder="¿Qué necesitas resolver?"
                 className="form-control mb-3"
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Número de teléfono"
-                className="form-control mb-3"
-                required
               />
               <textarea
                 name="message"

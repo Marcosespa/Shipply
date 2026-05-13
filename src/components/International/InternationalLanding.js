@@ -79,7 +79,7 @@ const InternationalLanding = () => {
     {
       icon: "bi-truck",
       title: "Last mile",
-      body: "Reliable, trackable delivery across Bogotá and major cities — the service level international buyers expect.",
+      body: "Reliable, trackable delivery across Bogotá, Medellín, Cali, and national partners where needed — the service level international buyers expect.",
     },
     {
       icon: "bi-receipt-cutoff",
@@ -393,10 +393,10 @@ const InternationalLanding = () => {
           <Row className="g-4">
             <Col md={4}>
               <div className="intl-region-card">
-                <h3>Bogotá & central corridor</h3>
+                <h3>Bogotá, Cali & Medellín</h3>
                 <p>
-                  Deep density for fulfillment, linehaul, and same‑day / next‑day patterns where the
-                  economics make sense.
+                  Core metro fulfillment and last mile in these three cities, with national coordination
+                  where your model needs it.
                 </p>
               </div>
             </Col>

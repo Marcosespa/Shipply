@@ -1,0 +1,90 @@
+/* Pie oscuro — contraste con homepage clara, acento oro */
+
+.footer-shipply-v2 {
+  position: relative;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(251, 185, 0, 0.18), transparent 22rem),
+    linear-gradient(180deg, #1e293b 0%, #334155 52%, #1e293b 100%) !important;
+  color: #f1f5f9 !important;
+  border-top: 2px solid rgba(251, 185, 0, 0.5) !important;
+  box-shadow: inset 0 1px 0 rgba(251, 185, 0, 0.12) !important;
+  padding-top: 2.75rem !important;
+}
+
+.footer-shipply-v2 .footer-title {
+  color: #f8fafc !important;
+}
+
+.footer-shipply-v2 .footer-menu a,
+.footer-shipply-v2 .footer-menu a:visited {
+  color: #e2e8f0 !important;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.footer-shipply-v2 .footer-menu a:hover {
+  color: #fbbf24 !important;
+  transform: translateX(2px);
+}
+
+.footer-shipply-v2 .footer-rights {
+  color: #cbd5e1 !important;
+}
+
+.footer-shipply-v2 .social-icons a i {
+  color: #cbd5e1 !important;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.footer-shipply-v2 .social-icons a i:hover {
+  color: #fbbf24 !important;
+  transform: translateY(-2px);
+}
+
+.footer-shipply-v2 .footer-tagline {
+  color: #cbd5e1;
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .footer-shipply-v2 .footer-tagline {
+    margin-left: 0;
+  }
+}
+
+.footer-shipply-v2 .footer-logo-container {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  gap: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.12);
+}
+
+.footer-shipply-v2 .footer-logo-container .footer-logo {
+  filter: none;
+  max-height: 56px;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .footer-shipply-v2 .footer-logo-container {
+    justify-content: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-shipply-v2 * {
+    transition-duration: 0.01ms !important;
+  }
+
+  .footer-shipply-v2 .footer-menu a:hover,
+  .footer-shipply-v2 .social-icons a i:hover {
+    transform: none;
+  }
+}

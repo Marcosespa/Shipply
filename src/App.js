@@ -12,15 +12,8 @@ import ReactGA from "react-ga4";
 
 // Componentes que se cargan inmediatamente (críticos)
 import Navbar from "./components/Navbar";
-import Hero from "./components/Home/Hero";
-import Services from "./components/Home/Services";
-import Testimonials from "./components/Home/Testimonials";
+import HomeV2Page from "./components/HomeV2/HomeV2Page";
 import Footer from "./components/Footer";
-import Clients from "./components/Home/Clients";
-import Benefits from "./components/Home/Benefits";
-import Integrations from "./components/Home/Integrations";
-import AboutUs from "./components/Home/AboutUs";
-import Benefits2 from "./components/Home/Benefits2";
 import WhatsappButton from "./components/WhatsappButton";
 import ScrollToHash from "./components/ScrollToHash";
 import ScrollToTop from "./components/ScrollToTop";
@@ -51,6 +44,14 @@ const PrivacyPolitic = React.lazy(() => import("./components/Contact/PrivacyPoli
 const Faq = React.lazy(() => import("./components/Faq/Faq"));
 const InternationalLanding = React.lazy(() =>
   import("./components/International/InternationalLanding")
+);
+
+const MarcaDigitalColombianaPage = React.lazy(() =>
+  import("./components/Soluciones/MarcaDigitalColombianaPage")
+);
+const B2bYEcommercePage = React.lazy(() => import("./components/Soluciones/B2bYEcommercePage"));
+const InternacionalColombiaPage = React.lazy(() =>
+  import("./components/Soluciones/InternacionalColombiaPage")
 );
 
 // Lazy loading para componentes B2B
@@ -93,18 +94,7 @@ const App = () => {
           <Routes>
             <Route
               path="/"
-              element={
-                <>
-                  <Hero />
-                  <Benefits />
-                  <Services />
-                  <Integrations />
-                  <AboutUs />
-                  <Testimonials />
-                  <Clients />
-                  <Benefits2 />
-                </>
-              }
+              element={<HomeV2Page />}
             />
             <Route
               path="/bussinesToBussines"
@@ -140,6 +130,15 @@ const App = () => {
             <Route
               path="/international"
               element={<InternationalLanding />}
+            />
+            <Route
+              path="/soluciones/marca-digital-colombiana"
+              element={<MarcaDigitalColombianaPage />}
+            />
+            <Route path="/soluciones/b2b-y-ecommerce" element={<B2bYEcommercePage />} />
+            <Route
+              path="/soluciones/internacional-colombia"
+              element={<InternacionalColombiaPage />}
             />
             {/* Blog Routes */}
             <Route path="/blog" element={<BlogSection />} />
