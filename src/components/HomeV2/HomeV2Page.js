@@ -11,9 +11,14 @@ import FadeIn from "../motion/FadeIn";
 import HeroLines from "../motion/HeroLines";
 import MotionLink from "../motion/MotionLink";
 import StaggerSection from "../motion/StaggerSection";
+import AnimatedCounter from "../Marketing/AnimatedCounter";
+import LiveOpsTicker from "./LiveOpsTicker";
 import { OPERATIONS_METRICS } from "../../data/operationsMetrics";
+import images from "../../assets/images/images";
 import "../../styles/home-v2.css";
 import "../../styles/marketing-futuristic.css";
+
+const HERO_PARTICLES = Array.from({ length: 12 }, (_, i) => i + 1);
 
 const waHref =
   "https://wa.me/573147516693?text=" +
@@ -184,8 +189,20 @@ const HomeV2Page = () => {
   const heroLines = [
     "Fulfillment y logística",
     "para marcas que crecen",
-    "en Colombia.",
   ];
+
+  const clientLogos = [
+    { src: images.travelBlue, alt: "Travel Blue" },
+    { src: images.dia11, alt: "Día 11" },
+    { src: images.alohaBaby, alt: "Aloha Baby" },
+    { src: images.santaAnita, alt: "Santa Anita" },
+    { src: images.scribe, alt: "Scribe" },
+    { src: images.casaLuker, alt: "Casa Luker" },
+    { src: images.maestriEmocional, alt: "Maestría Emocional" },
+    { src: images.cacaoHunter, alt: "Cacao Hunters" },
+  ];
+
+  const clientLogosLoop = [...clientLogos, ...clientLogos];
 
   return (
     <div className="home-v2">
@@ -211,6 +228,14 @@ const HomeV2Page = () => {
       <header id="inicio" className="home-v2-hero">
         <div className="home-v2-hero-mesh" aria-hidden />
         <div className="home-v2-hero-ribbon" aria-hidden />
+        <div className="home-v2-hero-aurora" aria-hidden />
+        <div className="home-v2-hero-particles" aria-hidden="true">
+          {HERO_PARTICLES.map((n) => (
+            <span key={n} className={`particle particle-${n}`}>
+              <img src={images.ShipplyBox} alt="" loading="lazy" decoding="async" />
+            </span>
+          ))}
+        </div>
         <Container fluid="xxl" className="home-v2-hero-inner px-3 px-lg-5">
           <Row className="align-items-center gy-5 gx-lg-4 home-v2-hero-grid">
             <Col lg={5} xl={7} className="pe-xl-5">
@@ -222,11 +247,9 @@ const HomeV2Page = () => {
               </FadeIn>
               <FadeIn delay={0.06} y={26} duration={0.52}>
                 <div className="home-v2-hero-pills" aria-hidden="true">
-                  <span className="home-v2-hero-mini-pill">Referencia · +300 órdenes/mes</span>
                   <span className="home-v2-hero-mini-pill home-v2-hero-mini-pill--cyan">
                     Última milla · Bogotá · Cali · Medellín
                   </span>
-                  <span className="home-v2-hero-mini-pill">Inventario + órdenes visibles</span>
                 </div>
               </FadeIn>
               <HeroLines className="home-v2-display-title" lines={heroLines} />
@@ -236,7 +259,10 @@ const HomeV2Page = () => {
                   más sin inflar equipo ni montar bodega propia.
                 </p>
                 <div className="d-flex flex-wrap gap-3">
-                  <MotionLink className="home-v2-btn-primary" to="/contacto">
+                  <MotionLink
+                    className="home-v2-btn-primary home-v2-btn-primary--pulse"
+                    to="/contacto"
+                  >
                     Cotizar mi operación
                   </MotionLink>
                   <MotionLink className="home-v2-btn-ghost" hash smooth to="/#como-funciona">
@@ -259,10 +285,8 @@ const HomeV2Page = () => {
             <Col lg={7} xl={5} className="ps-xl-4">
               <FadeIn className="home-v2-hero-panel-wrap" delay={0.22} y={40} duration={0.58}>
                 <div className="home-v2-hero-panel">
+                  <LiveOpsTicker />
                   <p className="home-v2-hero-panel-kicker">Aliado integral</p>
-                  <p className="home-v2-hero-panel-lead">
-                    Un solo equipo conecta tus canales con picking, packing, carrier y post‑venta.
-                  </p>
                   <ul className="home-v2-hero-checklist">
                     <li>Inventario y órdenes visibles</li>
                     <li>SLAs comerciales acordados</li>
@@ -306,7 +330,9 @@ const HomeV2Page = () => {
                     delay={Math.min(i * 0.05, 0.2)}
                     y={36}
                   >
-                    <div className="home-v2-metric-value">{m.value}</div>
+                    <div className="home-v2-metric-value">
+                      <AnimatedCounter value={m.value} />
+                    </div>
                     <div className="home-v2-metric-label">{m.label}</div>
                     {m.hint ? <p className="home-v2-metric-hint">{m.hint}</p> : null}
                   </FadeIn>
@@ -441,7 +467,7 @@ const HomeV2Page = () => {
             </Col>
             <Col lg={4}>
               <FadeIn
-                className="home-v2-card home-v2-card--accent home-v2-card--cta-compact"
+                className="home-v2-card home-v2-card--accent home-v2-card--cta-compact home-v2-process-cta"
                 delay={0.14}
                 y={36}
               >
@@ -657,32 +683,54 @@ const HomeV2Page = () => {
           <Row className="g-4">
             <Col md={4}>
               <FadeIn className="home-v2-case home-v2-case--lift" delay={0.04} y={38}>
-                <h3>Marca de e‑commerce en crecimiento</h3>
+                <h3>Marca y comercio en crecimiento</h3>
+                <p className="home-v2-case-client">Cliente: Maestría Emocional</p>
                 <p className="small home-v2-case-text mb-0">
-                  Muchas órdenes y el equipo ya no alcanza a preparar con calidad. Shipply recibe
-                  inventario, conecta la tienda y despacha cada pedido con trazabilidad.
+                  Marca digital en crecimiento con foco en experiencia de compra. Estandarizamos
+                  preparación de pedidos, control de inventario y salida diaria para sostener picos
+                  sin perder calidad operativa.
                 </p>
               </FadeIn>
             </Col>
             <Col md={4}>
               <FadeIn className="home-v2-case home-v2-case--lift" delay={0.1} y={38}>
                 <h3>Empresa internacional</h3>
+                <p className="home-v2-case-client">Cliente: Travel Blue</p>
                 <p className="small home-v2-case-text mb-0">
-                  Quiere vender en Colombia sin bodega propia. Recibimos mercancía, almacenamos y
-                  operamos pedidos localmente, según acuerdo comercial.
+                  Marca internacional que requiere operación local en Colombia. Coordinamos
+                  almacenamiento, fulfillment y distribución nacional para operar el mercado sin
+                  montar infraestructura propia desde cero.
                 </p>
               </FadeIn>
             </Col>
             <Col md={4}>
               <FadeIn className="home-v2-case home-v2-case--lift" delay={0.16} y={38}>
                 <h3>Empresa B2B</h3>
+                <p className="home-v2-case-client">Cliente: Cacao Hunters</p>
                 <p className="small home-v2-case-text mb-0">
-                  Debe abastecer clientes, tiendas o aliados. Administramos inventario y coordinamos
-                  despachos según tus reglas de salida.
+                  Operación B2B con requerimientos de abastecimiento y trazabilidad. Alineamos
+                  inventario, preparación y despacho según reglas de salida y compromisos comerciales
+                  del canal corporativo.
                 </p>
               </FadeIn>
             </Col>
           </Row>
+          <FadeIn className="home-v2-case-brands mt-4" delay={0.2} y={20}>
+            <p className="home-v2-case-brands-title mb-2">Marcas con las que trabajamos</p>
+            <div className="home-v2-case-brands-carousel" role="region" aria-label="Clientes Shipply">
+              <div className="home-v2-case-brands-track" role="list">
+                {clientLogosLoop.map((logo, i) => (
+                  <div key={`${logo.alt}-${i}`} className="home-v2-case-brand-item" role="listitem">
+                    <img src={logo.src} alt={logo.alt} loading="lazy" />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="home-v2-case-brands-copy mb-0">
+              Operamos con marcas de e-commerce, internacionales y B2B, adaptando el flujo logístico
+              según el tipo de canal y su promesa comercial.
+            </p>
+          </FadeIn>
         </Container>
       </section>
 

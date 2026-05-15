@@ -449,24 +449,74 @@
 }
 
 .int-grid-logos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: flex-start;
-  align-items: center;
   margin-top: 1.25rem;
+}
+
+.int-grid-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 0.25rem 0;
+}
+
+.int-grid-carousel::before,
+.int-grid-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 56px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.int-grid-carousel::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(2, 6, 23, 0.95), transparent);
+}
+
+.int-grid-carousel::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(2, 6, 23, 0.95), transparent);
+}
+
+.int-grid--light .int-grid-carousel::before {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.98), transparent);
+}
+
+.int-grid--light .int-grid-carousel::after {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.98), transparent);
+}
+
+.int-grid-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.9rem;
+  width: max-content;
+  animation: int-grid-marquee 30s linear infinite;
+  align-items: center;
+}
+
+@keyframes int-grid-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .int-grid-logo-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 88px;
-  min-width: 132px;
-  padding: 0.65rem 1.25rem;
+  min-height: 104px;
+  min-width: 176px;
+  padding: 0.8rem 1.5rem;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(148, 163, 184, 0.2);
+  flex: 0 0 auto;
 }
 
 .int-grid--light .int-grid-logo-wrap {
@@ -476,11 +526,50 @@
 }
 
 .int-grid-logo {
-  max-height: 52px;
-  max-width: 180px;
+  max-height: 70px;
+  max-width: 220px;
   width: auto;
   height: auto;
   object-fit: contain;
+}
+
+.int-grid-carousel:hover .int-grid-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 991.98px) {
+  .int-grid-logo-wrap {
+    min-height: 92px;
+    min-width: 148px;
+    padding: 0.65rem 1.15rem;
+  }
+
+  .int-grid-logo {
+    max-height: 58px;
+    max-width: 190px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .int-grid-carousel::before,
+  .int-grid-carousel::after {
+    width: 34px;
+  }
+
+  .int-grid-track {
+    gap: 0.7rem;
+    animation-duration: 22s;
+  }
+
+  .int-grid-logo-wrap {
+    min-height: 80px;
+    min-width: 128px;
+  }
+
+  .int-grid-logo {
+    max-height: 48px;
+    max-width: 150px;
+  }
 }
 
 .int-grid-chip {

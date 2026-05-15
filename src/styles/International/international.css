@@ -14,9 +14,10 @@
 .intl-lang-bar {
   background: #0d1b2a;
   color: rgba(255, 255, 255, 0.92);
-  font-size: 0.8125rem;
-  /* Relleno bajo navbar fijo dentro de la barra oscura (sin hueco gris) */
-  padding: calc(var(--shipply-navbar-h, 96px) + 0.35rem) 0 0.4rem;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  /* Más compacto: solo una franja delgada bajo el navbar fijo */
+  padding: calc(var(--shipply-navbar-h, 96px) + 0.08rem) 0 0.18rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -33,12 +34,11 @@
 /* Sticky in-page anchors (desktop) */
 .intl-anchor-nav-wrap {
   position: sticky;
-  top: calc(var(--shipply-navbar-h, 96px) + 3rem);
-  z-index: 990;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
+  top: var(--shipply-navbar-h, 96px);
+  z-index: 980;
+  background: #ffffff;
   border-bottom: 1px solid rgba(13, 27, 42, 0.08);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.95) inset, 0 8px 22px rgba(13, 27, 42, 0.08);
 }
 
 .intl-anchor-nav {
@@ -47,7 +47,7 @@
   align-items: center;
   gap: 0.25rem 1rem;
   justify-content: flex-start;
-  padding: 0.65rem 0;
+  padding: 0.45rem 0;
 }
 
 .intl-anchor-nav a {
@@ -154,7 +154,7 @@
 /* Section layout */
 .intl-section {
   padding: 4rem 0;
-  scroll-margin-top: 148px;
+  scroll-margin-top: 190px;
 }
 
 .intl-section-alt {

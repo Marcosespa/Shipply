@@ -127,7 +127,7 @@ const MarcaDigitalColombianaPage = () => {
         </div>
 
         <FadeIn className="sf-cta-banner mb-5" y={24}>
-          <h2>Diagnóstico rápido, sin jargon</h2>
+          <h2>Diagnóstico rápido</h2>
           <p>
             Contanos tus canales, volumen aproximado y ciudad objetivo — te orientamos sobre
             siguiente paso y modelo.

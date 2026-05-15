@@ -61,14 +61,32 @@
 }
 
 .navbar-shipply-v2.navbar {
-  background: rgba(255, 255, 255, 0.92) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
-  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06) !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05) !important;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04) !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    border-color 0.3s ease, padding 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Glassmorphism reforzado al hacer scroll */
+.navbar-shipply-v2.navbar.is-scrolled {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border-bottom-color: rgba(251, 185, 0, 0.22) !important;
+  box-shadow: 0 6px 28px rgba(15, 23, 42, 0.1) !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-shipply-v2.navbar {
+    transition: none;
+  }
 }
 
 /* Ruta activa — subrayado oro en el toggle del dropdown */

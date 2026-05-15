@@ -72,6 +72,10 @@ const ContactSectionInternational = () => {
       action: "Lead Submit",
       label: formatUtmsForLabel(getStoredUtms()),
     });
+    const adsId = process.env.REACT_APP_GADS_SEND_TO_EN;
+    if (typeof window !== "undefined" && typeof window.gtag === "function" && adsId) {
+      window.gtag("event", "conversion", { send_to: adsId });
+    }
     if (formRef.current) {
       formRef.current.submit();
     }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar, Nav, Button, Container, NavDropdown } from "react-bootstrap";
 import "../styles/Navbar.css";
 import "../styles/navbar-shipply-v2.css";
@@ -10,8 +10,16 @@ import { useEnglishMarketingShell } from "../utils/useEnglishMarketingShell";
 
 const NavigationBar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const en = useEnglishMarketingShell();
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const dropActive = (prefix) =>
     pathname === prefix || pathname.startsWith(`${prefix}/`);
@@ -24,7 +32,9 @@ const NavigationBar = () => {
       bg="light"
       expand="lg"
       expanded={isExpanded}
-      className={`navbar-custom ${!en ? "navbar-shipply-v2" : ""}`}
+      className={`navbar-custom ${!en ? "navbar-shipply-v2" : ""} ${
+        scrolled ? "is-scrolled" : ""
+      }`}
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center navbar-brand-shipply">
