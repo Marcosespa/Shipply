@@ -1,0 +1,163 @@
+/**
+ * Shipply Design Tokens
+ *
+ * Fuente única de verdad para colores, tipografía, espaciado, sombras y motion.
+ * Importar en src/index.js ANTES que cualquier otro CSS.
+ *
+ * Migración progresiva: reemplazar HEX hardcoded por var(--sp-*) un archivo por vez.
+ * Las variables sf-* (marketing-futuristic.css) y sp-* (home-v2.css) se consolidan aquí
+ * — los archivos originales pueden borrar su :root cuando este archivo esté en producción.
+ */
+
+:root {
+  /* ============================================
+   * COLORES — Brand
+   * ============================================ */
+  --sp-gold: #fbb900;
+  --sp-gold-light: #ffd700;
+  --sp-gold-hover: #e0a800;
+  --sp-gold-dim: rgba(251, 185, 0, 0.35);
+
+  /* Neutros */
+  --sp-ink: #0f172a;
+  --sp-ink-soft: #1e293b;
+  --sp-slate-deep: #0b1220;
+  --sp-slate-mid: #111c33;
+  --sp-muted: #64748b;
+  --sp-border: rgba(15, 23, 42, 0.08);
+
+  /* Superficies */
+  --sp-surface: #eef2f6;
+  --sp-cream: #f6f1e8;
+  --sp-cream-deep: #ede4d6;
+  --sp-card: #ffffff;
+  --sp-bg-deep: #020617;
+
+  /* Acentos secundarios */
+  --sp-cyan: #22d3ee;
+  --sp-success: #25d366; /* WhatsApp green */
+  --sp-success-dark: #128c7e;
+
+  /* Texto */
+  --sp-text: #f8fafc;
+  --sp-text-muted: rgba(248, 250, 252, 0.72);
+
+  /* Glass / overlays */
+  --sp-glass-bg: rgba(15, 23, 42, 0.55);
+  --sp-glass-border: rgba(251, 185, 0, 0.28);
+
+  /* ============================================
+   * TIPOGRAFÍA
+   * ============================================ */
+  --sp-font: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sp-font-mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
+
+  /* Escala fluida con clamp() — escala 320 → 1600 sin media queries */
+  --sp-fs-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.85rem);   /* 12-14 */
+  --sp-fs-sm: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);     /* 14-16 */
+  --sp-fs-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem); /* 16-18 */
+  --sp-fs-lg: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);   /* 18-22 */
+  --sp-fs-xl: clamp(1.375rem, 1.15rem + 1vw, 1.75rem);   /* 22-28 */
+  --sp-fs-2xl: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);     /* 28-40 */
+  --sp-fs-3xl: clamp(2.25rem, 1.6rem + 3vw, 3.5rem);     /* 36-56 */
+  --sp-fs-hero: clamp(2.5rem, 1.8rem + 4vw, 4.5rem);     /* 40-72 */
+
+  --sp-lh-tight: 1.15;
+  --sp-lh-snug: 1.35;
+  --sp-lh-normal: 1.55;
+  --sp-lh-loose: 1.75;
+
+  /* Pesos: usar SÓLO estos tres en el sitio */
+  --sp-fw-regular: 400;
+  --sp-fw-semibold: 600;
+  --sp-fw-bold: 700;
+
+  /* ============================================
+   * ESPACIADO (escala de 4px)
+   * ============================================ */
+  --sp-space-1: 0.25rem;  /* 4 */
+  --sp-space-2: 0.5rem;   /* 8 */
+  --sp-space-3: 0.75rem;  /* 12 */
+  --sp-space-4: 1rem;     /* 16 */
+  --sp-space-5: 1.5rem;   /* 24 */
+  --sp-space-6: 2rem;     /* 32 */
+  --sp-space-7: 3rem;     /* 48 */
+  --sp-space-8: 4rem;     /* 64 */
+  --sp-space-9: 6rem;     /* 96 */
+
+  /* ============================================
+   * RADIO / BORDES
+   * ============================================ */
+  --sp-radius-sm: 6px;
+  --sp-radius-md: 12px;
+  --sp-radius-lg: 20px;
+  --sp-radius-pill: 999px;
+
+  /* ============================================
+   * SOMBRAS
+   * ============================================ */
+  --sp-shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --sp-shadow-md: 0 4px 24px rgba(15, 23, 42, 0.08);
+  --sp-shadow-lg: 0 12px 36px rgba(15, 23, 42, 0.12);
+  --sp-shadow-gold: 0 0 0 1px var(--sp-gold), 0 16px 44px rgba(251, 185, 0, 0.25);
+
+  /* ============================================
+   * BREAKPOINTS (referencia — usar en media queries)
+   * Alineados con Bootstrap 5
+   * ============================================ */
+  --sp-bp-sm: 576px;
+  --sp-bp-md: 768px;
+  --sp-bp-lg: 992px;
+  --sp-bp-xl: 1200px;
+  --sp-bp-xxl: 1400px;
+
+  /* ============================================
+   * Z-INDEX (jerarquía explícita)
+   * ============================================ */
+  --sp-z-base: 1;
+  --sp-z-dropdown: 100;
+  --sp-z-sticky: 1020;
+  --sp-z-navbar: 1030;
+  --sp-z-fixed-cta: 1040;   /* WhatsApp flotante */
+  --sp-z-modal: 1050;
+  --sp-z-toast: 1080;
+
+  /* ============================================
+   * MOTION
+   * ============================================ */
+  --sp-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --sp-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --sp-dur-fast: 150ms;
+  --sp-dur-base: 250ms;
+  --sp-dur-slow: 450ms;
+
+  /* ============================================
+   * ALIASES DE COMPATIBILIDAD
+   * Mantienen funcionando los archivos que usan --sf-*
+   * Eliminar cuando se migren marketing-futuristic.css y home-v2.css
+   * ============================================ */
+  --sf-bg-deep: var(--sp-bg-deep);
+  --sf-bg-mid: var(--sp-ink);
+  --sf-gold: var(--sp-gold);
+  --sf-gold-dim: var(--sp-gold-dim);
+  --sf-cyan: var(--sp-cyan);
+  --sf-glass-bg: var(--sp-glass-bg);
+  --sf-glass-border: var(--sp-glass-border);
+  --sf-text: var(--sp-text);
+  --sf-text-muted: var(--sp-text-muted);
+}
+
+/* ============================================
+ * Respeto a usuarios con motion reducido
+ * Crítico para accesibilidad (WCAG 2.3.3)
+ * ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

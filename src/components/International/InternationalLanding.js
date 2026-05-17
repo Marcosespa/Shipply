@@ -11,6 +11,8 @@ import { HashLink } from "react-router-hash-link";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga4";
 import "../../styles/International/international.css";
+import { INTERNATIONAL_FAQS } from "../../data/faqs";
+import { usePageMeta } from "../../utils/usePageMeta";
 import {
   captureAndStoreUtms,
   getStoredUtms,
@@ -33,6 +35,7 @@ const anchorLinks = [
   { to: "/international#why-shipply", label: "Why Shipply" },
   { to: "/international#coverage", label: "Coverage" },
   { to: "/international#included", label: "Included" },
+  { to: "/international#faq", label: "FAQ" },
 ];
 
 function SectionHeader({ eyebrow, title, subtitle }) {
@@ -50,6 +53,27 @@ function SectionHeader({ eyebrow, title, subtitle }) {
 
 const InternationalLanding = () => {
   const location = useLocation();
+
+  usePageMeta({
+    title: "Sell in Colombia without a local company | Shipply",
+    lang: "en",
+    description:
+      "Infrastructure for European, Chinese, and global brands entering Colombia: free-zone warehousing, fulfillment, national last mile, and local billing — without operational complexity.",
+    canonical: "https://www.shipply.com.co/international",
+    alternates: [
+      { hrefLang: "es", href: "https://www.shipply.com.co/" },
+      { hrefLang: "en", href: "https://www.shipply.com.co/international" },
+      { hrefLang: "x-default", href: "https://www.shipply.com.co/" },
+    ],
+    openGraph: {
+      "og:title": "Shipply — Colombia market entry & fulfillment",
+      "og:description":
+        "We make Colombia your next market — without opening a local company. Partner for inbound, fulfillment, and delivery.",
+      "og:type": "website",
+      "og:url": "https://www.shipply.com.co/international",
+      "og:image": "https://www.shipply.com.co/assets/images/ImagenShipply.webp",
+    },
+  });
 
   useEffect(() => {
     captureAndStoreUtms(location.search);
@@ -163,6 +187,7 @@ const InternationalLanding = () => {
   return (
     <div className="intl-landing" lang="en">
       <Helmet>
+        <html lang="en" />
         <title>Sell in Colombia without a local company | Shipply</title>
         <meta
           name="description"
@@ -174,7 +199,12 @@ const InternationalLanding = () => {
           content="We make Colombia your next market — without opening a local company. Partner for inbound, fulfillment, and delivery."
         />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.shipply.com.co/international" />
+        <meta property="og:image" content="https://www.shipply.com.co/assets/images/ImagenShipply.webp" />
         <link rel="canonical" href="https://www.shipply.com.co/international" />
+        <link rel="alternate" hrefLang="es" href="https://www.shipply.com.co/" />
+        <link rel="alternate" hrefLang="en" href="https://www.shipply.com.co/international" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.shipply.com.co/" />
       </Helmet>
 
       <div className="intl-lang-bar">
@@ -186,7 +216,7 @@ const InternationalLanding = () => {
           <span>
             <Link to="/">Versión en español</Link>
             <span className="text-white-50 mx-2">·</span>
-            <Link to="/contacto">Contact (ES form)</Link>
+            <Link to="/contacto?lang=en">Contact us</Link>
           </span>
         </Container>
       </div>
@@ -438,6 +468,26 @@ const InternationalLanding = () => {
                 </div>
               ))}
             </Col>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="intl-section intl-section-alt" id="faq">
+        <Container>
+          <SectionHeader
+            eyebrow="07 — FAQ"
+            title="Common questions from international teams"
+            subtitle="Short answers for the first market-entry conversation. We confirm legal, tax, and logistics details during scoping."
+          />
+          <Row className="g-3">
+            {INTERNATIONAL_FAQS.map((faq) => (
+              <Col md={6} key={faq.q}>
+                <div className="intl-faq-card">
+                  <h3>{faq.q}</h3>
+                  <p>{faq.a}</p>
+                </div>
+              </Col>
+            ))}
           </Row>
         </Container>
       </section>

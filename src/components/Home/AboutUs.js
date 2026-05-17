@@ -17,19 +17,19 @@ const AboutUs = () => {
             <Row className="info-cards">
               <Col md={3.3} className="info-card">
                 <div className="card-icon">
-                  <i className="fas fa-shield-alt"></i>
+                  <i className="bi bi-shield-check" aria-hidden="true"></i>
                 </div>
                 <p>Contamos con el soporte de Cargalibre, incluyendo una flota propia y warehouses en las principales ciudades de Colombia.</p>
               </Col>
               <Col md={3.3} className="info-card">
                 <div className="card-icon">
-                  <i className="fas fa-chart-line"></i>
+                  <i className="bi bi-graph-up-arrow" aria-hidden="true"></i>
                 </div>
                 <p>Simplificamos y mejoramos la logística de tu E-commerce.</p>
               </Col>
               <Col md={3.3} className="info-card">
                 <div className="card-icon">
-                  <i className="fas fa-balance-scale"></i>
+                  <i className="bi bi-sliders" aria-hidden="true"></i>
                 </div>
                 <p>Ofrecemos soluciones seguras, ajustadas a las necesidades de cada negocio con precios justos y competitivos.</p>
               </Col>

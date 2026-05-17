@@ -71,7 +71,7 @@ const SolucionLandingLayout = ({
                     className="sol-future-btn-ghost"
                     href={waHref}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     WhatsApp
                   </MotionLink>

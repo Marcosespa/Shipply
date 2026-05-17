@@ -12,6 +12,8 @@ const MotionLink = ({
   hash = false,
   href,
   to,
+  target,
+  rel,
   whileHover = { y: -2 },
   whileTap = { scale: 0.98 },
   ...props
@@ -26,8 +28,10 @@ const MotionLink = ({
       };
 
   if (href) {
+    const safeRel = target === "_blank" ? rel || "noopener noreferrer" : rel;
+
     return (
-      <MotionAnchor href={href} {...motionProps} {...props}>
+      <MotionAnchor href={href} target={target} rel={safeRel} {...motionProps} {...props}>
         {children}
       </MotionAnchor>
     );

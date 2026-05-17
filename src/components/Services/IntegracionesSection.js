@@ -1,8 +1,9 @@
 import React from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "../../styles/Services/integracionessection.css";
 import "../../styles/marketing-futuristic.css";
 import IntegracionesGrid from "../Marketing/IntegracionesGrid";
+import Button from "../ui/Button";
 
 const IntegracionesSection = () => {
   return (
@@ -25,10 +26,11 @@ const IntegracionesSection = () => {
         <Button
           href="https://wa.me/573184516959"
           target="_blank"
-          variant="dark"
+          variant="success"
+          size="md"
           className="cta-button mt-3"
         >
-          <i className="bi bi-whatsapp me-2"></i>
+          <i className="bi bi-whatsapp" aria-hidden="true"></i>
           Cotizar ahora
         </Button>
       </Container>

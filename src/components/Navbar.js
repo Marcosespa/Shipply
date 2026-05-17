@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Navbar, Nav, Button, Container, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import "../styles/Navbar.css";
 import "../styles/navbar-shipply-v2.css";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { FaUsers, FaPhoneAlt } from "react-icons/fa";
 import images from "../assets/images/images";
 import { useEnglishMarketingShell } from "../utils/useEnglishMarketingShell";
+import Button from "./ui/Button";
 
 const NavigationBar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -37,7 +37,11 @@ const NavigationBar = () => {
       }`}
     >
       <Container>
-        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center navbar-brand-shipply">
+        <Navbar.Brand
+          as={Link}
+          to={en ? "/international" : "/"}
+          className="d-flex align-items-center navbar-brand-shipply"
+        >
           <img
             src={images.ShipplyPNG}
             alt={en ? "Shipply logo" : "Logo Shipply"}
@@ -83,16 +87,22 @@ const NavigationBar = () => {
                 <NavDropdown.Item as={Link} to="/faq" onClick={closeNavbar}>
                   Preguntas frecuentes (página)
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/valueaddedsservices" onClick={closeNavbar}>
+                <NavDropdown.Item as={Link} to="/value-added-services" onClick={closeNavbar}>
                   Soluciones de valor agregado
                 </NavDropdown.Item>
               </NavDropdown>
             )}
             <NavDropdown
-              title={en ? "Services" : "Servicios"}
+              title={en ? "Overview" : "Servicios"}
               id="basic-nav-dropdown"
               className={
-                dropActive("/servicios") || dropActive("/soluciones") ? "nav-dd--active" : ""
+                en
+                  ? dropActive("/international") || pathname === "/contacto"
+                    ? "nav-dd--active"
+                    : ""
+                  : dropActive("/servicios") || dropActive("/soluciones")
+                    ? "nav-dd--active"
+                    : ""
               }
             >
               {!en && (
@@ -127,48 +137,54 @@ const NavigationBar = () => {
               )}
               {en && (
                 <>
+                  <NavDropdown.Header>International funnel</NavDropdown.Header>
                   <NavDropdown.Item
-                    as={Link}
-                    to="/soluciones/marca-digital-colombiana"
+                    as={HashLink}
+                    smooth
+                    to="/international#platform"
                     onClick={closeNavbar}
                   >
-                    Digital brands · e‑commerce fulfillment
+                    Platform
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    as={Link}
-                    to="/soluciones/b2b-y-ecommerce"
+                    as={HashLink}
+                    smooth
+                    to="/international#how-it-works"
                     onClick={closeNavbar}
                   >
-                    B2B · e‑commerce
+                    Process
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    as={Link}
-                    to="/soluciones/internacional-colombia"
+                    as={HashLink}
+                    smooth
+                    to="/international#who-we-serve"
                     onClick={closeNavbar}
                   >
-                    International (Colombia)
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item
-                    as={Link}
-                    to="/servicios#integraciones"
-                    onClick={closeNavbar}
-                  >
-                    E‑commerce fulfillment (detail)
+                    Who we serve
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    as={Link}
-                    to="/bussinesToBussines"
+                    as={HashLink}
+                    smooth
+                    to="/international#why-shipply"
                     onClick={closeNavbar}
                   >
-                    B2B (classic page)
+                    Why Shipply
                   </NavDropdown.Item>
                   <NavDropdown.Item
-                    as={Link}
-                    to="/valueaddedsservices"
+                    as={HashLink}
+                    smooth
+                    to="/international#coverage"
                     onClick={closeNavbar}
                   >
-                    Value‑added services
+                    Coverage
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    as={HashLink}
+                    smooth
+                    to="/international#included"
+                    onClick={closeNavbar}
+                  >
+                    Included
                   </NavDropdown.Item>
                 </>
               )}
@@ -197,13 +213,13 @@ const NavigationBar = () => {
               </NavDropdown>
             )}
             {en ? (
-              <Nav.Link as={Link} to="/">
-                Español
+              <Nav.Link as={HashLink} smooth to="/international#faq" onClick={closeNavbar}>
+                FAQ
               </Nav.Link>
             ) : null}
             {en ? (
-              <Nav.Link as={Link} to="/blog" onClick={closeNavbar}>
-                Resources
+              <Nav.Link as={Link} to="/" onClick={closeNavbar}>
+                Español
               </Nav.Link>
             ) : null}
             {en ? (
@@ -220,23 +236,23 @@ const NavigationBar = () => {
 
           <div className="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center mt-3 mt-lg-0 gap-2 navbar-actions-shipply ms-lg-auto flex-shrink-0">
             <Button
-              variant="warning"
+              variant="primary"
+              size="sm"
               className="btn-custom btn-navbar-compact"
               href="https://control.logystix.co/site/login"
               target="_blank"
-              rel="noopener noreferrer"
             >
-              <FaUsers className="me-lg-2" aria-hidden />{" "}
+              <i className="bi bi-people-fill me-lg-2" aria-hidden="true" />{" "}
               <span className="navbar-btn-label">{en ? "Client portal" : "Portal"}</span>
             </Button>
             <Button
-              variant="warning"
+              variant="primary"
+              size="sm"
               className="btn-custom btn-navbar-compact"
-              as={Link}
               to={en ? "/contacto?lang=en" : "/contacto"}
               onClick={closeNavbar}
             >
-              <FaPhoneAlt className="me-lg-2" aria-hidden />{" "}
+              <i className="bi bi-telephone-fill me-lg-2" aria-hidden="true" />{" "}
               <span className="navbar-btn-label">{en ? "Contact us" : "Contactar"}</span>
             </Button>
           </div>

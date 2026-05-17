@@ -1,101 +1,115 @@
-/* Estilo general */
 .contact-section {
-  background-color: #fff;
-  /* Fondo blanco */
-  padding: 3rem 0;
+  background:
+    linear-gradient(180deg, rgba(246, 241, 232, 0.72), rgba(255, 255, 255, 0.96)),
+    #fff;
+  font-family: var(--sp-font);
+  padding: var(--sp-space-8) 0;
 }
 
-/* Información de la izquierda */
+.contact-section > .row {
+  width: min(100% - 2rem, 1180px);
+  margin-inline: auto;
+}
+
 .info-section {
   text-align: center;
-  padding-right: 0.5rem;
-  /* Espaciado pequeño */
-
+  padding-right: var(--sp-space-3);
 }
 
 .hero-title {
-  font-family: "Poppins", sans-serif;
-  font-size: 2.8rem;
-  font-weight: bold;
-  color: #333;
+  font-family: var(--sp-font);
+  font-size: var(--sp-fs-3xl);
+  font-weight: var(--sp-fw-bold);
+  color: var(--sp-ink);
   margin-bottom: 2rem;
 }
 
 .highlight-text {
-  color: #ffc107;
-  /* Amarillo */
+  color: var(--sp-gold-hover);
 }
 
-/* Ilustración */
 .illustration-Shipply {
-  max-width: 80%;
+  display: block;
+  width: min(86%, 520px);
+  max-width: 100%;
   height: auto;
+  margin-inline: auto;
+  filter: drop-shadow(0 28px 42px rgba(15, 23, 42, 0.14));
 }
 
-/* Formulario */
 .form-section {
-  background-color: #f9f9f9;
-  /* Gris claro */
-  padding-left: 0.5rem;
-  /* Espaciado pequeño */
-
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 40%;
-  /* Ancho relativo (ajústalo como prefieras) */
-  max-width: 500px;
-  /* Ancho máximo */
+  background-color: var(--sp-card);
+  padding: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+  border: 1px solid var(--sp-border);
+  border-radius: var(--sp-radius-md);
+  box-shadow: var(--sp-shadow-lg);
+  width: min(100%, 540px);
+  max-width: 540px;
   margin: 0 auto;
-  /* Centra el formulario horizontalmente */
 }
-
 
 .form-title {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.8rem;
+  font-family: var(--sp-font);
+  font-size: var(--sp-fs-xl);
   text-align: center;
-  font-weight: bold;
-  color: #ffc107;
+  font-weight: var(--sp-fw-bold);
+  color: var(--sp-ink);
+  margin-bottom: var(--sp-space-2);
 }
 
 .form-description {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--sp-font);
   text-align: center;
-  color: #555;
-  margin-bottom: 1rem;
+  color: var(--sp-muted);
+  margin-bottom: var(--sp-space-5);
+}
+
+.field-label {
+  display: block;
+  margin-bottom: var(--sp-space-2);
+  color: var(--sp-ink-soft);
+  font-size: var(--sp-fs-xs);
+  font-weight: var(--sp-fw-semibold);
+  line-height: var(--sp-lh-snug);
 }
 
 form .form-control {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  padding: 0.8rem;
-  font-size: 1rem;
+  border-radius: var(--sp-radius-sm);
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  padding: 0.8rem 0.9rem;
+  color: var(--sp-ink);
+  font-size: var(--sp-fs-sm);
+  transition: border-color var(--sp-dur-base) var(--sp-ease-out),
+    box-shadow var(--sp-dur-base) var(--sp-ease-out);
+}
+
+form .form-control::placeholder {
+  color: #94a3b8;
 }
 
 form .form-control:focus {
-  border-color: #ffc107;
-  box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+  border-color: var(--sp-gold-hover);
+  box-shadow: 0 0 0 0.2rem rgba(251, 185, 0, 0.18);
 }
 
-/* Botón */
 .btn-dark {
   background-color: #000;
   color: #fff;
-  font-weight: bold;
-  transition: all 0.3s;
+  font-weight: var(--sp-fw-bold);
+  transition: background-color var(--sp-dur-base) var(--sp-ease-out),
+    color var(--sp-dur-base) var(--sp-ease-out);
 }
 
 .btn-dark:hover {
-  background-color: #333;
-  color: #ffc107;
+  background-color: var(--sp-ink);
+  color: var(--sp-gold);
 }
 
-/* Redes sociales */
 .social-text {
   text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
+  font-family: var(--sp-font);
+  color: var(--sp-muted);
+  font-weight: var(--sp-fw-semibold);
 }
 
 .social-icons {
@@ -105,34 +119,28 @@ form .form-control:focus {
 }
 
 .social-icons i {
-  font-size: 1.8rem;
-  color: #ffc107;
-  transition: all 0.3s;
+  font-size: 1.6rem;
+  color: var(--sp-gold-hover);
+  transition: color var(--sp-dur-base) var(--sp-ease-out),
+    transform var(--sp-dur-base) var(--sp-ease-out);
 }
 
 .social-icons i:hover {
-  color: #000;
-  transform: scale(1.2);
+  color: var(--sp-ink);
+  transform: translateY(-2px);
 }
 
-
-/* Responsividad */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-
   .form-section {
     padding: 1.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-title {
-    font-size: 1.8rem;
+    width: 100%;
   }
 
-  .form-title {
-    font-size: 1.5rem;
+  .info-section {
+    margin-bottom: var(--sp-space-5);
+  }
+
+  .illustration-Shipply {
+    width: min(74%, 360px);
   }
 }

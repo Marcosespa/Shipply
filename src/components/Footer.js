@@ -33,17 +33,25 @@ const Footer = () => {
             <FadeIn delay={0.04} y={14}>
               <h5 className="footer-title">SHIPPLY</h5>
               <ul className="footer-menu">
-                <li><Link to="/blog">Blog</Link></li>
-                <li><Link to="/talento">{en ? "Careers" : "Talento"}</Link></li>
                 {en ? (
-                  <li><Link to="/">Spanish site</Link></li>
+                  <>
+                    <li><Link to="/international">International home</Link></li>
+                    <li><Link to="/contacto?lang=en">Contact us</Link></li>
+                    <li><Link to="/">Spanish site</Link></li>
+                  </>
                 ) : (
-                  <li><Link to="/international">International — EN</Link></li>
+                  <>
+                    <li><Link to="/blog">Blog</Link></li>
+                    <li><Link to="/talento">Talento</Link></li>
+                    <li><Link to="/international">International — EN</Link></li>
+                  </>
                 )}
                 <li>
-                  <Link to={en ? "/contacto?lang=en" : "/contacto"}>
-                    {en ? "Contact us" : "Contacto / cotización"}
-                  </Link>
+                  {en ? (
+                    <HashLink smooth to="/international#faq">FAQ</HashLink>
+                  ) : (
+                    <Link to="/contacto">Contacto / cotización</Link>
+                  )}
                 </li>
               </ul>
             </FadeIn>
@@ -79,9 +87,19 @@ const Footer = () => {
             <FadeIn delay={0.12} y={14}>
               <h5 className="footer-title">{en ? "PRODUCT" : "PRODUCTO"}</h5>
               <ul className="footer-menu">
-                <li><Link to="/servicios">{en ? "Services" : "Servicios"}</Link></li>
-                <li><Link to="/servicios#integraciones">{en ? "Integrations" : "Integraciones"}</Link></li>
-                <li><Link to="/faq">{en ? "FAQ" : "Preguntas frecuentes (FAQ)"}</Link></li>
+                {en ? (
+                  <>
+                    <li><HashLink smooth to="/international#platform">Platform</HashLink></li>
+                    <li><HashLink smooth to="/international#how-it-works">Process</HashLink></li>
+                    <li><HashLink smooth to="/international#included">Included</HashLink></li>
+                  </>
+                ) : (
+                  <>
+                    <li><Link to="/servicios">Servicios</Link></li>
+                    <li><Link to="/servicios#integraciones">Integraciones</Link></li>
+                    <li><Link to="/faq">Preguntas frecuentes (FAQ)</Link></li>
+                  </>
+                )}
               </ul>
             </FadeIn>
           </Col>
@@ -92,7 +110,7 @@ const Footer = () => {
               <ul className="footer-menu">
                 <li>
                   <Link to="/politica-de-privacidad">
-                    {en ? "Privacy policy" : "Política de privacidad"}
+                    {en ? "Privacy policy (Spanish)" : "Política de privacidad"}
                   </Link>
                 </li>
               </ul>
@@ -103,14 +121,29 @@ const Footer = () => {
         <Row className="justify-content-center mt-4">
           <Col xs={12} className="text-center">
             <FadeIn className="social-icons" delay={0.12} y={12}>
-              <a href="https://www.linkedin.com/company/shipply-sas" target="_blank" rel="noreferrer">
-                <i className="fab fa-linkedin" aria-hidden="true"></i>
+              <a
+                href="https://www.linkedin.com/company/shipply-sas"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={en ? "Shipply on LinkedIn" : "Shipply en LinkedIn"}
+              >
+                <i className="bi bi-linkedin" aria-hidden="true"></i>
               </a>
-              <a href="https://www.instagram.com/shipply.col/" target="_blank" rel="noreferrer">
-                <i className="fab fa-instagram" aria-hidden="true"></i>
+              <a
+                href="https://www.instagram.com/shipply.col/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={en ? "Shipply on Instagram" : "Shipply en Instagram"}
+              >
+                <i className="bi bi-instagram" aria-hidden="true"></i>
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61550521441472" target="_blank" rel="noreferrer">
-                <i className="fab fa-facebook" aria-hidden="true"></i>
+              <a
+                href="https://www.facebook.com/profile.php?id=61550521441472"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={en ? "Shipply on Facebook" : "Shipply en Facebook"}
+              >
+                <i className="bi bi-facebook" aria-hidden="true"></i>
               </a>
             </FadeIn>
           </Col>

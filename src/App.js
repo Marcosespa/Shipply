@@ -5,7 +5,6 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./styles/Home/chestDrawer.css";
 import "./styles/loading.css";
 import ReactGA from "react-ga4";
@@ -97,12 +96,21 @@ const App = () => {
               element={<HomeV2Page />}
             />
             <Route
-              path="/bussinesToBussines"
+              path="/business-to-business"
               element={<B2BComponents />}
             />
             <Route
-              path="/valueaddedsservices"
+              path="/value-added-services"
               element={<ValueAddedServicesPage />}
+            />
+            {/* Legacy URLs with typos — keep as redirects to preserve SEO/backlinks */}
+            <Route
+              path="/bussinesToBussines"
+              element={<Navigate to="/business-to-business" replace />}
+            />
+            <Route
+              path="/valueaddedsservices"
+              element={<Navigate to="/value-added-services" replace />}
             />
             <Route
               path="/servicios"

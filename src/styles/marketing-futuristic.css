@@ -2,15 +2,15 @@
 
 /* Misma lógica que home: navbar fixed — no padding en wrapper; el hero trae el offset */
 .soluciones-future {
-  --sf-bg-deep: #020617;
-  --sf-bg-mid: #0f172a;
-  --sf-gold: #fbb900;
-  --sf-gold-dim: rgba(251, 185, 0, 0.35);
-  --sf-cyan: #22d3ee;
-  --sf-glass-bg: rgba(15, 23, 42, 0.55);
-  --sf-glass-border: rgba(251, 185, 0, 0.28);
-  --sf-text: #f8fafc;
-  --sf-text-muted: rgba(248, 250, 252, 0.72);
+  --sf-bg-deep: var(--sp-bg-deep);
+  --sf-bg-mid: var(--sp-ink);
+  --sf-gold: var(--sp-gold);
+  --sf-gold-dim: var(--sp-gold-dim);
+  --sf-cyan: var(--sp-cyan);
+  --sf-glass-bg: var(--sp-glass-bg);
+  --sf-glass-border: var(--sp-glass-border);
+  --sf-text: var(--sp-text);
+  --sf-text-muted: var(--sp-text-muted);
   font-family: var(--sp-font, "Poppins", system-ui, sans-serif);
   background:
     radial-gradient(circle at 8% 12%, rgba(34, 211, 238, 0.1), transparent 22rem),
@@ -727,7 +727,7 @@
 .home-v2-triage-card .link-arrow {
   font-weight: 700;
   font-size: 0.88rem;
-  color: #fbb900;
+  color: var(--sf-gold);
 }
 
 @media (prefers-reduced-motion: reduce) {

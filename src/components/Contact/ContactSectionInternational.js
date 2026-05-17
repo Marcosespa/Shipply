@@ -5,6 +5,9 @@ import { useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
 import "../../styles/Contact/contactsection.css";
 import images from "../../assets/images/images";
+import { pushLeadSubmitAndContinue } from "../../utils/leadTracking";
+import { usePageMeta } from "../../utils/usePageMeta";
+import Button from "../ui/Button";
 import {
   captureAndStoreUtms,
   getStoredUtms,
@@ -17,6 +20,19 @@ const ContactSectionInternational = () => {
   const location = useLocation();
   const formRef = useRef(null);
   const [utms, setUtms] = useState(() => getStoredUtms());
+
+  usePageMeta({
+    title: "Contact us — Shipply | Colombia market entry",
+    lang: "en",
+    description:
+      "Reach Shipply for international market entry: warehousing, fulfillment, and local billing in Colombia.",
+    canonical: "https://www.shipply.com.co/contacto?lang=en",
+    alternates: [
+      { hrefLang: "es", href: "https://www.shipply.com.co/contacto" },
+      { hrefLang: "en", href: "https://www.shipply.com.co/contacto?lang=en" },
+      { hrefLang: "x-default", href: "https://www.shipply.com.co/contacto" },
+    ],
+  });
 
   useEffect(() => {
     captureAndStoreUtms(location.search);
@@ -32,12 +48,16 @@ const ContactSectionInternational = () => {
     return (
       <div lang="en">
         <Helmet>
+          <html lang="en" />
           <title>Contact us — Shipply | Colombia market entry</title>
           <meta
             name="description"
             content="Reach Shipply for international market entry: warehousing, fulfillment, and local billing in Colombia."
           />
           <link rel="canonical" href="https://www.shipply.com.co/contacto?lang=en" />
+          <link rel="alternate" hrefLang="es" href="https://www.shipply.com.co/contacto" />
+          <link rel="alternate" hrefLang="en" href="https://www.shipply.com.co/contacto?lang=en" />
+          <link rel="alternate" hrefLang="x-default" href="https://www.shipply.com.co/contacto" />
         </Helmet>
         <section className="contact-section py-5">
           <Container>
@@ -62,34 +82,32 @@ const ContactSectionInternational = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    ReactGA.event({
-      category: "Contact",
-      action: "Submit Form",
-      label: "International EN",
-    });
-    ReactGA.event({
-      category: "International",
-      action: "Lead Submit",
-      label: formatUtmsForLabel(getStoredUtms()),
-    });
-    const adsId = process.env.REACT_APP_GADS_SEND_TO_EN;
-    if (typeof window !== "undefined" && typeof window.gtag === "function" && adsId) {
-      window.gtag("event", "conversion", { send_to: adsId });
-    }
-    if (formRef.current) {
-      formRef.current.submit();
-    }
+
+    if (!formRef.current?.reportValidity()) return;
+
+    pushLeadSubmitAndContinue(
+      {
+        form_type: "contact",
+        lang: "en",
+        utms: getStoredUtms(),
+      },
+      () => formRef.current?.submit()
+    );
   };
 
   return (
     <div lang="en">
       <Helmet>
+        <html lang="en" />
         <title>Contact us — Shipply | Colombia market entry</title>
         <meta
           name="description"
           content="Reach Shipply for international market entry: warehousing, fulfillment, and local billing in Colombia."
         />
         <link rel="canonical" href="https://www.shipply.com.co/contacto?lang=en" />
+        <link rel="alternate" hrefLang="es" href="https://www.shipply.com.co/contacto" />
+        <link rel="alternate" hrefLang="en" href="https://www.shipply.com.co/contacto?lang=en" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.shipply.com.co/contacto" />
       </Helmet>
       <section className="contact-section py-5">
         <Row className="align-items-center gx-1">
@@ -111,6 +129,7 @@ const ContactSectionInternational = () => {
               ref={formRef}
               action="https://formspree.io/f/xdkaoyaa"
               method="POST"
+              onSubmit={handleFormSubmit}
             >
               <input type="hidden" name="lead_source" value="international_en" />
               <input
@@ -123,19 +142,27 @@ const ContactSectionInternational = () => {
               ))}
               <Row>
                 <Col md={6}>
+                  <label className="field-label" htmlFor="intl-contact-name">
+                    Full name
+                  </label>
                   <input
+                    id="intl-contact-name"
                     type="text"
                     name="name"
-                    placeholder="Full name"
+                    placeholder="Your name"
                     className="form-control mb-3"
                     required
                   />
                 </Col>
                 <Col md={6}>
+                  <label className="field-label" htmlFor="intl-contact-email">
+                    Work email
+                  </label>
                   <input
+                    id="intl-contact-email"
                     type="email"
                     name="email"
-                    placeholder="Work email"
+                    placeholder="name@company.com"
                     className="form-control mb-3"
                     required
                   />
@@ -143,71 +170,94 @@ const ContactSectionInternational = () => {
               </Row>
               <Row>
                 <Col md={6}>
+                  <label className="field-label" htmlFor="intl-contact-product-type">
+                    Product category
+                  </label>
                   <input
+                    id="intl-contact-product-type"
                     type="text"
                     name="productType"
-                    placeholder="Product category"
+                    placeholder="Beauty, apparel, electronics..."
                     className="form-control mb-3"
                   />
                 </Col>
                 <Col md={6}>
+                  <label className="field-label" htmlFor="intl-contact-orders">
+                    Estimated orders per month
+                  </label>
                   <input
+                    id="intl-contact-orders"
                     type="text"
                     name="ordersPerMonth"
-                    placeholder="Estimated orders per month"
+                    placeholder="Example: 500"
                     className="form-control mb-3"
                   />
                 </Col>
               </Row>
+              <label className="field-label" htmlFor="intl-contact-company-country">
+                Company / country of origin
+              </label>
               <input
+                id="intl-contact-company-country"
                 type="text"
                 name="companyCountry"
-                placeholder="Company / country of origin"
+                placeholder="Company, country"
                 className="form-control mb-3"
               />
+              <label className="field-label" htmlFor="intl-contact-phone">
+                Phone
+              </label>
               <input
+                id="intl-contact-phone"
                 type="tel"
                 name="phone"
-                placeholder="Phone (incl. country code)"
+                placeholder="+1 555 000 0000"
                 className="form-control mb-3"
                 required
               />
+              <label className="field-label" htmlFor="intl-contact-message">
+                How can we help?
+              </label>
               <textarea
+                id="intl-contact-message"
                 name="message"
                 rows="4"
-                placeholder="How can we help? (channels, volumes, timeline)"
+                placeholder="Channels, volumes, timeline, and launch constraints"
                 className="form-control mb-3"
               ></textarea>
-              <button
+              <Button
                 type="submit"
-                className="btn btn-dark w-100"
-                onClick={handleFormSubmit}
+                variant="secondary"
+                fullWidth
               >
                 Send
-              </button>
+              </Button>
             </form>
             <p className="social-text mt-4">Follow us</p>
             <div className="social-icons">
               <a
                 href="https://www.instagram.com/shipply.col/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="Shipply on Instagram"
               >
-                <i className="bi bi-instagram"></i>
+                <i className="bi bi-instagram" aria-hidden="true"></i>
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=61550521441472"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="Shipply on Facebook"
               >
-                <i className="bi bi-facebook"></i>
+                <i className="bi bi-facebook" aria-hidden="true"></i>
               </a>
               <a
                 href="https://www.linkedin.com/company/shipply-sas"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="Shipply on LinkedIn"
               >
-                <i className="bi bi-linkedin"></i>
+                <i className="bi bi-linkedin" aria-hidden="true"></i>
               </a>
             </div>
           </Col>

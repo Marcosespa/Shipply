@@ -11,8 +11,7 @@ export function useEnglishMarketingShell() {
     pathname === "/contacto" && q.get("lang") === "en";
 
   return (
-    pathname === "/international" ||
-    pathname.startsWith("/international/contact") ||
+    pathname.startsWith("/international") ||
     contactEnglish
   );
 }

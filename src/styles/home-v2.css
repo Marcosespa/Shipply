@@ -1,24 +1,9 @@
 /* Shipply — marketing home V3 (Poppins site-wide; gold #fbb900) */
 
 :root {
-  --sp-gold: #fbb900;
-  --sp-gold-light: #ffd700;
-  --sp-gold-hover: #e0a800;
-  --sp-ink: #0f172a;
-  --sp-ink-soft: #1e293b;
-  --sp-muted: #64748b;
-  --sp-surface: #eef2f6;
-  --sp-cream: #f6f1e8;
-  --sp-cream-deep: #ede4d6;
-  --sp-slate-deep: #0b1220;
-  --sp-slate-mid: #111c33;
-  --sp-card: #ffffff;
-  --sp-border: rgba(15, 23, 42, 0.08);
   --sp-radius: 14px;
-  --sp-radius-sm: 10px;
   --sp-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
   --sp-shadow-hover: 0 12px 40px rgba(15, 23, 42, 0.1);
-  --sp-font: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
   --shipply-navbar-h: 96px;
 
   /* Brand spec — usados por aurora del Hero, pulse del CTA y partículas */
@@ -920,7 +905,10 @@
 }
 
 .home-v2-process-cta {
-  max-width: 320px;
+  margin-left: auto;
+  max-width: 350px;
+  position: sticky;
+  top: calc(var(--shipply-navbar-h, 96px) + 1.5rem);
 }
 
 .home-v2-cta-card-title {
@@ -966,6 +954,16 @@
 
 .home-v2-card-benefit {
   color: var(--sp-ink-soft) !important;
+}
+
+.home-v2-card--accent h3,
+.home-v2-card--accent .home-v2-cta-card-title {
+  color: #fff;
+}
+
+.home-v2-card--accent p,
+.home-v2-card--accent .home-v2-cta-card-copy {
+  color: rgba(255, 255, 255, 0.88) !important;
 }
 
 /* Servicios — cuadrícula estable (mismo orden que el array) */
@@ -1043,6 +1041,14 @@
   line-height: 1.55;
   color: rgba(248, 250, 252, 0.96) !important;
   font-weight: 500;
+}
+
+@media (max-width: 991.98px) {
+  .home-v2-process-cta {
+    margin-left: 0;
+    max-width: none;
+    position: static;
+  }
 }
 
 /* Audience + benefits merge */

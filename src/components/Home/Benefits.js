@@ -1,14 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../../styles/Home/benefits.css";
-import { Link } from "react-router-dom";
-import {
-  FaCogs,
-  FaBox,
-  FaWarehouse,
-  FaClipboardCheck,
-  FaTruck,
-  FaMapMarkedAlt,
-} from "react-icons/fa";
+import Button from "../ui/Button";
 
 const Benefits = () => {
   const [visibleCards, setVisibleCards] = useState([]);
@@ -19,7 +11,7 @@ const Benefits = () => {
       id: 1,
       title: "Nos integramos",
       description: "Conectamos tu tienda online con nuestras herramientas de gestión.",
-      icon: <FaCogs />,
+      icon: "bi-gear-fill",
       cta: "Explora Integraciones",
       link: "/servicios#integraciones",
     },
@@ -27,7 +19,7 @@ const Benefits = () => {
       id: 2,
       title: "Recogemos tu inventario",
       description: "Recogemos tus productos y los trasladamos a nuestro almacén.",
-      icon: <FaBox />,
+      icon: "bi-box-seam-fill",
       cta: "Agenda una Recogida",
       link: "/contacto",
     },
@@ -35,7 +27,7 @@ const Benefits = () => {
       id: 3,
       title: "Almacenamos",
       description: "Guardamos tu inventario de manera segura y organizada.",
-      icon: <FaWarehouse />,
+      icon: "bi-houses-fill",
       cta: "Conoce Nuestros Almacenes",
       link: "/servicios#almacenamiento",
     },
@@ -43,7 +35,7 @@ const Benefits = () => {
       id: 4,
       title: "Alistamos tus pedidos",
       description: "Preparamos cada pedido para su envío con precisión.",
-      icon: <FaClipboardCheck />,
+      icon: "bi-clipboard2-check-fill",
       cta: "Descubre el Proceso",
       link: "/servicios#picking",
     },
@@ -51,7 +43,7 @@ const Benefits = () => {
       id: 5,
       title: "Despachamos",
       description: "Realizamos entregas puntuales a tus clientes.",
-      icon: <FaTruck />,
+      icon: "bi-truck",
       cta: "Conoce las Opciones de Envío",
       link: "/servicios#envios",
     },
@@ -59,7 +51,7 @@ const Benefits = () => {
       id: 6,
       title: "Realizamos seguimiento",
       description: "Monitoreamos cada entrega para garantizar la satisfacción del cliente.",
-      icon: <FaMapMarkedAlt />,
+      icon: "bi-map-fill",
       cta: "Consulta el Seguimiento",
       link: "/servicios#DataAnalysis",
     },
@@ -102,12 +94,14 @@ const Benefits = () => {
             }`}
             data-index={index}
           >
-            <div className="icon-container">{step.icon}</div>
+            <div className="icon-container">
+              <i className={`bi ${step.icon}`} aria-hidden="true" />
+            </div>
             <h3>{step.title}</h3>
             <p>{step.description}</p>
-            <Link to={step.link} className="cta-button">
+            <Button to={step.link} variant="primary" size="md" className="cta-button">
               {step.cta}
-            </Link>
+            </Button>
           </div>
         ))}
       </div>

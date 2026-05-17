@@ -76,7 +76,7 @@ const LiveOpsTicker = () => {
   }, [shouldReduceMotion]);
 
   return (
-    <div className="home-v2-hero-feed" aria-label="Eventos de operación en vivo">
+    <div className="home-v2-hero-feed" aria-label="Demo de eventos operativos simulados">
       <div className="home-v2-hero-feed-head">
         <span className="home-v2-hero-feed-dot" aria-hidden />
         <span className="home-v2-hero-feed-title">Feed en vivo</span>

@@ -14,7 +14,9 @@ import StaggerSection from "../motion/StaggerSection";
 import AnimatedCounter from "../Marketing/AnimatedCounter";
 import LiveOpsTicker from "./LiveOpsTicker";
 import { OPERATIONS_METRICS } from "../../data/operationsMetrics";
+import { HOME_FAQS } from "../../data/faqs";
 import images from "../../assets/images/images";
+import { usePageMeta } from "../../utils/usePageMeta";
 import "../../styles/home-v2.css";
 import "../../styles/marketing-futuristic.css";
 
@@ -44,6 +46,29 @@ function SectionHead({ eyebrow, title, subtitle, center, light }) {
 }
 
 const HomeV2Page = () => {
+  usePageMeta({
+    title: "Shipply | Fulfillment y logística para e‑commerce en Colombia",
+    lang: "es",
+    description:
+      "Fulfillment, almacenamiento, integraciones y última milla en Colombia. Aliado operativo para marcas que venden online y empresas internacionales. Cotiza tu operación con Shipply.",
+    keywords:
+      "fulfillment Colombia, fulfillment Bogotá Cali Medellín, logística para e-commerce, almacenamiento e-commerce, operador logístico e-commerce Colombia, picking packing Colombia, fulfillment Shopify Colombia, distribución e-commerce Colombia, fulfillment marcas internacionales Colombia",
+    canonical: "https://www.shipply.com.co/",
+    alternates: [
+      { hrefLang: "es", href: "https://www.shipply.com.co/" },
+      { hrefLang: "en", href: "https://www.shipply.com.co/international" },
+      { hrefLang: "x-default", href: "https://www.shipply.com.co/" },
+    ],
+    openGraph: {
+      "og:title": "Shipply — Fulfillment y logística para tu marca en Colombia",
+      "og:description":
+        "Centraliza inventario, pedidos y entregas. Enfócate en vender; nosotros operamos la logística.",
+      "og:type": "website",
+      "og:url": "https://www.shipply.com.co/",
+      "og:image": "https://www.shipply.com.co/assets/images/ImagenShipply.webp",
+    },
+  });
+
   const services = [
     {
       icon: "bi-box-seam",
@@ -138,45 +163,6 @@ const HomeV2Page = () => {
     "Inicio de operación",
   ];
 
-  const faqs = [
-    {
-      q: "¿Qué tipo de empresas pueden trabajar con Shipply?",
-      a: "Marcas de e‑commerce, empresas B2B y compañías internacionales que mueven productos físicos en Colombia y quieren tercerizar almacén y despacho.",
-    },
-    {
-      q: "¿Necesito tener muchas órdenes para empezar?",
-      a: "Evaluamos cada caso. Trabajamos especialmente con marcas en crecimiento; si superas el volumen que tu equipo puede preparar internamente o buscas escalar con orden, hablemos.",
-    },
-    {
-      q: "¿Pueden integrarse con Shopify?",
-      a: "Sí. También con otros canales y sistemas según tu stack. La integración busca que las órdenes fluyan y el inventario se actualice de forma más clara.",
-    },
-    {
-      q: "¿Manejan inventario en tiempo real?",
-      a: "Operamos con plataforma para administrar inventario y órdenes. La exactitud depende de buenas prácticas de carga y operación; te acompañamos en el onboarding.",
-    },
-    {
-      q: "¿Hacen entregas en Bogotá, Cali, Medellín y envíos nacionales?",
-      a: "Sí: última milla en Bogotá, Cali y Medellín y coordinación de distribución nacional con aliados, con estados de seguimiento en la medida de lo operado.",
-    },
-    {
-      q: "¿Pueden ayudar a una empresa extranjera a vender en Colombia?",
-      a: "Sí. Podemos ser tu aliado operativo local: recepción, almacenamiento, fulfillment y apoyo en modelo de facturación según la estructura acordada. Ver también nuestra página International.",
-    },
-    {
-      q: "¿Cómo se calculan las tarifas?",
-      a: "Según volumen, tipo de producto, espacio, operaciones de picking/packing y envíos. Lo definimos en la propuesta comercial según tu operación real.",
-    },
-    {
-      q: "¿Manejan devoluciones?",
-      a: "Sí, con flujos acordados para ingreso, registro y disposición según tu política.",
-    },
-    {
-      q: "¿Cuánto demora el onboarding?",
-      a: "Depende de complejidad de catálogo, integraciones y ventana de recepción de inventario. En la reunión comercial te damos un cronograma estimado.",
-    },
-  ];
-
   useEffect(() => {
     if (process.env.NODE_ENV === "development") {
       console.info(
@@ -207,6 +193,7 @@ const HomeV2Page = () => {
   return (
     <div className="home-v2">
       <Helmet>
+        <html lang="es" />
         <title>Shipply | Fulfillment y logística para e‑commerce en Colombia</title>
         <meta
           name="description"
@@ -217,12 +204,17 @@ const HomeV2Page = () => {
           content="fulfillment Colombia, fulfillment Bogotá Cali Medellín, logística para e-commerce, almacenamiento e-commerce, operador logístico e-commerce Colombia, picking packing Colombia, fulfillment Shopify Colombia, distribución e-commerce Colombia, fulfillment marcas internacionales Colombia"
         />
         <link rel="canonical" href="https://www.shipply.com.co/" />
+        <link rel="alternate" hrefLang="es" href="https://www.shipply.com.co/" />
+        <link rel="alternate" hrefLang="en" href="https://www.shipply.com.co/international" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.shipply.com.co/" />
         <meta property="og:title" content="Shipply — Fulfillment y logística para tu marca en Colombia" />
         <meta
           property="og:description"
           content="Centraliza inventario, pedidos y entregas. Enfócate en vender; nosotros operamos la logística."
         />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.shipply.com.co/" />
+        <meta property="og:image" content="https://www.shipply.com.co/assets/images/ImagenShipply.webp" />
       </Helmet>
 
       <header id="inicio" className="home-v2-hero">
@@ -766,7 +758,7 @@ const HomeV2Page = () => {
             <Col lg={9}>
               <FadeIn delay={0.08} y={34}>
                 <Accordion defaultActiveKey="0" flush>
-                  {faqs.map((f, i) => (
+                  {HOME_FAQS.map((f, i) => (
                     <Accordion.Item eventKey={String(i)} key={f.q}>
                       <Accordion.Header>{f.q}</Accordion.Header>
                       <Accordion.Body className="text-muted">{f.a}</Accordion.Body>
@@ -794,7 +786,7 @@ const HomeV2Page = () => {
               <MotionLink className="home-v2-btn-primary" to="/contacto">
                 Solicitar cotización
               </MotionLink>
-              <MotionLink className="home-v2-btn-outline-dark" href={waHref} target="_blank" rel="noreferrer">
+              <MotionLink className="home-v2-btn-outline-dark" href={waHref} target="_blank" rel="noopener noreferrer">
                 <i className="bi bi-whatsapp me-2" aria-hidden />
                 Hablar por WhatsApp
               </MotionLink>

@@ -17,11 +17,12 @@ const WhatsappButton = () => {
     <a
       href="https://wa.me/573147516693"
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       className="whatsapp-button"
+      aria-label="Contactar a Shipply por WhatsApp"
       style={{ top: `${position}px`, right: "20px" }}
     >
-      <i className="bi bi-whatsapp"></i>
+      <i className="bi bi-whatsapp" aria-hidden="true"></i>
     </a>
   );
 };
