@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import "./styles/Home/chestDrawer.css";
 import "./styles/loading.css";
-import ReactGA from "react-ga4";
+import { initWhatsappClickTracking } from "./utils/whatsappTracking";
 
 // Componentes que se cargan inmediatamente (críticos)
 import Navbar from "./components/Navbar";
@@ -68,8 +68,7 @@ const B2BComponents = React.lazy(() => import("./components/Services/B2B").then(
   }
 })));
 
-// Inicializa Google Analytics
-ReactGA.initialize("G-Z7LYPT9LHY");
+initWhatsappClickTracking();
 
 // Componente de carga mejorado
 const LoadingSpinner = () => (

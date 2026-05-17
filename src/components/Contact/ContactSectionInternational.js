@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
-import ReactGA from "react-ga4";
 import "../../styles/Contact/contactsection.css";
 import images from "../../assets/images/images";
 import { pushLeadSubmitAndContinue } from "../../utils/leadTracking";
+import { pushDataLayerEvent } from "../../utils/dataLayer";
 import { usePageMeta } from "../../utils/usePageMeta";
 import Button from "../ui/Button";
 import {
@@ -37,7 +37,7 @@ const ContactSectionInternational = () => {
   useEffect(() => {
     captureAndStoreUtms(location.search);
     setUtms(getStoredUtms());
-    ReactGA.event({
+    pushDataLayerEvent("intl_contact_view", {
       category: "International",
       action: "Contact Page View",
       label: formatUtmsForLabel(getStoredUtms()),

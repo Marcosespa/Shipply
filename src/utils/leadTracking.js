@@ -1,3 +1,5 @@
+import { pushDataLayerEvent } from "./dataLayer";
+
 export const pushLeadSubmitAndContinue = (payload, onContinue) => {
   let continued = false;
 
@@ -7,14 +9,13 @@ export const pushLeadSubmitAndContinue = (payload, onContinue) => {
     onContinue();
   };
 
-  if (typeof window !== "undefined" && Array.isArray(window.dataLayer)) {
-    window.dataLayer.push({
-      event: "lead_submit",
-      ...payload,
-      eventCallback: continueOnce,
-      eventTimeout: 2000,
-    });
+  const pushed = pushDataLayerEvent("lead_submit", {
+    ...payload,
+    eventCallback: continueOnce,
+    eventTimeout: 2000,
+  });
 
+  if (pushed) {
     window.setTimeout(continueOnce, 2100);
     return;
   }

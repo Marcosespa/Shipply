@@ -9,7 +9,6 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Helmet } from "react-helmet";
-import ReactGA from "react-ga4";
 import "../../styles/International/international.css";
 import { INTERNATIONAL_FAQS } from "../../data/faqs";
 import { usePageMeta } from "../../utils/usePageMeta";
@@ -18,10 +17,11 @@ import {
   getStoredUtms,
   formatUtmsForLabel,
 } from "../../utils/utm";
+import { pushDataLayerEvent } from "../../utils/dataLayer";
 
 const trackCta = (label) => {
   const utmPart = formatUtmsForLabel(getStoredUtms());
-  ReactGA.event({
+  pushDataLayerEvent("intl_cta_click", {
     category: "International",
     action: "CTA Click",
     label: `${label} | ${utmPart}`,
@@ -77,7 +77,7 @@ const InternationalLanding = () => {
 
   useEffect(() => {
     captureAndStoreUtms(location.search);
-    ReactGA.event({
+    pushDataLayerEvent("intl_landing_view", {
       category: "International",
       action: "Landing View",
       label: formatUtmsForLabel(getStoredUtms()),
