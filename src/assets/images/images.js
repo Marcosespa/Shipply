@@ -15,6 +15,7 @@ const images = {
   RespaldoAnimation: require("./AnimacionRespaldo.json"),
   ImagenAlmacentamiento: require("./ImagenAlmacentamiento.jpg"),
   ShipplyPNG: require("./Shipply-SinFondo.webp"),
+  ShipplyBox: require("./shipply-box-transparent.png"),
   EnviosImg: require("./EnviosImg.png"),
   AnimationAnalytics: require("./AnimationAnalytics.json"),
   AnimationAlmacentamient: require("./Animation-Almacenamiento.json"),

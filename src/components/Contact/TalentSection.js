@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import "../../styles/Contact/talentsection.css";
 import images from "../../assets/images/images";
+import Button from "../ui/Button";
 
 const TalentSection = () => {
   return (
@@ -24,22 +25,31 @@ const TalentSection = () => {
             Estamos en busca de personas apasionadas que quieran construir el
             futuro de la logística con Shipply.
           </p>
-          <form action="https://formspree.io/f/mnqwerty" method="POST">
+          <form action="https://formspree.io/f/mnqwerty" method="POST" encType="multipart/form-data">
+            <input type="hidden" name="_subject" value="[Shipply] Nueva aplicación de talento" />
             <Row>
               <Col md={6}>
+                <label className="field-label" htmlFor="talent-name">
+                  Nombre completo
+                </label>
                 <input
+                  id="talent-name"
                   type="text"
                   name="name"
-                  placeholder="Nombre completo"
+                  placeholder="Tu nombre"
                   className="form-control mb-3"
                   required
                 />
               </Col>
               <Col md={6}>
+                <label className="field-label" htmlFor="talent-email">
+                  Correo electrónico
+                </label>
                 <input
+                  id="talent-email"
                   type="email"
                   name="email"
-                  placeholder="Correo electrónico"
+                  placeholder="correo@dominio.com"
                   className="form-control mb-3"
                   required
                 />
@@ -47,31 +57,43 @@ const TalentSection = () => {
             </Row>
             <Row>
               <Col md={6}>
+                <label className="field-label" htmlFor="talent-position">
+                  Puesto deseado
+                </label>
                 <input
+                  id="talent-position"
                   type="text"
                   name="position"
-                  placeholder="Puesto deseado"
+                  placeholder="Ej. Operaciones"
                   className="form-control mb-3"
                   required
                 />
               </Col>
               <Col md={6}>
+                <label className="field-label" htmlFor="talent-experience">
+                  Años de experiencia
+                </label>
                 <input
+                  id="talent-experience"
                   type="text"
                   name="experience"
-                  placeholder="Años de experiencia"
+                  placeholder="Ej. 3 años"
                   className="form-control mb-3"
                 />
               </Col>
             </Row>
+            <label className="field-label" htmlFor="talent-message">
+              Cuéntanos sobre ti
+            </label>
             <textarea
+              id="talent-message"
               name="message"
               rows="4"
-              placeholder="Cuéntanos sobre ti y tus habilidades"
+              placeholder="Experiencia, habilidades y por qué quieres unirte"
               className="form-control mb-3"
               required
             ></textarea>
-            <label className="form-label" htmlFor="cv">
+            <label className="field-label" htmlFor="cv">
               Adjunta tu CV (PDF):
             </label>
             <input
@@ -81,22 +103,37 @@ const TalentSection = () => {
               accept=".pdf"
               className="form-control mb-3"
             />
-            <button type="submit" className="btn btn-dark w-100">
+            <Button type="submit" variant="secondary" fullWidth>
               Enviar
-            </button>
+            </Button>
           </form>
           <p className="social-text mt-4">
             Síguenos en nuestras redes sociales
           </p>
           <div className="social-icons">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
-              <i className="bi bi-instagram"></i>
+            <a
+              href="https://www.instagram.com/shipply.col/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Shipply en Instagram"
+            >
+              <i className="bi bi-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer">
-              <i className="bi bi-facebook"></i>
+            <a
+              href="https://www.facebook.com/profile.php?id=61550521441472"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Shipply en Facebook"
+            >
+              <i className="bi bi-facebook" aria-hidden="true"></i>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-              <i className="bi bi-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/company/shipply-sas"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Shipply en LinkedIn"
+            >
+              <i className="bi bi-linkedin" aria-hidden="true"></i>
             </a>
           </div>
         </Col>

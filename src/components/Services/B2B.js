@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "../../styles/Services/logisticsection.css";
 import images from "../../assets/images/images";
-import { Link } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
+import Button from "../ui/Button";
 
 const LogisticaCreceSection = () => {
   return (
@@ -26,9 +26,9 @@ const LogisticaCreceSection = () => {
               Agiliza, expande y potencia tus alianzas con retailers. 🚀
             </p>
             <Button
-               id="btn-cta-logistic"
+              variant="primary"
+              size="md"
               className="btn-cta-logistic"
-              as={Link}
               to="/contacto"
             >
               Iniciemos una conversación
@@ -65,9 +65,9 @@ const InovacionSection = () => {
               </ul>
             </div>
             <Button
-               id="btn-cta-logistic"
+              variant="primary"
+              size="md"
               className="btn-cta-logistic"
-              as={Link}
               to="/contacto"
             >
               Iniciemos una conversación
@@ -112,9 +112,9 @@ const RetailersLideresSection = () => {
             En Shipply, contamos con el respaldo de CargaLibre, una empresa con amplia trayectoria en logística y distribución. Gracias a esta alianza, hemos perfeccionado nuestros procesos y adquirido una vasta experiencia en la entrega eficiente y segura a grandes superficies y clientes B2B.
             </p>
             <Button
-              // id="btn-cta-logistic"
+              variant="primary"
+              size="md"
               className="btn-cta-logistic"
-              as={Link}
               to="/contacto"
             >
               Iniciemos una conversación
@@ -161,9 +161,9 @@ const RespaldoSection = () => {
               </ul>
             </div>
             <Button
-               id="btn-cta-logistic"
+              variant="primary"
+              size="md"
               className="btn-cta-logistic"
-              as={Link}
               to="/contacto"
             >
               Iniciemos una conversación

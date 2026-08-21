@@ -1,7 +1,8 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "../../styles/Services/pickingpackingsection.css";
 import images from "../../assets/images/images";
+import Button from "../ui/Button";
 
 const PickingPackingSection = () => {
   return (
@@ -36,10 +37,11 @@ const PickingPackingSection = () => {
             <Button
               href="https://wa.me/573184516959"
               target="_blank"
-              variant="dark"
+              variant="success"
+              size="md"
               className="cta-button mt-3"
             >
-              <i className="bi bi-whatsapp me-2"></i>
+              <i className="bi bi-whatsapp" aria-hidden="true"></i>
               Cotizar ahora
             </Button>
           </Col>
@@ -47,7 +49,7 @@ const PickingPackingSection = () => {
           <Col xs={12} md={6} className="text-center">
             <img
               src={images.ImagenAlmacentamiento}
-              alt="Logo 1"
+              alt="Operación de almacenamiento y alistamiento Shipply"
               className="img-fluid fade-in-image"
               loading="lazy"
             />

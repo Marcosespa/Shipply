@@ -1,0 +1,114 @@
+/**
+ * Shipply <Button /> — un solo componente, cuatro variants, tres tamaños.
+ * Reemplaza .cta-button, .btn-dark, .btn-custom, .btn-cta-logistic.
+ */
+
+.sp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-space-2);
+  font-family: var(--sp-font);
+  font-weight: var(--sp-fw-semibold);
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: var(--sp-radius-pill);
+  transition: transform var(--sp-dur-base) var(--sp-ease-out),
+              background-color var(--sp-dur-base) var(--sp-ease-out),
+              box-shadow var(--sp-dur-base) var(--sp-ease-out),
+              color var(--sp-dur-base) var(--sp-ease-out);
+  user-select: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sp-btn:focus-visible {
+  outline: 2px solid var(--sp-gold);
+  outline-offset: 3px;
+}
+
+.sp-btn:disabled,
+.sp-btn[aria-disabled="true"] {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Sizes — target táctil mínimo 44x44 (WCAG 2.5.5) */
+.sp-btn--sm {
+  font-size: var(--sp-fs-sm);
+  padding: 0.5rem 1rem;
+  min-height: 36px;
+}
+.sp-btn--md {
+  font-size: var(--sp-fs-base);
+  padding: 0.75rem 1.5rem;
+  min-height: 44px;
+}
+.sp-btn--lg {
+  font-size: var(--sp-fs-lg);
+  padding: 1rem 2rem;
+  min-height: 52px;
+}
+
+.sp-btn--block {
+  width: 100%;
+}
+
+/* ============ Variants ============ */
+
+/* Primary: dorado sobre tinta — el CTA principal */
+.sp-btn--primary {
+  background: var(--sp-gold);
+  color: var(--sp-ink);
+  box-shadow: var(--sp-shadow-sm);
+}
+.sp-btn--primary:hover {
+  background: var(--sp-gold-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--sp-shadow-md);
+}
+.sp-btn--primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary: tinta sólida */
+.sp-btn--secondary {
+  background: var(--sp-ink);
+  color: #fff;
+}
+.sp-btn--secondary:hover {
+  background: var(--sp-ink-soft);
+  transform: translateY(-1px);
+}
+
+/* Ghost: borde dorado, fondo transparente */
+.sp-btn--ghost {
+  background: transparent;
+  color: var(--sp-ink);
+  border-color: var(--sp-gold);
+}
+.sp-btn--ghost:hover {
+  background: var(--sp-gold);
+  color: var(--sp-ink);
+}
+
+/* Success: WhatsApp */
+.sp-btn--success {
+  background: var(--sp-success);
+  color: #fff;
+}
+.sp-btn--success:hover {
+  background: var(--sp-success-dark);
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sp-btn,
+  .sp-btn:hover {
+    transform: none;
+  }
+}

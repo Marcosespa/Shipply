@@ -3,23 +3,16 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
 } from "react-router-dom";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./styles/Home/chestDrawer.css";
 import "./styles/loading.css";
-import ReactGA from "react-ga4";
+import { initWhatsappClickTracking } from "./utils/whatsappTracking";
 
 // Componentes que se cargan inmediatamente (críticos)
 import Navbar from "./components/Navbar";
-import Hero from "./components/Home/Hero";
-import Services from "./components/Home/Services";
-import Testimonials from "./components/Home/Testimonials";
+import HomeV2Page from "./components/HomeV2/HomeV2Page";
 import Footer from "./components/Footer";
-import Clients from "./components/Home/Clients";
-import Benefits from "./components/Home/Benefits";
-import Integrations from "./components/Home/Integrations";
-import AboutUs from "./components/Home/AboutUs";
-import Benefits2 from "./components/Home/Benefits2";
 import WhatsappButton from "./components/WhatsappButton";
 import ScrollToHash from "./components/ScrollToHash";
 import ScrollToTop from "./components/ScrollToTop";
@@ -42,9 +35,23 @@ const DataAnalysisSection = React.lazy(() => import("./components/Services/DataA
 const DevolutionSection = React.lazy(() => import("./components/Services/DevolutionSection"));
 const EnvioSection = React.lazy(() => import("./components/Services/EnvioSection"));
 const ContactSection = React.lazy(() => import("./components/Contact/ContactSection"));
+const ContactSectionInternational = React.lazy(() =>
+  import("./components/Contact/ContactSectionInternational")
+);
 const TalentSection = React.lazy(() => import("./components/Contact/TalentSection"));
 const PrivacyPolitic = React.lazy(() => import("./components/Contact/PrivacyPolitic"));
 const Faq = React.lazy(() => import("./components/Faq/Faq"));
+const InternationalLanding = React.lazy(() =>
+  import("./components/International/InternationalLanding")
+);
+
+const MarcaDigitalColombianaPage = React.lazy(() =>
+  import("./components/Soluciones/MarcaDigitalColombianaPage")
+);
+const B2bYEcommercePage = React.lazy(() => import("./components/Soluciones/B2bYEcommercePage"));
+const InternacionalColombiaPage = React.lazy(() =>
+  import("./components/Soluciones/InternacionalColombiaPage")
+);
 
 // Lazy loading para componentes B2B
 const B2BComponents = React.lazy(() => import("./components/Services/B2B").then(module => ({
@@ -61,8 +68,7 @@ const B2BComponents = React.lazy(() => import("./components/Services/B2B").then(
   }
 })));
 
-// Inicializa Google Analytics
-ReactGA.initialize("G-Z7LYPT9LHY");
+initWhatsappClickTracking();
 
 // Componente de carga mejorado
 const LoadingSpinner = () => (
@@ -86,26 +92,24 @@ const App = () => {
           <Routes>
             <Route
               path="/"
-              element={
-                <>
-                  <Hero />
-                  <Benefits />
-                  <Services />
-                  <Integrations />
-                  <AboutUs />
-                  <Testimonials />
-                  <Clients />
-                  <Benefits2 />
-                </>
-              }
+              element={<HomeV2Page />}
             />
             <Route
-              path="/bussinesToBussines"
+              path="/business-to-business"
               element={<B2BComponents />}
             />
             <Route
-              path="/valueaddedsservices"
+              path="/value-added-services"
               element={<ValueAddedServicesPage />}
+            />
+            {/* Legacy URLs with typos — keep as redirects to preserve SEO/backlinks */}
+            <Route
+              path="/bussinesToBussines"
+              element={<Navigate to="/business-to-business" replace />}
+            />
+            <Route
+              path="/valueaddedsservices"
+              element={<Navigate to="/value-added-services" replace />}
             />
             <Route
               path="/servicios"
@@ -121,7 +125,28 @@ const App = () => {
                 </>
               }
             />
+            <Route
+              path="/contacto/international"
+              element={<Navigate to="/contacto?lang=en" replace />}
+            />
+            <Route
+              path="/international/contact"
+              element={<ContactSectionInternational />}
+            />
             <Route path="/contacto" element={<ContactSection />} />
+            <Route
+              path="/international"
+              element={<InternationalLanding />}
+            />
+            <Route
+              path="/soluciones/marca-digital-colombiana"
+              element={<MarcaDigitalColombianaPage />}
+            />
+            <Route path="/soluciones/b2b-y-ecommerce" element={<B2bYEcommercePage />} />
+            <Route
+              path="/soluciones/internacional-colombia"
+              element={<InternacionalColombiaPage />}
+            />
             {/* Blog Routes */}
             <Route path="/blog" element={<BlogSection />} />
             <Route
