@@ -308,7 +308,7 @@ const HomeV2Page = () => {
               <FadeIn y={40}>
                 <SectionHead
                   eyebrow="Operación medible"
-                  title="Ritmo y estándares que sostemos contigo"
+                  title="Ritmo y estándares que sostenemos contigo"
                   subtitle="Indicadores de referencia — el detalle fino se ajusta en diagnóstico y propuesta comercial."
                 />
               </FadeIn>
